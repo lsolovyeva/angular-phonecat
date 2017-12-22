@@ -1,7 +1,10 @@
 package model;
 
 public class MotorolaBravoWithMotoblur extends PhoneDetail {
-    public static final MotorolaBravoWithMotoblur me = new MotorolaBravoWithMotoblur();
+    //public static final MotorolaBravoWithMotoblur me = new MotorolaBravoWithMotoblur();
+    public static MotorolaBravoWithMotoblur newInstance(){
+        return new MotorolaBravoWithMotoblur();
+    }
 
     private MotorolaBravoWithMotoblur() {
         super(

@@ -169,26 +169,26 @@ public interface PhoneService {
 
 
     PhoneDetail all[] = new PhoneDetail[] {
-            MotorolaXoomWithWiFi.me,
-            NexusS.me,
-            DellStreak7.me,
+            MotorolaXoomWithWiFi.newInstance(),
+            NexusS.newInstance(),
+            DellStreak7.newInstance(),
             DellVenue.newInstance(),
-            Droid2GlobalByMotorola.me,
-            DroidProByMotorola.me,
-            LgAxis.me,
-            MotorolaAtrix4g.me,
-            MotorolaBravoWithMotoblur.me,
-            MotorolaCharmWithMotoblur.me,
-            MotorolaDefyWithMotoblur.me,
-            MotorolaXoom.me,
-            SamsungGalaxyTab.me,
-            SamsungGem.me,
-            SamsungMesmerizeAGalaxySPhone.me,
-            SamsungShowcaseAGalaxySPhone.me,
-            SamsungTransform.me,
-            SanyoZio.me,
-            TMobileG2.me,
-            TMobileMytouch4g.me
+            Droid2GlobalByMotorola.newInstance(),
+            DroidProByMotorola.newInstance(),
+            LgAxis.newInstance(),
+            MotorolaAtrix4g.newInstance(),
+            MotorolaBravoWithMotoblur.newInstance(),
+            MotorolaCharmWithMotoblur.newInstance(),
+            MotorolaDefyWithMotoblur.newInstance(),
+            MotorolaXoom.newInstance(),
+            SamsungGalaxyTab.newInstance(),
+            SamsungGem.newInstance(),
+            SamsungMesmerizeAGalaxySPhone.newInstance(),
+            SamsungShowcaseAGalaxySPhone.newInstance(),
+            SamsungTransform.newInstance(),
+            SanyoZio.newInstance(),
+            TMobileG2.newInstance(),
+            TMobileMytouch4g.newInstance()
 
     };
 }

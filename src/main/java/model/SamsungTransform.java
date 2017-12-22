@@ -1,7 +1,10 @@
 package model;
 
 public class SamsungTransform extends PhoneDetail {
-    public static final SamsungTransform me = new SamsungTransform();
+    //public static final SamsungTransform me = new SamsungTransform();
+    public static SamsungTransform newInstance(){
+        return new SamsungTransform();
+    }
 
     private SamsungTransform() {
         super(

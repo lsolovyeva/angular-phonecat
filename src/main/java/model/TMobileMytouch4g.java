@@ -1,7 +1,10 @@
 package model;
 
 public class TMobileMytouch4g extends PhoneDetail {
-    public static final TMobileMytouch4g me = new TMobileMytouch4g();
+    //public static final TMobileMytouch4g me = new TMobileMytouch4g();
+    public static TMobileMytouch4g newInstance(){
+        return new TMobileMytouch4g();
+    }
 
     private TMobileMytouch4g() {
         super(

@@ -1,7 +1,10 @@
 package model;
 
 public class NexusS extends PhoneDetail {
-    public static final NexusS me = new NexusS();
+    //public static final NexusS me = new NexusS();
+    public static NexusS newInstance(){
+        return new NexusS();
+    }
 
     private NexusS() {
         super(

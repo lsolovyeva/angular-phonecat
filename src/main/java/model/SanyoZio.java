@@ -1,7 +1,10 @@
 package model;
 
 public class SanyoZio extends PhoneDetail {
-    public static final SanyoZio me = new SanyoZio();
+    //public static final SanyoZio me = new SanyoZio();
+    public static SanyoZio newInstance(){
+        return new SanyoZio();
+    }
 
     private SanyoZio() {
         super(

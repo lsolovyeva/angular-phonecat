@@ -1,7 +1,10 @@
 package model;
 
 public class Droid2GlobalByMotorola extends PhoneDetail {
-    public static final Droid2GlobalByMotorola me = new Droid2GlobalByMotorola();
+    //public static final Droid2GlobalByMotorola me = new Droid2GlobalByMotorola();
+    public static Droid2GlobalByMotorola newInstance(){
+        return new Droid2GlobalByMotorola();
+    }
 
     private Droid2GlobalByMotorola() {
         super(

@@ -1,7 +1,10 @@
 package model;
 
 public class DellStreak7 extends PhoneDetail{
-    public static final DellStreak7 me = new DellStreak7();
+    //public static final DellStreak7 me = new DellStreak7();
+    public static DellStreak7 newInstance(){
+        return new DellStreak7();
+    }
 
     private DellStreak7() {
         super(

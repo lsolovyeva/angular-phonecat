@@ -1,7 +1,10 @@
 package model;
 
 public class DroidProByMotorola extends PhoneDetail {
-    public static final DroidProByMotorola me = new DroidProByMotorola();
+    //public static final DroidProByMotorola me = new DroidProByMotorola();
+    public static DroidProByMotorola newInstance(){
+        return new DroidProByMotorola();
+    }
 
     private DroidProByMotorola() {
         super(

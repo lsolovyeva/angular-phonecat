@@ -2,7 +2,10 @@ package model;
 
 
 public class MotorolaXoomWithWiFi extends PhoneDetail {
-    public static final MotorolaXoomWithWiFi me = new MotorolaXoomWithWiFi();
+    //public static final MotorolaXoomWithWiFi me = new MotorolaXoomWithWiFi();
+    public static MotorolaXoomWithWiFi newInstance(){
+        return new MotorolaXoomWithWiFi();
+    }
 
     private MotorolaXoomWithWiFi() {
         super(

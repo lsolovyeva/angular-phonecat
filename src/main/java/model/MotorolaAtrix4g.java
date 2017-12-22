@@ -1,7 +1,10 @@
 package model;
 
 public class MotorolaAtrix4g extends PhoneDetail {
-    public static final MotorolaAtrix4g me = new MotorolaAtrix4g();
+    //public static final MotorolaAtrix4g me = new MotorolaAtrix4g();
+    public static MotorolaAtrix4g newInstance(){
+        return new MotorolaAtrix4g();
+    }
 
     private MotorolaAtrix4g() {
         super(

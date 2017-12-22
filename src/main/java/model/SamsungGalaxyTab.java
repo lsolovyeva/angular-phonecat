@@ -1,7 +1,10 @@
 package model;
 
 public class SamsungGalaxyTab extends PhoneDetail {
-    public static final SamsungGalaxyTab me = new SamsungGalaxyTab();
+    //public static final SamsungGalaxyTab me = new SamsungGalaxyTab();
+    public static SamsungGalaxyTab newInstance(){
+        return new SamsungGalaxyTab();
+    }
 
     private SamsungGalaxyTab() {
         super(

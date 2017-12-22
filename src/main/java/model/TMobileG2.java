@@ -1,7 +1,10 @@
 package model;
 
 public class TMobileG2 extends PhoneDetail {
-    public static final TMobileG2 me = new TMobileG2();
+    //public static final TMobileG2 me = new TMobileG2();
+    public static TMobileG2 newInstance(){
+        return new TMobileG2();
+    }
 
     private TMobileG2() {
         super(

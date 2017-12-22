@@ -1,7 +1,10 @@
 package model;
 
 public class MotorolaXoom extends PhoneDetail {
-    public static final MotorolaXoom me = new MotorolaXoom();
+    //public static final MotorolaXoom me = new MotorolaXoom();
+    public static MotorolaXoom newInstance(){
+        return new MotorolaXoom();
+    }
 
     private MotorolaXoom() {
         super(

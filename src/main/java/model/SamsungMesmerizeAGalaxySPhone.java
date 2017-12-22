@@ -1,7 +1,10 @@
 package model;
 
 public class SamsungMesmerizeAGalaxySPhone extends PhoneDetail {
-    public static final SamsungMesmerizeAGalaxySPhone me = new SamsungMesmerizeAGalaxySPhone();
+    //public static final SamsungMesmerizeAGalaxySPhone me = new SamsungMesmerizeAGalaxySPhone();
+    public static SamsungMesmerizeAGalaxySPhone newInstance(){
+        return new SamsungMesmerizeAGalaxySPhone();
+    }
 
     private SamsungMesmerizeAGalaxySPhone() {
         super(

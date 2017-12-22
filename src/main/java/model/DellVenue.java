@@ -1,7 +1,7 @@
 package model;
 
 public class DellVenue extends PhoneDetail {
-    public static final DellVenue me = new DellVenue();
+    //public static final DellVenue me = new DellVenue();
 
     public static DellVenue newInstance(){
         return new DellVenue();

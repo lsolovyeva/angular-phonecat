@@ -1,7 +1,10 @@
 package model;
 
 public class LgAxis extends PhoneDetail {
-    public static final LgAxis me = new LgAxis();
+    //public static final LgAxis me = new LgAxis();
+    public static LgAxis newInstance(){
+        return new LgAxis();
+    }
 
     private LgAxis() {
         super(

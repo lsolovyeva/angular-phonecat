@@ -1,7 +1,10 @@
 package model;
 
 public class SamsungGem extends PhoneDetail {
-    public static final SamsungGem me = new SamsungGem();
+    //public static final SamsungGem me = new SamsungGem();
+    public static SamsungGem newInstance(){
+        return new SamsungGem();
+    }
 
     private SamsungGem() {
         super(
