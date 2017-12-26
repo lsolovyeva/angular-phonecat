@@ -1,5 +1,8 @@
 package model;
 
+import lombok.Builder;
+
+@Builder
 public class Phones {
     private int age;
     private String carrier;
@@ -7,6 +10,7 @@ public class Phones {
     private String imageUrl;
     private String name;
     private String snippet;
+
 
     public Phones(int age, String id, String imageUrl, String name, String snippet) {
         this.age = age;
@@ -43,4 +47,5 @@ public class Phones {
     public String getSnippet() {
         return snippet;
     }
+
 }

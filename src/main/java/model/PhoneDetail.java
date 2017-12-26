@@ -56,11 +56,11 @@ public class PhoneDetail {
     public static class Connectivity{
         private String bluetooth;
         private String cell;
-        private boolean gps;
-        private boolean infrared;
+        private Boolean gps;
+        private Boolean infrared;
         private String wifi;
 
-        public Connectivity(String bluetooth, String cell, boolean gps, boolean infrared, String wifi) {
+        public Connectivity(String bluetooth, String cell, Boolean gps, Boolean infrared, String wifi) {
             this.bluetooth = bluetooth;
             this.cell = cell;
             this.gps = gps;
@@ -73,10 +73,10 @@ public class PhoneDetail {
         public String getCell() {
             return cell;
         }
-        public boolean isGps() {
+        public Boolean isGps() {
             return gps;
         }
-        public boolean isInfrared() {
+        public Boolean isInfrared() {
             return infrared;
         }
         public String getWifi() {
@@ -87,8 +87,8 @@ public class PhoneDetail {
     public static class Display {
         private String screenResolution;
         private String screenSize;
-        private boolean touchScreen;
-        public Display(String screenResolution, String screenSize, boolean touchScreen) {
+        private Boolean touchScreen;
+        public Display(String screenResolution, String screenSize, Boolean touchScreen) {
             this.screenResolution = screenResolution;
             this.screenSize = screenSize;
             this.touchScreen = touchScreen;
@@ -99,19 +99,19 @@ public class PhoneDetail {
         public String getScreenSize() {
             return screenSize;
         }
-        public boolean isTouchScreen() {
+        public Boolean isTouchScreen() {
             return touchScreen;
         }
     }
 
     public static class Hardware {
-        private boolean accelerometer;
+        private Boolean accelerometer;
         private String audioJack;
         private String cpu;
-        private boolean fmRadio;
-        private boolean physicalKeyboard;
+        private Boolean fmRadio;
+        private Boolean physicalKeyboard;
         private String usb;
-        public Hardware(boolean accelerometer, String audioJack, String cpu, boolean fmRadio, boolean physicalKeyboard, String usb) {
+        public Hardware(Boolean accelerometer, String audioJack, String cpu, Boolean fmRadio, Boolean physicalKeyboard, String usb) {
             this.accelerometer = accelerometer;
             this.audioJack = audioJack;
             this.cpu = cpu;
@@ -119,7 +119,7 @@ public class PhoneDetail {
             this.physicalKeyboard = physicalKeyboard;
             this.usb = usb;
         }
-        public boolean isAccelerometer() {
+        public Boolean isAccelerometer() {
             return accelerometer;
         }
         public String getAudioJack() {
@@ -128,10 +128,10 @@ public class PhoneDetail {
         public String getCpu() {
             return cpu;
         }
-        public boolean isFmRadio() {
+        public Boolean isFmRadio() {
             return fmRadio;
         }
-        public boolean isPhysicalKeyboard() {
+        public Boolean isPhysicalKeyboard() {
             return physicalKeyboard;
         }
         public String getUsb() {

@@ -3,6 +3,7 @@ model/DroidProByMotorola.class
 model/NexusS.class
 model/MotorolaCharmWithMotoblur.class
 model/SamsungGem.class
+model/Phones$PhonesBuilder.class
 model/MotorolaXoom.class
 model/Droid2GlobalByMotorola.class
 model/SamsungTransform.class
