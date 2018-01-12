@@ -3,7 +3,7 @@ package model;
 import lombok.Builder;
 
 @Builder
-public class Phones {
+public class Phone {
     private int age;
     private String carrier;
     private String id;
@@ -12,7 +12,7 @@ public class Phones {
     private String snippet;
 
 
-    public Phones(int age, String id, String imageUrl, String name, String snippet) {
+    public Phone(int age, String id, String imageUrl, String name, String snippet) {
         this.age = age;
         this.id = id;
         this.imageUrl = imageUrl;
@@ -20,7 +20,7 @@ public class Phones {
         this.snippet = snippet;
     }
 
-    public Phones(int age, String carrier, String id, String imageUrl, String name, String snippet) {
+    public Phone(int age, String carrier, String id, String imageUrl, String name, String snippet) {
         this.age = age;
         this.carrier = carrier;
         this.id = id;
