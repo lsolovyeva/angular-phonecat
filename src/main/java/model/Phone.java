@@ -1,8 +1,10 @@
 package model;
 
 import lombok.Builder;
+import lombok.Getter;
 
 @Builder
+@Getter
 public class Phones {
     private int age;
     private String carrier;
@@ -29,23 +31,23 @@ public class Phones {
         this.snippet = snippet;
     }
 
-    public int getAge() {
-        return age;
-    }
-    public String getCarrier() {
-        return carrier;
-    }
-    public String getId() {
-        return id;
-    }
-    public String getImageUrl() {
-        return imageUrl;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getSnippet() {
-        return snippet;
-    }
+//    public int getAge() {
+//        return age;
+//    }
+//    public String getCarrier() {
+//        return carrier;
+//    }
+//    public String getId() {
+//        return id;
+//    }
+//    public String getImageUrl() {
+//        return imageUrl;
+//    }
+//    public String getName() {
+//        return name;
+//    }
+//    public String getSnippet() {
+//        return snippet;
+//    }
 
 }
