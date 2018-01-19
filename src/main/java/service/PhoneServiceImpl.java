@@ -2,17 +2,26 @@ package service;
 
 
 import model.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-
+import repository.UserRepository;
+import repository.PhoneRowMapper;
 import java.util.Arrays;
 import java.util.Collection;
+
+
 
 @Service
 
 public class PhoneServiceImpl implements PhoneService {
 
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
     public Collection<Phone> getAllPhonesInfo() {
-        return PhoneServiceImpl.allInfo;
+        //return PhoneServiceImpl.allInfo;
+        return jdbcTemplate.query("select * from Phone", new PhoneRowMapper());
     }
 
     public PhoneDetail getPhoneById(String id) {
@@ -22,6 +31,7 @@ public class PhoneServiceImpl implements PhoneService {
         return null;
     }
 
+/*
     public static Collection<Phone> allInfo = Arrays.asList(
             //new Phone[]{
             //Phone.builder().age(0).id("aasd").imageUrl("dfd").build(),
@@ -180,7 +190,7 @@ public class PhoneServiceImpl implements PhoneService {
                 )
     );
 
-
+*/
     public static Collection<PhoneDetail> all = Arrays.asList(
         //new PhoneDetail[] {
             MotorolaXoomWithWiFi.newInstance(),
