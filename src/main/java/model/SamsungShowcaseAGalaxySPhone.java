@@ -7,6 +7,7 @@ public class SamsungShowcaseAGalaxySPhone extends PhoneDetail {
     }
 
     private SamsungShowcaseAGalaxySPhone() {
+        /*
         super(
                 "Swype",
                 new PhoneDetail.Android(
@@ -70,6 +71,7 @@ public class SamsungShowcaseAGalaxySPhone extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

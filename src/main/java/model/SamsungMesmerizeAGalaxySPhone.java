@@ -7,6 +7,7 @@ public class SamsungMesmerizeAGalaxySPhone extends PhoneDetail {
     }
 
     private SamsungMesmerizeAGalaxySPhone() {
+        /*
         super(
                 "Swype",
                 new PhoneDetail.Android(
@@ -71,6 +72,7 @@ public class SamsungMesmerizeAGalaxySPhone extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

@@ -7,6 +7,7 @@ public class TMobileMytouch4g extends PhoneDetail {
     }
 
     private TMobileMytouch4g() {
+        /*
         super(
                  "Mobile Video Chat, HD Camcorder, Screen Share (DLNA), Genius Button, Wi-Fi Calling, Wi-Fi HotSpot, T-Mobile TV, Slacker Radio, Rock Band, Monopoly, Asphalt 5, myModes, Faves Gallery",
                 new PhoneDetail.Android(
@@ -73,6 +74,7 @@ public class TMobileMytouch4g extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

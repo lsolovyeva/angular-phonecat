@@ -1,12 +1,24 @@
 package model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import repository.PhoneDetailRowMapper;
+
 public class MotorolaXoom extends PhoneDetail {
     //public static final MotorolaXoom me = new MotorolaXoom();
-    public static MotorolaXoom newInstance(){
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
+
+    public  static MotorolaXoom newInstance(){
         return new MotorolaXoom();
+        //return jdbcTemplate.queryForObject("select * from PhoneDetail where id=?", new Object[]{id}, new PhoneDetailRowMapper());
     }
 
+        /*
     private MotorolaXoom() {
+
+
         super(
                 "Front-facing camera. Sensors: proximity, ambient light, barometer, gyroscope.",
                 new PhoneDetail.Android(
@@ -70,6 +82,8 @@ public class MotorolaXoom extends PhoneDetail {
                 )
 
         );
+
     }
+            */
 }
 

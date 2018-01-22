@@ -7,6 +7,7 @@ public class MotorolaAtrix4g extends PhoneDetail {
     }
 
     private MotorolaAtrix4g() {
+        /*
         super(
                 "",
                 new PhoneDetail.Android(
@@ -70,6 +71,7 @@ public class MotorolaAtrix4g extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

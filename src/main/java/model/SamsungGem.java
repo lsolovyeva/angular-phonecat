@@ -7,6 +7,7 @@ public class SamsungGem extends PhoneDetail {
     }
 
     private SamsungGem() {
+        /*
         super(
                  "3.2\u201d Full touch screen with Advanced anti smudge, anti reflective and anti scratch glass; Swype text input for easy and fast message creation; multiple messaging options, including text with threaded messaging for organized, easy-to-follow text; Social Community support, including Facebook and MySpace; Next generation Address book; Visual Voice Mail\n",
                 new PhoneDetail.Android(
@@ -69,6 +70,7 @@ public class SamsungGem extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

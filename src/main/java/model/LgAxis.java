@@ -7,6 +7,7 @@ public class LgAxis extends PhoneDetail {
     }
 
     private LgAxis() {
+        /*
         super(
                 "Accessibility features: Tactile QWERTY keyboard, four-direction keypad, start and end call buttons, dedicated number keys, camera button, TalkBack screen reader",
                 new PhoneDetail.Android(
@@ -70,6 +71,8 @@ public class LgAxis extends PhoneDetail {
                 )
 
         );
+   */
     }
+
 }
 

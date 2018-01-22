@@ -7,6 +7,7 @@ public class MotorolaCharmWithMotoblur extends PhoneDetail {
     }
 
     private MotorolaCharmWithMotoblur() {
+        /*
         super(
                  "MOTOBLUR-enabled; battery manager; seven home screens; customize by moving or resizing widgets; Android HTML WebKit w/Flash Lite; BACKTRACK\u2122 navigation pad behind screen",
                 new PhoneDetail.Android(
@@ -70,6 +71,7 @@ public class MotorolaCharmWithMotoblur extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

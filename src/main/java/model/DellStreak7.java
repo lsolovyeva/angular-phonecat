@@ -7,6 +7,7 @@ public class DellStreak7 extends PhoneDetail{
     }
 
     private DellStreak7() {
+        /*
         super(
                 "Front Facing 1.3MP Camera",
                 new PhoneDetail.Android(
@@ -66,5 +67,6 @@ public class DellStreak7 extends PhoneDetail{
                         "512MB"
                 )
         );
+        */
     }
 }

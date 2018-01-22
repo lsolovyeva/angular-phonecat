@@ -37,4 +37,9 @@ public class PhoneController {
         return repo.findAll();
     }
 
+    @RequestMapping(value="/phones/{id}", method = RequestMethod.GET )
+    public PhoneDetail getPhoneById(@PathVariable("id") Integer id) {
+        return repo.findPhoneById(id);
+    }
+
 }

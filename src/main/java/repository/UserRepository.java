@@ -1,6 +1,7 @@
 package repository;
 
 import model.Phone;
+import model.PhoneDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -22,9 +23,14 @@ public class UserRepository {
     public List<Phone> findAll() {
         return jdbcTemplate.query("select * from Phone", new PhoneRowMapper()); }
 
+        /*
     @Transactional(readOnly=true)
     public User findUserById(int id) {
         return jdbcTemplate.queryForObject("select * from users where id=?", new Object[]{id}, new UserRowMapper()); }
+*/
+        @Transactional(readOnly=true)
+        public PhoneDetail findPhoneById(Integer id) {
+            return jdbcTemplate.queryForObject("select * from PhoneDetail where id=?", new Object[]{id}, new PhoneDetailRowMapper()); }
 
 
     public User create(final User user)

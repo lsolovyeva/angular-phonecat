@@ -7,6 +7,7 @@ public class SanyoZio extends PhoneDetail {
     }
 
     private SanyoZio() {
+        /*
         super(
                 "Trackball Navigation Control",
                 new PhoneDetail.Android(
@@ -69,6 +70,7 @@ public class SanyoZio extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

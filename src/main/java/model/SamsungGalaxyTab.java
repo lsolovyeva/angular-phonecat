@@ -7,6 +7,7 @@ public class SamsungGalaxyTab extends PhoneDetail {
     }
 
     private SamsungGalaxyTab() {
+        /*
         super(
                 "Adobe\u00ae Flash\u00ae Player compatible; 1.3MP front-facing camera for video chat; eReader pre-loaded; Swype text input technology\r\n",
                 new PhoneDetail.Android(
@@ -77,6 +78,7 @@ public class SamsungGalaxyTab extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

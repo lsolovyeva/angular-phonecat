@@ -8,6 +8,7 @@ public class DellVenue extends PhoneDetail {
     }
 
     private DellVenue() {
+        /*
         super(
                 "Gorilla Glass display, Dedicated Camera Key, Ring Silence Switch, Swype keyboard.",
                 new PhoneDetail.Android(
@@ -76,6 +77,7 @@ public class DellVenue extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

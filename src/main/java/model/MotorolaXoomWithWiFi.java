@@ -8,6 +8,7 @@ public class MotorolaXoomWithWiFi extends PhoneDetail {
     }
 
     private MotorolaXoomWithWiFi() {
+        /*
         super(
                 "Sensors: proximity, ambient light, barometer, gyroscope",
                 new PhoneDetail.Android(
@@ -68,5 +69,6 @@ public class MotorolaXoomWithWiFi extends PhoneDetail {
                         "1000MB"
                 )
         );
+        */
     }
 }

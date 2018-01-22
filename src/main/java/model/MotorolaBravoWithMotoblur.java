@@ -7,6 +7,7 @@ public class MotorolaBravoWithMotoblur extends PhoneDetail {
     }
 
     private MotorolaBravoWithMotoblur() {
+        /*
         super(
                  "Adobe\u00ae Flash\u00ae Lite\u00ae 3, DNLA, CrystalTalk\u2122 PLUS technology",
                 new PhoneDetail.Android(
@@ -69,6 +70,7 @@ public class MotorolaBravoWithMotoblur extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

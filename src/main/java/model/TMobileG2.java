@@ -7,6 +7,7 @@ public class TMobileG2 extends PhoneDetail {
     }
 
     private TMobileG2() {
+        /*
         super(
                 "Accessibility features: tactile QWERTY keyboard, trackpad, three programmable keys, camera button",
                 new PhoneDetail.Android(
@@ -71,6 +72,7 @@ public class TMobileG2 extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

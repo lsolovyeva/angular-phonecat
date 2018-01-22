@@ -6,15 +6,26 @@ public class PhoneDetail {
     public static class Android {
         private String os;
         private String ui;
+
         public Android(String os, String ui) {
             this.os = os;
             this.ui = ui;
         }
+
+        public Android() {}
+
         public String getOs() {
             return os;
         }
         public String getUi() {
             return ui;
+        }
+
+        public void setOs(String os) {
+            this.os = os;
+        }
+        public void setUi(String ui) {
+            this.ui = ui;
         }
     }
 
@@ -27,6 +38,9 @@ public class PhoneDetail {
             this.talkTime = talkTime;
             this.type = type;
         }
+
+        public  Battery() {}
+
         public String getStandbyTime() {
             return standbyTime;
         }
@@ -35,6 +49,16 @@ public class PhoneDetail {
         }
         public String getType() {
             return type;
+        }
+
+        public void setStandbyTime(String standbyTime) {
+            this.standbyTime = standbyTime;
+        }
+        public void setTalkTime(String talkTime) {
+            this.talkTime = talkTime;
+        }
+        public void setType(String type) {
+            this.type = type;
         }
     }
 
@@ -50,6 +74,13 @@ public class PhoneDetail {
         }
         public String getPrimary() {
             return primary;
+        }
+
+        public void setFeatures(String[] features) {
+            this.features = features;
+        }
+        public void setPrimary(String primary) {
+            this.primary = primary;
         }
     }
 
@@ -67,6 +98,9 @@ public class PhoneDetail {
             this.infrared = infrared;
             this.wifi = wifi;
         }
+
+        public Connectivity() {}
+
         public String getBluetooth() {
             return bluetooth;
         }
@@ -82,6 +116,22 @@ public class PhoneDetail {
         public String getWifi() {
             return wifi;
         }
+
+        public void setBluetooth(String bluetooth) {
+            this.bluetooth = bluetooth;
+        }
+        public void setCell(String cell) {
+            this.cell = cell;
+        }
+        public void setGps(Boolean gps) {
+            this.gps = gps;
+        }
+        public void setInfrared(Boolean infrared) {
+            this.infrared = infrared;
+        }
+        public void setWifi(String wifi) {
+            this.wifi = wifi;
+        }
     }
 
     public static class Display {
@@ -93,6 +143,9 @@ public class PhoneDetail {
             this.screenSize = screenSize;
             this.touchScreen = touchScreen;
         }
+
+        public Display() {}
+
         public String getScreenResolution() {
             return screenResolution;
         }
@@ -101,6 +154,16 @@ public class PhoneDetail {
         }
         public Boolean isTouchScreen() {
             return touchScreen;
+        }
+
+        public void setScreenResolution(String screenResolution) {
+            this.screenResolution = screenResolution;
+        }
+        public void setScreenSize(String screenSize) {
+            this.screenSize = screenSize;
+        }
+        public void setTouchScreen(Boolean touchScreen) {
+            this.touchScreen = touchScreen;
         }
     }
 
@@ -119,6 +182,9 @@ public class PhoneDetail {
             this.physicalKeyboard = physicalKeyboard;
             this.usb = usb;
         }
+
+        public Hardware() {}
+
         public Boolean isAccelerometer() {
             return accelerometer;
         }
@@ -137,6 +203,25 @@ public class PhoneDetail {
         public String getUsb() {
             return usb;
         }
+
+        public void setAccelerometer(Boolean accelerometer) {
+            this.accelerometer = accelerometer;
+        }
+        public void setAudioJack(String audioJack) {
+            this.audioJack = audioJack;
+        }
+        public void setCpu(String cpu) {
+            this.cpu = cpu;
+        }
+        public void setFmRadio(Boolean fmRadio) {
+            this.fmRadio = fmRadio;
+        }
+        public void setPhysicalKeyboard(Boolean physicalKeyboard) {
+            this.physicalKeyboard = physicalKeyboard;
+        }
+        public void setUsb(String usb) {
+            this.usb = usb;
+        }
     }
 
     public static class SizeAndWeight {
@@ -146,11 +231,21 @@ public class PhoneDetail {
             this.dimensions = dimensions;
             this.weight = weight;
         }
+
+        public SizeAndWeight() {}
+
         public String[] getDimensions() {
             return dimensions;
         }
         public String getWeight() {
             return weight;
+        }
+
+        public void setDimensions(String[] dimensions) {
+            this.dimensions = dimensions;
+        }
+        public void setWeight(String weight) {
+            this.weight = weight;
         }
     }
 
@@ -161,15 +256,26 @@ public class PhoneDetail {
             this.flash = flash;
             this.ram = ram;
         }
+
+        public  Storage() {}
+
         public String getFlash() {
             return flash;
         }
         public String getRam() {
             return ram;
         }
+
+        public void setFlash(String flash) {
+            this.flash = flash;
+        }
+        public void setRam(String ram) {
+            this.ram = ram;
+        }
     }
 
     private String additionalFeatures;
+    private Integer os_id;
     private Android android;
     private String[] availability;
     private Battery battery;
@@ -178,7 +284,7 @@ public class PhoneDetail {
     private String description;
     private Display display;
     private Hardware hardware;
-    private String id;
+    public String id;
     private String[] images;
     private String name;
     private SizeAndWeight sizeAndWeight;
@@ -186,6 +292,7 @@ public class PhoneDetail {
 
 
     public PhoneDetail(String additionalFeatures,
+                       Integer os_id,
                        Android android,
                        String[] availability,
                        Battery battery,
@@ -201,6 +308,7 @@ public class PhoneDetail {
                        Storage storage
     ) {
         this.additionalFeatures = additionalFeatures;
+        this.os_id = os_id;
         this.android = android;
         this.availability = availability;
         this.battery = battery;
@@ -215,6 +323,8 @@ public class PhoneDetail {
         this.sizeAndWeight = sizeAndWeight;
         this.storage = storage;
     }
+
+    public PhoneDetail() {}
 
     public String getAdditionalFeatures() {
         return additionalFeatures;
@@ -257,5 +367,70 @@ public class PhoneDetail {
     }
     public Storage getStorage() {
         return storage;
+    }
+
+
+
+    //
+
+
+    public void setAdditionalFeatures(String additionalFeatures) {
+        this.additionalFeatures = additionalFeatures;
+    }
+
+    public void setOs_id(Integer os_id) {
+        this.os_id = os_id;
+    }
+
+    public void setAndroid(Android android) {
+        this.android = android;
+    }
+
+    public void setAvailability(String[] availability) {
+        this.availability = availability;
+    }
+
+    public void setBattery(Battery battery) {
+        this.battery = battery;
+    }
+
+    public void setCamera(Camera camera) {
+        this.camera = camera;
+    }
+
+    public void setConnectivity(Connectivity connectivity) {
+        this.connectivity = connectivity;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDisplay(Display display) {
+        this.display = display;
+    }
+
+    public void setHardware(Hardware hardware) {
+        this.hardware = hardware;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setImages(String[] images) {
+        this.images = images;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSizeAndWeight(SizeAndWeight sizeAndWeight) {
+        this.sizeAndWeight = sizeAndWeight;
+    }
+
+    public void setStorage(Storage storage) {
+        this.storage = storage;
     }
 }

@@ -7,6 +7,7 @@ public class Droid2GlobalByMotorola extends PhoneDetail {
     }
 
     private Droid2GlobalByMotorola() {
+        /*
         super(
                 "Adobe Flash Player 10, Quadband GSM Worldphone, Advance Business Security, Complex Password Secure, Review & Edit Documents with Quick Office, Personal 3G Mobile Hotspot for up to 5 WiFi enabled Devices, Advanced Social Networking brings all social content into a single homescreen widget",
                 new PhoneDetail.Android(
@@ -70,6 +71,7 @@ public class Droid2GlobalByMotorola extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

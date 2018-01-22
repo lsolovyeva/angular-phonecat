@@ -7,6 +7,7 @@ public class SamsungTransform extends PhoneDetail {
     }
 
     private SamsungTransform() {
+        /*
         super(
                 "Access to Sprint ID Service Packs, front and rear facing cameras\n",
                 new PhoneDetail.Android(
@@ -72,6 +73,7 @@ public class SamsungTransform extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

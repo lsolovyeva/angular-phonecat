@@ -7,6 +7,7 @@ public class NexusS extends PhoneDetail {
     }
 
     private NexusS() {
+        /*
         super(
                 "Contour Display, Near Field Communications (NFC), Three-axis gyroscope, Anti-fingerprint display coating, Internet Calling support (VoIP/SIP)",
                 new PhoneDetail.Android(
@@ -77,6 +78,7 @@ public class NexusS extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

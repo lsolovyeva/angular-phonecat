@@ -7,6 +7,7 @@ public class MotorolaDefyWithMotoblur extends PhoneDetail {
     }
 
     private MotorolaDefyWithMotoblur() {
+        /*
         super(
                 "Blockbuster On Demand\u00ae movies and music downloads with connected music player\nWater-resistant and dustproof",
                 new PhoneDetail.Android(
@@ -72,6 +73,7 @@ public class MotorolaDefyWithMotoblur extends PhoneDetail {
                 )
 
         );
+        */
     }
 }
 

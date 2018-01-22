@@ -5,6 +5,7 @@ import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import repository.PhoneDetailRowMapper;
 import repository.UserRepository;
 import repository.PhoneRowMapper;
 import java.util.Arrays;
@@ -25,11 +26,14 @@ public class PhoneServiceImpl implements PhoneService {
     }
 
     public PhoneDetail getPhoneById(String id) {
-        for (PhoneDetail phone : PhoneServiceImpl.all) {
-            if (id.equals(phone.getId())) return phone;
-        }
-        return null;
+        //for (PhoneDetail phone : PhoneServiceImpl.all) {
+           // if (id.equals(phone.getId()))
+                //return phone;
+                return jdbcTemplate.queryForObject("select * from PhoneDetail where id=?", new Object[]{id}, new PhoneDetailRowMapper());
+
     }
+        //return null;
+    //}
 
 /*
     public static Collection<Phone> allInfo = Arrays.asList(
