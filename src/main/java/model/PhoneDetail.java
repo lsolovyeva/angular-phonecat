@@ -1,6 +1,8 @@
 package model;
 
 
+import java.util.List;
+
 public class PhoneDetail {
 
     public static class Android {
@@ -278,9 +280,8 @@ public class PhoneDetail {
     }
 
     private String additionalFeatures;
-    //private Integer os_id;
     private Android android;
-    private String[] availability;
+    private List<String> availability;
     private Battery battery;
     private Camera camera;
     private Connectivity connectivity;
@@ -288,16 +289,15 @@ public class PhoneDetail {
     private Display display;
     private Hardware hardware;
     public String id;
-    private String[] images;
+    private List<String> images;
     private String name;
     private SizeAndWeight sizeAndWeight;
     private Storage storage;
 
 
     public PhoneDetail(String additionalFeatures,
-                       //Integer os_id,
                        Android android,
-                       String[] availability,
+                       List<String> availability,
                        Battery battery,
                        Camera camera,
                        Connectivity connectivity,
@@ -305,7 +305,7 @@ public class PhoneDetail {
                        Display display,
                        Hardware hardware,
                        String id,
-                       String[] images,
+                       List<String> images,
                        String name,
                        SizeAndWeight sizeAndWeight,
                        Storage storage
@@ -335,7 +335,7 @@ public class PhoneDetail {
     public Android getAndroid() {
         return android;
     }
-    public String[] getAvailability() {
+    public List<String> getAvailability() {
         return availability;
     }
     public Battery getBattery() {
@@ -359,7 +359,7 @@ public class PhoneDetail {
     public String getId() {
         return id;
     }
-    public String[] getImages() {
+    public List<String> getImages() {
         return images;
     }
     public String getName() {
@@ -373,63 +373,45 @@ public class PhoneDetail {
     }
 
 
-
-    //
-
-
     public void setAdditionalFeatures(String additionalFeatures) {
         this.additionalFeatures = additionalFeatures;
     }
-
-
     public void setAndroid(Android android) {
         this.android = android;
     }
-
-    public void setAvailability(String[] availability) {
+    public void setAvailability(List<String> availability) {
         this.availability = availability;
     }
-
     public void setBattery(Battery battery) {
         this.battery = battery;
     }
-
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
-
     public void setConnectivity(Connectivity connectivity) {
         this.connectivity = connectivity;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public void setDisplay(Display display) {
         this.display = display;
     }
-
     public void setHardware(Hardware hardware) {
         this.hardware = hardware;
     }
-
     public void setId(String id) {
         this.id = id;
     }
-
-    public void setImages(String[] images) {
+    public void setImages(List<String> images) {
         this.images = images;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public void setSizeAndWeight(SizeAndWeight sizeAndWeight) {
         this.sizeAndWeight = sizeAndWeight;
     }
-
     public void setStorage(Storage storage) {
         this.storage = storage;
     }

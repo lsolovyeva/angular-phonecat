@@ -1,3 +1,4 @@
+/*
 package service;
 
 import model.*;
@@ -11,3 +12,4 @@ public interface PhoneService {
     Collection<Phone> getAllPhonesInfo();
     PhoneDetail getPhoneById(String id);
 }
+*/

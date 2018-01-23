@@ -4,20 +4,16 @@ import model.PhoneDetail;
 import model.Phone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import repository.User;
-import repository.UserRepository;
-import service.PhoneService;
+import repository.PhoneRepository;
 
 import java.util.Collection;
-import java.util.List;
 
 @RestController
 public class PhoneController {
 
-    @Autowired
+ /*   @Autowired
     private PhoneService phoneServiceImpl;
 
-/*
     @RequestMapping(value = "/phones/phones.json", method = RequestMethod.GET)
     public Collection<Phone> getAllPhonesInfo() {
         return phoneServiceImpl.getAllPhonesInfo();
@@ -30,7 +26,7 @@ public class PhoneController {
     */
 
     @Autowired
-    private UserRepository repo;
+    private PhoneRepository repo;
 
     @RequestMapping(value = "/phones/phones.json", method = RequestMethod.GET)
     public Collection<Phone> getAllPhonesInfo() {

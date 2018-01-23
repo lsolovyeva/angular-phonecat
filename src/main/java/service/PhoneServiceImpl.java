@@ -1,3 +1,5 @@
+/*
+
 package service;
 
 
@@ -7,7 +9,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 import repository.PhoneDetailRowMapper;
-import repository.UserRepository;
 import repository.PhoneRowMapper;
 import java.util.Arrays;
 import java.util.Collection;
@@ -197,6 +198,7 @@ public class PhoneServiceImpl implements PhoneService {
     );
 
 */
+/*
     public static Collection<PhoneDetail> all = Arrays.asList(
         //new PhoneDetail[] {
             MotorolaXoomWithWiFi.newInstance(),
@@ -222,3 +224,4 @@ public class PhoneServiceImpl implements PhoneService {
 
         );
 }
+*/

@@ -1,17 +1,21 @@
 package repository;
 
+import model.Phone;
 import model.PhoneDetail;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
-public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
-// ResultSetExtractor<PhoneDetail>
+public class PhoneDetailRowMapper implements ResultSetExtractor<PhoneDetail>
 {
-    @Override
-    public PhoneDetail mapRow(ResultSet rs, int rowNum) throws SQLException {
 
+
+    @Override
+    public PhoneDetail extractData(ResultSet rs) throws SQLException, DataAccessException {
         PhoneDetail phoneDetail = new PhoneDetail();
         phoneDetail.setAdditionalFeatures(rs.getString("additionalFeatures"));
         phoneDetail.setDescription(rs.getString("description"));
@@ -24,7 +28,6 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
         android.setOs(rs.getString("os_name"));
         phoneDetail.setAndroid(android);
 
-
         PhoneDetail.Battery battery = new PhoneDetail.Battery();
         battery.setStandbyTime(rs.getString("standbyTime"));
         battery.setTalkTime(rs.getString("talkTime"));
@@ -35,7 +38,6 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
         PhoneDetail.Camera camera = new PhoneDetail.Camera();
         camera.setPrimary(rs.getString("primary_name"));
         phoneDetail.setCamera(camera);
-
 
         PhoneDetail.Connectivity connectivity = new PhoneDetail.Connectivity();
         connectivity.setBluetooth(rs.getString("bluetooth_name"));
@@ -51,7 +53,6 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
         display.setScreenSize(rs.getString("screenSize"));
         display.setTouchScreen(rs.getBoolean("touchScreen"));
         phoneDetail.setDisplay(display);
-
 
         PhoneDetail.Hardware hardware = new PhoneDetail.Hardware();
         hardware.setAccelerometer(rs.getBoolean("accelerometer"));
@@ -73,22 +74,18 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
         phoneDetail.setStorage(storage);
 
 
+        ///////////
+        //PhoneDetail phoneDetail = null;
+        List<String> images = phoneDetail.getImages();
+        while (rs.next()) {
+            if (phoneDetail == null)
+                phoneDetail = new PhoneDetail();
+            else
+                //phoneDetail.setImages(resultSet.getString("image"));
+                images.add(rs.getString("images_name"));
+        }
         return phoneDetail;
     }
 
-  /*  @Override
-    public PhoneDetail extractData(ResultSet resultSet) throws SQLException, DataAccessException {
 
-        while (PhoneDetail.images.next) {
-            if (==null)
-                PhoneDetail phoneDetail = new PhoneDetail();
-            else
-             PhoneDetail.add(rs.getString("image");
-        }
-
-        return null;
-
-
-    }
-        */
 }
