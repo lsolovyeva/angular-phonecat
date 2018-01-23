@@ -23,14 +23,23 @@ public class UserRepository {
     public List<Phone> findAll() {
         return jdbcTemplate.query("select * from Phone", new PhoneRowMapper()); }
 
-        /*
     @Transactional(readOnly=true)
-    public User findUserById(int id) {
-        return jdbcTemplate.queryForObject("select * from users where id=?", new Object[]{id}, new UserRowMapper()); }
-*/
-        @Transactional(readOnly=true)
-        public PhoneDetail findPhoneById(Integer id) {
-            return jdbcTemplate.queryForObject("select * from PhoneDetail where id=?", new Object[]{id}, new PhoneDetailRowMapper()); }
+    public PhoneDetail findPhoneById(int id) {
+        return jdbcTemplate.queryForObject("select PhoneDetail.additionalFeatures, os.name as os_name,\n" +
+                "PhoneDetail.ui, PhoneDetail.standbyTime, PhoneDetail.talkTime, PhoneDetail.type,\n" +
+                "`primary`.`name` as primary_name,\n" +
+                "bluetooth.name as bluetooth_name,\n" +
+                "PhoneDetail.cell, PhoneDetail.gps, PhoneDetail.infrared,\n" +
+                "wifi.name as wifi_name,\n" +
+                "PhoneDetail.description, PhoneDetail.screenResolution,PhoneDetail.screenSize,PhoneDetail.touchScreen,\n" +
+                "PhoneDetail.accelerometer,\n" +
+                "audioJack.name as audioJack_name,\n" +
+                "PhoneDetail.cpu, PhoneDetail.fmRadio,PhoneDetail.physicalKeyboard,\n" +
+                        "usb.name as usb_name,\n" +
+                "PhoneDetail.id, PhoneDetail.name, PhoneDetail.weight,PhoneDetail.flash, PhoneDetail.ram from PhoneDetail LEFT JOIN os ON PhoneDetail.os_id=os.id LEFT JOIN `primary`\n" +
+                "ON PhoneDetail.primary_id=`primary`.id LEFT JOIN bluetooth\n" +
+                "ON PhoneDetail.bluetooth_id=bluetooth.id LEFT JOIN wifi ON PhoneDetail.wifi_id=wifi.id LEFT JOIN audioJack ON PhoneDetail.audioJack_id=audioJack.id\n" +
+                "LEFT JOIN usb ON PhoneDetail.usb_id=usb.id where PhoneDetail.id=?", new Object[]{id}, new PhoneDetailRowMapper()); }
 
 
     public User create(final User user)
@@ -56,16 +65,16 @@ public class UserRepository {
 
 
 class UserRowMapper implements RowMapper<User>
-        {
-@Override
-public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+{
+    @Override
+    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
         User user = new User();
         user.setId(rs.getInt("id"));
         user.setName(rs.getString("name"));
         user.setEmail(rs.getString("email"));
         return user;
-        }
-        }
+    }
+}
 
         /*
 class PhoneRowMapper implements RowMapper<Phone>

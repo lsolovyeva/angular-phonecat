@@ -14,7 +14,7 @@ public class PhoneRowMapper implements RowMapper<Phone>
         phone.setAge(rs.getInt("age"));
         phone.setCarrier(rs.getString("carrier"));
         //phone.setId(rs.getString("id"));
-                phone.setId(rs.getInt("id"));
+        phone.setId(rs.getInt("id"));
         phone.setImageUrl(rs.getString("imageUrl"));
         phone.setName(rs.getString("name"));
         phone.setSnippet(rs.getString("snippet"));

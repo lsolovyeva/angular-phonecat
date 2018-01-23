@@ -4,6 +4,7 @@ package service;
 import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 import repository.PhoneDetailRowMapper;
 import repository.UserRepository;
@@ -29,7 +30,8 @@ public class PhoneServiceImpl implements PhoneService {
         //for (PhoneDetail phone : PhoneServiceImpl.all) {
            // if (id.equals(phone.getId()))
                 //return phone;
-                return jdbcTemplate.queryForObject("select * from PhoneDetail where id=?", new Object[]{id}, new PhoneDetailRowMapper());
+                return jdbcTemplate.queryForObject("select * from PhoneDetail LEFT JOIN os \n" +
+                        "ON PhoneDetail.os_id=os.id where id=?", new Object[]{id}, (RowMapper<PhoneDetail>) new PhoneDetailRowMapper());
 
     }
         //return null;

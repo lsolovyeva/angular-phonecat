@@ -69,6 +69,9 @@ public class PhoneDetail {
             this.features = features;
             this.primary = primary;
         }
+
+        public Camera() {}
+
         public String[] getFeatures() {
             return features;
         }
@@ -275,7 +278,7 @@ public class PhoneDetail {
     }
 
     private String additionalFeatures;
-    private Integer os_id;
+    //private Integer os_id;
     private Android android;
     private String[] availability;
     private Battery battery;
@@ -292,7 +295,7 @@ public class PhoneDetail {
 
 
     public PhoneDetail(String additionalFeatures,
-                       Integer os_id,
+                       //Integer os_id,
                        Android android,
                        String[] availability,
                        Battery battery,
@@ -308,7 +311,7 @@ public class PhoneDetail {
                        Storage storage
     ) {
         this.additionalFeatures = additionalFeatures;
-        this.os_id = os_id;
+        //this.os_id = os_id;
         this.android = android;
         this.availability = availability;
         this.battery = battery;
@@ -378,9 +381,6 @@ public class PhoneDetail {
         this.additionalFeatures = additionalFeatures;
     }
 
-    public void setOs_id(Integer os_id) {
-        this.os_id = os_id;
-    }
 
     public void setAndroid(Android android) {
         this.android = android;

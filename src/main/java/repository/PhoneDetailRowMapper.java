@@ -1,6 +1,5 @@
 package repository;
 
-import model.Phone;
 import model.PhoneDetail;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -8,13 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
+// ResultSetExtractor<PhoneDetail>
 {
     @Override
     public PhoneDetail mapRow(ResultSet rs, int rowNum) throws SQLException {
 
         PhoneDetail phoneDetail = new PhoneDetail();
         phoneDetail.setAdditionalFeatures(rs.getString("additionalFeatures"));
-        phoneDetail.setOs_id(rs.getInt("os_id"));
         phoneDetail.setDescription(rs.getString("description"));
         phoneDetail.setName(rs.getString("name"));
 
@@ -22,7 +21,7 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
 
         PhoneDetail.Android android = new PhoneDetail.Android();
         android.setUi(rs.getString("ui"));
-        //android.setOs(rs.getString("os"));
+        android.setOs(rs.getString("os_name"));
         phoneDetail.setAndroid(android);
 
 
@@ -33,10 +32,17 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
         phoneDetail.setBattery(battery);
 
 
+        PhoneDetail.Camera camera = new PhoneDetail.Camera();
+        camera.setPrimary(rs.getString("primary_name"));
+        phoneDetail.setCamera(camera);
+
+
         PhoneDetail.Connectivity connectivity = new PhoneDetail.Connectivity();
+        connectivity.setBluetooth(rs.getString("bluetooth_name"));
         connectivity.setCell(rs.getString("cell"));
         connectivity.setGps(rs.getBoolean("gps"));
         connectivity.setInfrared(rs.getBoolean("infrared"));
+        connectivity.setWifi(rs.getString("wifi_name"));
         phoneDetail.setConnectivity(connectivity);
 
 
@@ -49,9 +55,11 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
 
         PhoneDetail.Hardware hardware = new PhoneDetail.Hardware();
         hardware.setAccelerometer(rs.getBoolean("accelerometer"));
+        hardware.setAudioJack(rs.getString("audioJack_name"));
         hardware.setCpu(rs.getString("cpu"));
         hardware.setFmRadio(rs.getBoolean("fmRadio"));
         hardware.setPhysicalKeyboard(rs.getBoolean("physicalKeyboard"));
+        hardware.setUsb(rs.getString("usb_name"));
         phoneDetail.setHardware(hardware);
 
 
@@ -67,4 +75,20 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail>
 
         return phoneDetail;
     }
+
+  /*  @Override
+    public PhoneDetail extractData(ResultSet resultSet) throws SQLException, DataAccessException {
+
+        while (PhoneDetail.images.next) {
+            if (==null)
+                PhoneDetail phoneDetail = new PhoneDetail();
+            else
+             PhoneDetail.add(rs.getString("image");
+        }
+
+        return null;
+
+
+    }
+        */
 }

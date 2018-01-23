@@ -2,34 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="610612dd-2918-4899-8498-f951f5976fdc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PhoneController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/PhoneController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DellStreak7.java" afterPath="$PROJECT_DIR$/src/main/java/model/DellStreak7.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DellVenue.java" afterPath="$PROJECT_DIR$/src/main/java/model/DellVenue.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Droid2GlobalByMotorola.java" afterPath="$PROJECT_DIR$/src/main/java/model/Droid2GlobalByMotorola.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DroidProByMotorola.java" afterPath="$PROJECT_DIR$/src/main/java/model/DroidProByMotorola.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/LgAxis.java" afterPath="$PROJECT_DIR$/src/main/java/model/LgAxis.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaAtrix4g.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaAtrix4g.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaBravoWithMotoblur.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaBravoWithMotoblur.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaCharmWithMotoblur.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaCharmWithMotoblur.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaDefyWithMotoblur.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaDefyWithMotoblur.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaXoom.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaXoom.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MotorolaXoomWithWiFi.java" afterPath="$PROJECT_DIR$/src/main/java/model/MotorolaXoomWithWiFi.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/NexusS.java" afterPath="$PROJECT_DIR$/src/main/java/model/NexusS.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" afterPath="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SamsungGalaxyTab.java" afterPath="$PROJECT_DIR$/src/main/java/model/SamsungGalaxyTab.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SamsungGem.java" afterPath="$PROJECT_DIR$/src/main/java/model/SamsungGem.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SamsungMesmerizeAGalaxySPhone.java" afterPath="$PROJECT_DIR$/src/main/java/model/SamsungMesmerizeAGalaxySPhone.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SamsungShowcaseAGalaxySPhone.java" afterPath="$PROJECT_DIR$/src/main/java/model/SamsungShowcaseAGalaxySPhone.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SamsungTransform.java" afterPath="$PROJECT_DIR$/src/main/java/model/SamsungTransform.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SanyoZio.java" afterPath="$PROJECT_DIR$/src/main/java/model/SanyoZio.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TMobileG2.java" afterPath="$PROJECT_DIR$/src/main/java/model/TMobileG2.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TMobileMytouch4g.java" afterPath="$PROJECT_DIR$/src/main/java/model/TMobileMytouch4g.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" afterPath="$PROJECT_DIR$/target/classes/data.sql" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Android.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Android.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Battery.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Battery.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Camera.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Camera.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Connectivity.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Connectivity.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Display.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Display.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Hardware.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Hardware.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$SizeAndWeight.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$SizeAndWeight.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Storage.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail$Storage.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PhoneDetail.class" afterPath="$PROJECT_DIR$/target/classes/model/PhoneDetail.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/PhoneDetailRowMapper.class" afterPath="$PROJECT_DIR$/target/classes/repository/PhoneDetailRowMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/repository/UserRepository.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PhoneServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/PhoneServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,26 +44,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PhoneServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java">
+      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/UserRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2867">
-              <caret line="210" column="24" lean-forward="false" selection-start-line="210" selection-start-column="24" selection-end-line="210" selection-end-column="24" />
+            <state relative-caret-position="302">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1516621590000" expanded="true" signature="603:622" ph="select * fro... Phone" />
-                <marker date="1516621590000" expanded="true" signature="891:927" ph="select * fro... PhoneDetail" />
-                <marker date="1516621590000" expanded="false" signature="1092:1179" ph="//..." />
+                <element signature="e#2483#2900#0" expanded="true" />
+                <element signature="e#2899#2900#0" expanded="true" />
+                <element signature="method#mapRow#0;class#UserRowMapper#0" expanded="false" />
+                <marker date="1516703296000" expanded="true" signature="763:782" ph="select * fro... Phone" />
+                <marker date="1516703296000" expanded="true" signature="936:2207" ph="select Phone... PhoneDetail" />
+                <marker date="1516703296000" expanded="true" signature="936:2230" ph="select Phone... PhoneDetail" />
+                <marker date="1516703296000" expanded="true" signature="2358:2399" ph="insert into users... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneDetailRowMapper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PhoneDetailRowMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -82,20 +75,9 @@
       <file leaf-file-name="PhoneDetail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="310" column="8" lean-forward="true" selection-start-line="310" selection-start-column="8" selection-end-line="310" selection-end-column="8" />
-              <folding>
-                <element signature="class#Android#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Battery#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Camera#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Connectivity#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Display#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Hardware#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#SizeAndWeight#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="class#Storage#0;class#PhoneDetail#0" expanded="false" />
-                <element signature="e#10213#10214#0" expanded="true" />
-                <element signature="e#10251#10252#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="189">
+              <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,10 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>conf</find>
-      <find>contr</find>
-      <find>img/</find>
-      <find>div</find>
       <find>phones</find>
       <find>PhoneListController</find>
       <find>imageUrl</find>
@@ -145,6 +123,10 @@
       <find>setAdditionalFeatures</find>
       <find>xoom</find>
       <find>stand</find>
+      <find>images</find>
+      <find>prima</find>
+      <find>wifi</find>
+      <find>aud</find>
     </findStrings>
     <replaceStrings>
       <replace>app/img/</replace>
@@ -199,13 +181,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Phone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/PhoneController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MotorolaXoom.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/LgAxis.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/SamsungGalaxyTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/TMobileMytouch4g.java" />
@@ -225,7 +203,11 @@
         <option value="$PROJECT_DIR$/src/main/java/model/SamsungTransform.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/NexusS.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/MotorolaXoomWithWiFi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/UserRepository.java" />
       </list>
     </option>
   </component>
@@ -274,8 +256,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="207" />
-    <option name="y" value="29" />
+    <option name="x" value="128" />
+    <option name="y" value="23" />
     <option name="width" value="1046" />
     <option name="height" value="709" />
   </component>
@@ -317,7 +299,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -349,14 +331,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,14 +347,6 @@
               <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -390,22 +356,13 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="phone-list" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -641,7 +598,8 @@
       <workItem from="1516101618947" duration="1683000" />
       <workItem from="1516105201849" duration="6533000" />
       <workItem from="1516360268576" duration="8095000" />
-      <workItem from="1516617372127" duration="10973000" />
+      <workItem from="1516617372127" duration="15925000" />
+      <workItem from="1516702137638" duration="1207000" />
     </task>
     <servers />
   </component>
@@ -678,10 +636,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106914000" />
+    <option name="totallyTimeSpent" value="113073000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="207" y="29" width="1046" height="709" extended-state="0" />
+    <frame x="128" y="23" width="1046" height="709" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27866668" sideWeight="0.503125" order="7" side_tool="true" content_ui="tabs" />
@@ -700,11 +659,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44740972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26530612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22753346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22753346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -858,13 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="90" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -890,7 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="27" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -898,7 +849,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,51 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/PhoneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/PhoneController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1178#1179#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="method#mapRow#0;class#UserRowMapper#0" expanded="false" />
-            <marker date="1516621071000" expanded="true" signature="763:782" ph="select * fro... Phone" />
-            <marker date="1516621071000" expanded="true" signature="939:969" ph="select * fro... users" />
-            <marker date="1516621071000" expanded="true" signature="1158:1194" ph="select * fro... phone" />
-            <marker date="1516621071000" expanded="true" signature="1322:1363" ph="insert into users... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,15 +870,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="38" lean-forward="false" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -982,20 +878,8 @@
         <state relative-caret-position="210">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1516621758000" expanded="true" signature="459:495" ph="select * fro... PhoneDetail" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="623" column="31" lean-forward="true" selection-start-line="623" selection-start-column="31" selection-end-line="623" selection-end-column="31" />
-          <folding>
-            <marker date="1516627810000" expanded="true" signature="0:68" ph="insert into users... " />
-            <marker date="1516627810000" expanded="true" signature="70:142" ph="insert into users... " />
-            <marker date="1516627810000" expanded="true" signature="144:214" ph="insert into users... " />
           </folding>
         </state>
       </provider>
@@ -1004,14 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/SamsungGalaxyTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="80" column="10" lean-forward="false" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1152,43 +1028,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="310" column="8" lean-forward="true" selection-start-line="310" selection-start-column="8" selection-end-line="310" selection-end-column="8" />
-          <folding>
-            <element signature="class#Android#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Battery#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Camera#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Connectivity#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Display#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Hardware#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#SizeAndWeight#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Storage#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="e#10213#10214#0" expanded="true" />
-            <element signature="e#10251#10252#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="435">
+          <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/PhoneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9345">
+          <caret line="623" column="31" lean-forward="true" selection-start-line="623" selection-start-column="31" selection-end-line="623" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/PhoneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/SamsungGalaxyTab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="80" column="10" lean-forward="false" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2867">
-          <caret line="210" column="24" lean-forward="false" selection-start-line="210" selection-start-column="24" selection-end-line="210" selection-end-column="24" />
+        <state relative-caret-position="353">
+          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1516621590000" expanded="true" signature="603:622" ph="select * fro... Phone" />
-            <marker date="1516621590000" expanded="true" signature="891:927" ph="select * fro... PhoneDetail" />
-            <marker date="1516621590000" expanded="false" signature="1092:1179" ph="//..." />
+            <marker date="1516638280000" expanded="true" signature="651:670" ph="select * fro... Phone" />
+            <marker date="1516638280000" expanded="true" signature="939:1046" ph="select * fro... PhoneDetail" />
+            <marker date="1516638280000" expanded="false" signature="1236:1323" ph="//..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="178" column="26" lean-forward="false" selection-start-line="178" selection-start-column="23" selection-end-line="178" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#2483#2900#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
+            <element signature="method#mapRow#0;class#UserRowMapper#0" expanded="false" />
+            <marker date="1516703296000" expanded="true" signature="763:782" ph="select * fro... Phone" />
+            <marker date="1516703296000" expanded="true" signature="936:2207" ph="select Phone... PhoneDetail" />
+            <marker date="1516703296000" expanded="true" signature="936:2230" ph="select Phone... PhoneDetail" />
+            <marker date="1516703296000" expanded="true" signature="2358:2399" ph="insert into users... " />
+          </folding>
         </state>
       </provider>
     </entry>
