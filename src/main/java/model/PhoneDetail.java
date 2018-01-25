@@ -65,23 +65,23 @@ public class PhoneDetail {
     }
 
     public static class Camera {
-        private String[] features;
+        private List<String> features;
         private String primary;
-        public Camera(String[] features, String primary) {
+        public Camera(List<String> features, String primary) {
             this.features = features;
             this.primary = primary;
         }
 
         public Camera() {}
 
-        public String[] getFeatures() {
+        public List<String> getFeatures() {
             return features;
         }
         public String getPrimary() {
             return primary;
         }
 
-        public void setFeatures(String[] features) {
+        public void setFeatures(List<String> features) {
             this.features = features;
         }
         public void setPrimary(String primary) {
@@ -230,24 +230,24 @@ public class PhoneDetail {
     }
 
     public static class SizeAndWeight {
-        private String[] dimensions;
+        private List<String> dimentions;
         private String weight;
-        public SizeAndWeight(String[] dimensions, String weight) {
-            this.dimensions = dimensions;
+        public SizeAndWeight(List<String> dimentions, String weight) {
+            this.dimentions = dimentions;
             this.weight = weight;
         }
 
         public SizeAndWeight() {}
 
-        public String[] getDimensions() {
-            return dimensions;
+        public List<String> getDimensions() {
+            return dimentions;
         }
         public String getWeight() {
             return weight;
         }
 
-        public void setDimensions(String[] dimensions) {
-            this.dimensions = dimensions;
+        public void setDimensions(List<String> dimentions) {
+            this.dimentions = dimentions;
         }
         public void setWeight(String weight) {
             this.weight = weight;

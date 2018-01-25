@@ -1,21 +1,28 @@
 package repository;
 
-import model.Phone;
 import model.PhoneDetail;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class PhoneDetailRowMapper implements ResultSetExtractor<PhoneDetail>
+public class PhoneDetailRowMapper implements
+        RowMapper<PhoneDetail>
+        //ResultSetExtractor<PhoneDetail>
 {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
+    PhoneDetailRowMapper(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     @Override
-    public PhoneDetail extractData(ResultSet rs) throws SQLException, DataAccessException {
+    public PhoneDetail mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
         PhoneDetail phoneDetail = new PhoneDetail();
         phoneDetail.setAdditionalFeatures(rs.getString("additionalFeatures"));
         phoneDetail.setDescription(rs.getString("description"));
@@ -74,18 +81,79 @@ public class PhoneDetailRowMapper implements ResultSetExtractor<PhoneDetail>
         phoneDetail.setStorage(storage);
 
 
+
+
         ///////////
-        //PhoneDetail phoneDetail = null;
-        List<String> images = phoneDetail.getImages();
-        while (rs.next()) {
-            if (phoneDetail == null)
-                phoneDetail = new PhoneDetail();
-            else
-                //phoneDetail.setImages(resultSet.getString("image"));
-                images.add(rs.getString("images_name"));
-        }
+        int id = rs.getInt("PhoneDetail.id");
+        List<String> images = jdbcTemplate.query("SELECT images.name as images_name FROM PHONE_IMAGES INNER JOIN IMAGES ON\n" +
+                "                phonedetail_id=?\n" +
+                "                AND\n" +
+                "                images_id= images.id", new Object[]{id}, new ImageRowMapper());
+
+        phoneDetail.setImages(images);
+
+
+        List<String> availability = jdbcTemplate.query("SELECT availability.name as availability_name FROM PHONE_availability INNER JOIN availability ON\n" +
+                "                phonedetail_id=?\n" +
+                "                AND\n" +
+                "                availability_id= availability.id", new Object[]{id}, new AvailabilityRowMapper());
+
+        phoneDetail.setAvailability(availability);
+
+
+        List<String> features = jdbcTemplate.query("SELECT features.name as features_name FROM PHONE_features INNER JOIN features ON\n" +
+                "                phonedetail_id=?\n" +
+                "                AND\n" +
+                "                features_id= features.id", new Object[]{id}, new FeaturesRowMapper());
+
+        camera.setFeatures(features);
+
+
+        List<String> dimentions = jdbcTemplate.query("SELECT dimentions.name as dimentions_name FROM PHONE_dimentions INNER JOIN dimentions ON\n" +
+                "                phonedetail_id=?\n" +
+                "                AND\n" +
+                "                dimentions_id= dimentions.id", new Object[]{id}, new DimensionsRowMapper());
+
+        sizeAndWeight.setDimensions(dimentions);
+
+
         return phoneDetail;
     }
 
 
+    private static class ImageRowMapper implements RowMapper<String> {
+
+        @Override
+        public String mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
+
+            return rs.getString("images_name");
+        }
+    }
+
+    private static class AvailabilityRowMapper implements RowMapper<String> {
+
+        @Override
+        public String mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
+
+            return rs.getString("availability_name");
+        }
+    }
+
+    private static class FeaturesRowMapper implements RowMapper<String> {
+
+        @Override
+        public String mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
+
+            return rs.getString("features_name");
+        }
+    }
+
+    private static class DimensionsRowMapper implements RowMapper<String> {
+
+        @Override
+        public String mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
+
+            return rs.getString("dimentions_name");
+        }
+    }
 }
