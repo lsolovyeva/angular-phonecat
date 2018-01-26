@@ -14,11 +14,13 @@ public class PhoneDetail {
             this.ui = ui;
         }
 
-        public Android() {}
+        public Android() {
+        }
 
         public String getOs() {
             return os;
         }
+
         public String getUi() {
             return ui;
         }
@@ -26,6 +28,7 @@ public class PhoneDetail {
         public void setOs(String os) {
             this.os = os;
         }
+
         public void setUi(String ui) {
             this.ui = ui;
         }
@@ -35,20 +38,24 @@ public class PhoneDetail {
         private String standbyTime;
         private String talkTime;
         private String type;
+
         public Battery(String standbyTime, String talkTime, String type) {
             this.standbyTime = standbyTime;
             this.talkTime = talkTime;
             this.type = type;
         }
 
-        public  Battery() {}
+        public Battery() {
+        }
 
         public String getStandbyTime() {
             return standbyTime;
         }
+
         public String getTalkTime() {
             return talkTime;
         }
+
         public String getType() {
             return type;
         }
@@ -56,40 +63,46 @@ public class PhoneDetail {
         public void setStandbyTime(String standbyTime) {
             this.standbyTime = standbyTime;
         }
+
         public void setTalkTime(String talkTime) {
             this.talkTime = talkTime;
         }
+
         public void setType(String type) {
             this.type = type;
         }
     }
 
     public static class Camera {
-        private String[] features;
+        private List<String> features;
         private String primary;
-        public Camera(String[] features, String primary) {
+
+        public Camera(List<String> features, String primary) {
             this.features = features;
             this.primary = primary;
         }
 
-        public Camera() {}
+        public Camera() {
+        }
 
-        public String[] getFeatures() {
+        public List<String> getFeatures() {
             return features;
         }
+
         public String getPrimary() {
             return primary;
         }
 
-        public void setFeatures(String[] features) {
+        public void setFeatures(List<String> features) {
             this.features = features;
         }
+
         public void setPrimary(String primary) {
             this.primary = primary;
         }
     }
 
-    public static class Connectivity{
+    public static class Connectivity {
         private String bluetooth;
         private String cell;
         private Boolean gps;
@@ -104,20 +117,25 @@ public class PhoneDetail {
             this.wifi = wifi;
         }
 
-        public Connectivity() {}
+        public Connectivity() {
+        }
 
         public String getBluetooth() {
             return bluetooth;
         }
+
         public String getCell() {
             return cell;
         }
+
         public Boolean isGps() {
             return gps;
         }
+
         public Boolean isInfrared() {
             return infrared;
         }
+
         public String getWifi() {
             return wifi;
         }
@@ -125,15 +143,19 @@ public class PhoneDetail {
         public void setBluetooth(String bluetooth) {
             this.bluetooth = bluetooth;
         }
+
         public void setCell(String cell) {
             this.cell = cell;
         }
+
         public void setGps(Boolean gps) {
             this.gps = gps;
         }
+
         public void setInfrared(Boolean infrared) {
             this.infrared = infrared;
         }
+
         public void setWifi(String wifi) {
             this.wifi = wifi;
         }
@@ -143,20 +165,24 @@ public class PhoneDetail {
         private String screenResolution;
         private String screenSize;
         private Boolean touchScreen;
+
         public Display(String screenResolution, String screenSize, Boolean touchScreen) {
             this.screenResolution = screenResolution;
             this.screenSize = screenSize;
             this.touchScreen = touchScreen;
         }
 
-        public Display() {}
+        public Display() {
+        }
 
         public String getScreenResolution() {
             return screenResolution;
         }
+
         public String getScreenSize() {
             return screenSize;
         }
+
         public Boolean isTouchScreen() {
             return touchScreen;
         }
@@ -164,9 +190,11 @@ public class PhoneDetail {
         public void setScreenResolution(String screenResolution) {
             this.screenResolution = screenResolution;
         }
+
         public void setScreenSize(String screenSize) {
             this.screenSize = screenSize;
         }
+
         public void setTouchScreen(Boolean touchScreen) {
             this.touchScreen = touchScreen;
         }
@@ -179,6 +207,7 @@ public class PhoneDetail {
         private Boolean fmRadio;
         private Boolean physicalKeyboard;
         private String usb;
+
         public Hardware(Boolean accelerometer, String audioJack, String cpu, Boolean fmRadio, Boolean physicalKeyboard, String usb) {
             this.accelerometer = accelerometer;
             this.audioJack = audioJack;
@@ -188,23 +217,29 @@ public class PhoneDetail {
             this.usb = usb;
         }
 
-        public Hardware() {}
+        public Hardware() {
+        }
 
         public Boolean isAccelerometer() {
             return accelerometer;
         }
+
         public String getAudioJack() {
             return audioJack;
         }
+
         public String getCpu() {
             return cpu;
         }
+
         public Boolean isFmRadio() {
             return fmRadio;
         }
+
         public Boolean isPhysicalKeyboard() {
             return physicalKeyboard;
         }
+
         public String getUsb() {
             return usb;
         }
@@ -212,43 +247,52 @@ public class PhoneDetail {
         public void setAccelerometer(Boolean accelerometer) {
             this.accelerometer = accelerometer;
         }
+
         public void setAudioJack(String audioJack) {
             this.audioJack = audioJack;
         }
+
         public void setCpu(String cpu) {
             this.cpu = cpu;
         }
+
         public void setFmRadio(Boolean fmRadio) {
             this.fmRadio = fmRadio;
         }
+
         public void setPhysicalKeyboard(Boolean physicalKeyboard) {
             this.physicalKeyboard = physicalKeyboard;
         }
+
         public void setUsb(String usb) {
             this.usb = usb;
         }
     }
 
     public static class SizeAndWeight {
-        private String[] dimensions;
+        private List<String> dimensions;
         private String weight;
-        public SizeAndWeight(String[] dimensions, String weight) {
+
+        public SizeAndWeight(List<String> dimensions, String weight) {
             this.dimensions = dimensions;
             this.weight = weight;
         }
 
-        public SizeAndWeight() {}
+        public SizeAndWeight() {
+        }
 
-        public String[] getDimensions() {
+        public List<String> getDimensions() {
             return dimensions;
         }
+
         public String getWeight() {
             return weight;
         }
 
-        public void setDimensions(String[] dimensions) {
+        public void setDimensions(List<String> dimensions) {
             this.dimensions = dimensions;
         }
+
         public void setWeight(String weight) {
             this.weight = weight;
         }
@@ -257,16 +301,19 @@ public class PhoneDetail {
     public static class Storage {
         String flash;
         String ram;
+
         public Storage(String flash, String ram) {
             this.flash = flash;
             this.ram = ram;
         }
 
-        public  Storage() {}
+        public Storage() {
+        }
 
         public String getFlash() {
             return flash;
         }
+
         public String getRam() {
             return ram;
         }
@@ -274,6 +321,7 @@ public class PhoneDetail {
         public void setFlash(String flash) {
             this.flash = flash;
         }
+
         public void setRam(String ram) {
             this.ram = ram;
         }
@@ -311,7 +359,6 @@ public class PhoneDetail {
                        Storage storage
     ) {
         this.additionalFeatures = additionalFeatures;
-        //this.os_id = os_id;
         this.android = android;
         this.availability = availability;
         this.battery = battery;
@@ -327,47 +374,61 @@ public class PhoneDetail {
         this.storage = storage;
     }
 
-    public PhoneDetail() {}
+    public PhoneDetail() {
+    }
 
     public String getAdditionalFeatures() {
         return additionalFeatures;
     }
+
     public Android getAndroid() {
         return android;
     }
+
     public List<String> getAvailability() {
         return availability;
     }
+
     public Battery getBattery() {
         return battery;
     }
+
     public Camera getCamera() {
         return camera;
     }
+
     public Connectivity getConnectivity() {
         return connectivity;
     }
+
     public String getDescription() {
         return description;
     }
+
     public Display getDisplay() {
         return display;
     }
+
     public Hardware getHardware() {
         return hardware;
     }
+
     public String getId() {
         return id;
     }
+
     public List<String> getImages() {
         return images;
     }
+
     public String getName() {
         return name;
     }
+
     public SizeAndWeight getSizeAndWeight() {
         return sizeAndWeight;
     }
+
     public Storage getStorage() {
         return storage;
     }
@@ -376,42 +437,55 @@ public class PhoneDetail {
     public void setAdditionalFeatures(String additionalFeatures) {
         this.additionalFeatures = additionalFeatures;
     }
+
     public void setAndroid(Android android) {
         this.android = android;
     }
+
     public void setAvailability(List<String> availability) {
         this.availability = availability;
     }
+
     public void setBattery(Battery battery) {
         this.battery = battery;
     }
+
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
+
     public void setConnectivity(Connectivity connectivity) {
         this.connectivity = connectivity;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
     public void setDisplay(Display display) {
         this.display = display;
     }
+
     public void setHardware(Hardware hardware) {
         this.hardware = hardware;
     }
+
     public void setId(String id) {
         this.id = id;
     }
+
     public void setImages(List<String> images) {
         this.images = images;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public void setSizeAndWeight(SizeAndWeight sizeAndWeight) {
         this.sizeAndWeight = sizeAndWeight;
     }
+
     public void setStorage(Storage storage) {
         this.storage = storage;
     }

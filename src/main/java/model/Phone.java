@@ -8,17 +8,16 @@ import lombok.Getter;
 public class Phone {
     private int age;
     private String carrier;
-    //private String id;
     private Integer id;
     private String imageUrl;
     private String name;
     private String snippet;
     private Integer phonedetail_id;
 
-public Phone () {}
+    public Phone() {
+    }
 
-    //public Phone(int age,  String id, String imageUrl, String name, String snippet) {
-    public Phone(int age,  Integer id, String imageUrl, String name, String snippet) {
+    public Phone(int age, Integer id, String imageUrl, String name, String snippet) {
 
         this.age = age;
         this.id = id;
@@ -27,7 +26,6 @@ public Phone () {}
         this.snippet = snippet;
     }
 
-    //public Phone(int age, String carrier, String id, String imageUrl, String name, String snippet) {
     public Phone(int age, String carrier, Integer id, String imageUrl, String name, String snippet) {
         this.age = age;
         this.carrier = carrier;
@@ -36,25 +34,6 @@ public Phone () {}
         this.name = name;
         this.snippet = snippet;
     }
-
-//    public int getAge() {
-//        return age;
-//    }
-//    public String getCarrier() {
-//        return carrier;
-//    }
-//    public String getId() {
-//        return id;
-//    }
-//    public String getImageUrl() {
-//        return imageUrl;
-//    }
-//    public String getName() {
-//        return name;
-//    }
-//    public String getSnippet() {
-//        return snippet;
-//    }
 
 
     public void setAge(int age) {
@@ -65,7 +44,6 @@ public Phone () {}
         this.carrier = carrier;
     }
 
-    //public void setId(String id) {
     public void setId(Integer id) {
         this.id = id;
     }
@@ -95,7 +73,6 @@ public Phone () {}
         return carrier;
     }
 
-    //public String getId() {
     public Integer getId() {
         return id;
     }

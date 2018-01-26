@@ -4,7 +4,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@ComponentScan({"controller","model", "service", "repository"})
+@ComponentScan({"controller", "model", "service", "repository"})
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
