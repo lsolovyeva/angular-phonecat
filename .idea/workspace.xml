@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="610612dd-2918-4899-8498-f951f5976fdc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/PhoneService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/PhoneController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/PhoneController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" afterPath="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java" afterPath="$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PhoneTests.java" afterPath="$PROJECT_DIR$/src/test/java/PhoneTests.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/repository/PhoneRepository.class" afterPath="$PROJECT_DIR$/target/classes/repository/PhoneRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PhoneTests.class" afterPath="$PROJECT_DIR$/target/test-classes/PhoneTests.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,35 +36,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PhoneRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java">
+      <file leaf-file-name="PhoneDetailRowMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            <state relative-caret-position="249">
+              <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               <folding>
-                <marker date="1517236032000" expanded="true" signature="466:485" ph="select * fro... Phone" />
-                <marker date="1517236032000" expanded="true" signature="609:1895" ph="select Phone... PhoneDetail" />
+                <marker date="1517242783000" expanded="true" signature="3557:3737" ph="SELECT image... PHONE_IMAGES" />
+                <marker date="1517242783000" expanded="true" signature="3877:4093" ph="SELECT avail... PHONE_availability" />
+                <marker date="1517242783000" expanded="true" signature="4250:4442" ph="SELECT featu... PHONE_features" />
+                <marker date="1517242783000" expanded="true" signature="4584:4788" ph="SELECT dimen... PHONE_dimentions" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/PhoneController.java">
+      <file leaf-file-name="PhoneDetail.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PhoneTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="class#Battery#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#Camera#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#Connectivity#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#Display#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#Hardware#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#SizeAndWeight#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="class#Storage#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#additionalFeatures#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#availability#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#battery#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#camera#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#connectivity#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#description#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#display#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#hardware#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#id#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#images#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#name#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#sizeAndWeight#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="method#storage#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+                <element signature="e#13694#13695#0" expanded="true" />
+                <element signature="e#13746#13747#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,8 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/java/model/MotorolaXoomWithWiFi.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/SanyoZio.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Phone.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -203,6 +208,8 @@
         <option value="$PROJECT_DIR$/src/main/java/service/PhoneServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/PhoneTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/PhoneDetail.java" />
       </list>
     </option>
   </component>
@@ -250,9 +257,9 @@
     <handled-path value="$PROJECT_DIR$/node/node_modules" />
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="23" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="162" />
+    <option name="y" value="28" />
     <option name="width" value="1175" />
     <option name="height" value="709" />
   </component>
@@ -325,14 +332,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -342,21 +341,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhoneApp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhoneApp" type="b2602c69:ProjectViewProjectNode" />
@@ -656,7 +640,7 @@
       <workItem from="1516617372127" duration="15925000" />
       <workItem from="1516702137638" duration="7208000" />
       <workItem from="1516962293720" duration="4873000" />
-      <workItem from="1517225366075" duration="6517000" />
+      <workItem from="1517225366075" duration="9294000" />
     </task>
     <servers />
   </component>
@@ -693,10 +677,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130464000" />
+    <option name="totallyTimeSpent" value="133241000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="23" width="1175" height="709" extended-state="1" />
+    <frame x="162" y="28" width="1175" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -716,12 +700,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13186814" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21531914" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -885,23 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-949">
-          <caret line="345" column="4" lean-forward="false" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
-          <folding>
-            <element signature="class#Android#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Battery#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Camera#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Connectivity#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Display#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Hardware#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#SizeAndWeight#0;class#PhoneDetail#0" expanded="false" />
-            <element signature="class#Storage#0;class#PhoneDetail#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/javascript/phone-list/phone-list.component.spec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -934,16 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Phone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc;n#Phone#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRowMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -957,21 +914,7 @@
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1517235761000" expanded="true" signature="3238:3418" ph="SELECT image... PHONE_IMAGES" />
-            <marker date="1517235761000" expanded="true" signature="3558:3774" ph="SELECT avail... PHONE_availability" />
-            <marker date="1517235761000" expanded="true" signature="3931:4123" ph="SELECT featu... PHONE_features" />
-            <marker date="1517235761000" expanded="true" signature="4265:4469" ph="SELECT dimen... PHONE_dimentions" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -981,36 +924,90 @@
         <state relative-caret-position="510">
           <caret line="36" column="121" lean-forward="false" selection-start-line="36" selection-start-column="121" selection-end-line="36" selection-end-column="121" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1517235761000" expanded="true" signature="514:533" ph="SELECT * FRO... Phone" />
             <marker date="1517235761000" expanded="true" signature="657:1943" ph="SELECT Phone... PhoneDetail" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PhoneTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="195">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <marker date="1517236032000" expanded="true" signature="466:485" ph="select * fro... Phone" />
+            <marker date="1517236032000" expanded="true" signature="609:1895" ph="select Phone... PhoneDetail" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/PhoneController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/PhoneTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="435">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Phone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
-            <marker date="1517236032000" expanded="true" signature="466:485" ph="select * fro... Phone" />
-            <marker date="1517236032000" expanded="true" signature="609:1895" ph="select Phone... PhoneDetail" />
+            <element signature="n#!!doc;n#Phone#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/repository/PhoneDetailRowMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <marker date="1517242783000" expanded="true" signature="3557:3737" ph="SELECT image... PHONE_IMAGES" />
+            <marker date="1517242783000" expanded="true" signature="3877:4093" ph="SELECT avail... PHONE_availability" />
+            <marker date="1517242783000" expanded="true" signature="4250:4442" ph="SELECT featu... PHONE_features" />
+            <marker date="1517242783000" expanded="true" signature="4584:4788" ph="SELECT dimen... PHONE_dimentions" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/PhoneDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="class#Battery#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#Camera#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#Connectivity#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#Display#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#Hardware#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#SizeAndWeight#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="class#Storage#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#additionalFeatures#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#availability#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#battery#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#camera#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#connectivity#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#description#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#display#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#hardware#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#id#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#images#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#name#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#sizeAndWeight#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="method#storage#0;class#PhoneDetailBuilder#0;class#PhoneDetail#0" expanded="false" />
+            <element signature="e#13694#13695#0" expanded="true" />
+            <element signature="e#13746#13747#0" expanded="true" />
           </folding>
         </state>
       </provider>

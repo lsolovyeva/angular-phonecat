@@ -1,5 +1,6 @@
 package repository;
 
+import model.Phone;
 import model.PhoneDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -20,11 +21,17 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail> {
 
     @Override
     public PhoneDetail mapRow(ResultSet rs, int i) throws SQLException, DataAccessException {
+        PhoneDetail.PhoneDetailBuilder phoneDetail = new PhoneDetail.PhoneDetailBuilder(
+                rs.getString("additionalFeatures"),
+                rs.getString("description"),
+                rs.getString("name")
+        ).android(rs.getString("ui"),rs.getString("os_name"));
+        /*
         PhoneDetail phoneDetail = new PhoneDetail();
         phoneDetail.setAdditionalFeatures(rs.getString("additionalFeatures"));
         phoneDetail.setDescription(rs.getString("description"));
         phoneDetail.setName(rs.getString("name"));
-
+*/
         PhoneDetail.Android android = new PhoneDetail.Android();
         android.setUi(rs.getString("ui"));
         android.setOs(rs.getString("os_name"));
