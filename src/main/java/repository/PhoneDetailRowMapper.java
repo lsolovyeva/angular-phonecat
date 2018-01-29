@@ -14,7 +14,7 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail> {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    PhoneDetailRowMapper(JdbcTemplate jdbcTemplate) {
+    public PhoneDetailRowMapper(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

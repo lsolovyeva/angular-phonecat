@@ -1,21 +1,20 @@
-package repository;
+package service;
 
-import lombok.extern.slf4j.Slf4j;
 import model.Phone;
 import model.PhoneDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+import repository.PhoneDetailRowMapper;
+import repository.PhoneRowMapper;
 
 import java.util.List;
 
-@Repository
-public class PhoneRepository {
-    /*
+@Service
+
+public class PhoneServiceImpl implements PhoneService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
-
     public List<Phone> findAll() {
         return jdbcTemplate.query("SELECT * FROM Phone", new PhoneRowMapper());
     }
@@ -37,5 +36,5 @@ public class PhoneRepository {
                 "ON PhoneDetail.bluetooth_id=bluetooth.id LEFT JOIN wifi ON PhoneDetail.wifi_id=wifi.id LEFT JOIN audioJack ON PhoneDetail.audioJack_id=audioJack.id\n" +
                 "LEFT JOIN usb ON PhoneDetail.usb_id=usb.id WHERE PhoneDetail.id=?", new Object[]{id}, new PhoneDetailRowMapper(jdbcTemplate));
     }
-    */
+
 }
