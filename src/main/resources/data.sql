@@ -1099,7 +1099,7 @@ INSERT INTO `phone_images` (`phonedetail_id`, `images_id`) VALUES
   ('324', '78'),
   ('324', '79');
 
-INSERT INTO `dimentions` (`id`, `name`) VALUES
+INSERT INTO `dimensions` (`id`, `name`) VALUES
   ('551', '249.1 mm (w)'),
   ('552', '167.8 mm (h)'),
   ('553', '12.9 mm (d)'),
@@ -1179,7 +1179,7 @@ INSERT INTO `dimentions` (`id`, `name`) VALUES
   ('654', '67.2 mm (w)'),
   ('655', '98.4 mm (h)'),
   ('656', '11.4 mm (d)');
-INSERT INTO `phone_dimentions` (`phonedetail_id`, `dimentions_id`) VALUES
+INSERT INTO `phone_dimensions` (`phonedetail_id`, `dimensions_id`) VALUES
   ('123', '551'),
   ('123', '552'),
   ('123', '553'),

@@ -127,14 +127,14 @@ CREATE TABLE IF NOT EXISTS `phone_images` (
     FOREIGN KEY (`images_id`) REFERENCES images(`id`)
 
 );
-CREATE TABLE `dimentions` (
+CREATE TABLE `dimensions` (
     `id` int NOT NULL,
     `name` varchar(100) NOT NULL,
     PRIMARY KEY (`id`)
 );
-CREATE TABLE IF NOT EXISTS `phone_dimentions` (
+CREATE TABLE IF NOT EXISTS `phone_dimensions` (
     `phonedetail_id` int NOT NULL,
-    `dimentions_id` int NOT NULL,
+    `dimensions_id` int NOT NULL,
     FOREIGN KEY (`phonedetail_id`) REFERENCES PhoneDetail (`id`),
-    FOREIGN KEY (`dimentions_id`) REFERENCES dimentions (`id`)
+    FOREIGN KEY (`dimensions_id`) REFERENCES dimensions (`id`)
 );

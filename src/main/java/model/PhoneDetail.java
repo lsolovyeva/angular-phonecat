@@ -4,8 +4,8 @@ import java.util.List;
 
 public class PhoneDetail {
 
-    public class Android {
-        private static String os;
+    public static class Android {
+        private String os;
         private String ui;
 
         public Android(String os, String ui) {
@@ -23,7 +23,6 @@ public class PhoneDetail {
         public String getUi() {
             return ui;
         }
-
         public void setOs(String os) {
             this.os = os;
         }
@@ -32,6 +31,7 @@ public class PhoneDetail {
             this.ui = ui;
         }
     }
+
     public static class Battery {
         private String standbyTime;
         private String talkTime;
@@ -49,7 +49,6 @@ public class PhoneDetail {
         public String getStandbyTime() {
             return standbyTime;
         }
-
         public String getTalkTime() {
             return talkTime;
         }
@@ -70,10 +69,10 @@ public class PhoneDetail {
             this.type = type;
         }
     }
+
     public static class Camera {
         private List<String> features;
         private String primary;
-
         public Camera(List<String> features, String primary) {
             this.features = features;
             this.primary = primary;
@@ -123,7 +122,6 @@ public class PhoneDetail {
         public String getCell() {
             return cell;
         }
-
         public Boolean isGps() {
             return gps;
         }
@@ -146,9 +144,7 @@ public class PhoneDetail {
 
         public void setGps(Boolean gps) {
             this.gps = gps;
-        }
-
-        public void setInfrared(Boolean infrared) {
+        }public void setInfrared(Boolean infrared) {
             this.infrared = infrared;
         }
 
@@ -156,6 +152,7 @@ public class PhoneDetail {
             this.wifi = wifi;
         }
     }
+
     public static class Display {
         private String screenResolution;
         private String screenSize;
@@ -166,7 +163,6 @@ public class PhoneDetail {
             this.screenSize = screenSize;
             this.touchScreen = touchScreen;
         }
-
         public Display() {
         }
 
@@ -189,11 +185,11 @@ public class PhoneDetail {
         public void setScreenSize(String screenSize) {
             this.screenSize = screenSize;
         }
-
         public void setTouchScreen(Boolean touchScreen) {
             this.touchScreen = touchScreen;
         }
     }
+
     public static class Hardware {
         private Boolean accelerometer;
         private String audioJack;
@@ -212,9 +208,7 @@ public class PhoneDetail {
         }
 
         public Hardware() {
-        }
-
-        public Boolean isAccelerometer() {
+        }public Boolean isAccelerometer() {
             return accelerometer;
         }
 
@@ -237,7 +231,6 @@ public class PhoneDetail {
         public String getUsb() {
             return usb;
         }
-
         public void setAccelerometer(Boolean accelerometer) {
             this.accelerometer = accelerometer;
         }
@@ -280,9 +273,7 @@ public class PhoneDetail {
 
         public String getWeight() {
             return weight;
-        }
-
-        public void setDimensions(List<String> dimensions) {
+        } public void setDimensions(List<String> dimensions) {
             this.dimensions = dimensions;
         }
 
@@ -290,6 +281,7 @@ public class PhoneDetail {
             this.weight = weight;
         }
     }
+
     public static class Storage {
         String flash;
         String ram;
@@ -301,7 +293,6 @@ public class PhoneDetail {
 
         public Storage() {
         }
-
         public String getFlash() {
             return flash;
         }
@@ -334,39 +325,8 @@ public class PhoneDetail {
     private SizeAndWeight sizeAndWeight;
     private Storage storage;
 
-/*
-    public PhoneDetail(String additionalFeatures,
-                       Android android,
-                       List<String> availability,
-                       Battery battery,
-                       Camera camera,
-                       Connectivity connectivity,
-                       String description,
-                       Display display,
-                       Hardware hardware,
-                       String id,
-                       List<String> images,
-                       String name,
-                       SizeAndWeight sizeAndWeight,
-                       Storage storage
-    ) {
-        this.additionalFeatures = additionalFeatures;
-        this.android = android;
-        this.availability = availability;
-        this.battery = battery;
-        this.camera = camera;
-        this.connectivity = connectivity;
-        this.description = description;
-        this.display = display;
-        this.hardware = hardware;
-        this.id = id;
-        this.images = images;
-        this.name = name;
-        this.sizeAndWeight = sizeAndWeight;
-        this.storage = storage;
-    }
-*/
     private PhoneDetail(PhoneDetailBuilder builder) {
+
         this.additionalFeatures = builder.additionalFeatures;
         this.android = builder.android;
         this.availability = builder.availability;
@@ -381,59 +341,108 @@ public class PhoneDetail {
         this.name = builder.name;
         this.sizeAndWeight = builder.sizeAndWeight;
         this.storage = builder.storage;
-}
+    }
 
-/*
+    public PhoneDetail(String additionalFeatures,
+                       Android android,
+                       List<String> availability,
+                       Battery battery,
+                       Camera camera,
+                       Connectivity connectivity,
+                       String description,
+                       Display display,
+                       Hardware hardware,
+                       String id,
+                       List<String> images,
+                       String name,
+                       SizeAndWeight sizeAndWeight,
+                       Storage storage
+    ) {this.additionalFeatures = additionalFeatures;
+        this.android = android;
+        this.availability = availability;
+        this.battery = battery;
+        this.camera = camera;
+        this.connectivity = connectivity;
+        this.description = description;
+        this.display = display;
+        this.hardware = hardware;
+        this.id = id;
+        this.images = images;
+        this.name = name;
+        this.sizeAndWeight = sizeAndWeight;
+        this.storage = storage;
+    }
+
     public PhoneDetail() {
     }
-*/
+
     public String getAdditionalFeatures() {
         return additionalFeatures;
     }
     public Android getAndroid() {
         return android;
     }
+
     public List<String> getAvailability() {
         return availability;
     }
+
     public Battery getBattery() {
         return battery;
     }
+
     public Camera getCamera() {
         return camera;
     }
+
     public Connectivity getConnectivity() {
         return connectivity;
     }
+
     public String getDescription() {
         return description;
     }
+
     public Display getDisplay() {
         return display;
     }
+
     public Hardware getHardware() {
         return hardware;
     }
+
     public String getId() {
         return id;
     }
+
     public List<String> getImages() {
         return images;
     }
+
     public String getName() {
         return name;
     }
+
     public SizeAndWeight getSizeAndWeight() {
         return sizeAndWeight;
     }
+
     public Storage getStorage() {
         return storage;
     }
 
-    ///////////////////////
+    public void setImages(List<String> images) {
+        this.images = images;
+    }
+
+    public void setAvailability(List<String> availability) {
+        this.availability = availability;
+    }
 
 
-    public static class PhoneDetailBuilder {
+
+    public static class PhoneDetailBuilder
+    {
         private String additionalFeatures;
         private Android android;
         private List<String> availability;
@@ -449,24 +458,20 @@ public class PhoneDetail {
         private SizeAndWeight sizeAndWeight;
         private Storage storage;
 
-       // public PhoneDetailBuilder() {}
-
-        public PhoneDetailBuilder(String additionalFeatures,
-                                  String description,
-                                  String name
-        ) {
+        public PhoneDetailBuilder(String additionalFeatures) {
             this.additionalFeatures = additionalFeatures;
-            this.description = description;
-            this.name = name;
         }
 
-        public PhoneDetailBuilder additionalFeatures(String additionalFeatures) {
-            this.additionalFeatures = additionalFeatures;
+        public PhoneDetailBuilder android(String ui, String os) {
+            this.android = new Android(ui, os);
             return this;
         }
-        public PhoneDetailBuilder android(String os, String ui) {
-            Android.os = os;
-            this.ui = ui;
+        public PhoneDetailBuilder description(String description) {
+            this.description = description;
+            return this;
+        }
+        public PhoneDetailBuilder name(String name) {
+            this.name = name;
             return this;
         }
 
@@ -474,112 +479,45 @@ public class PhoneDetail {
             this.availability = availability;
             return this;
         }
-        public PhoneDetailBuilder battery(Battery battery) {
-            this.battery = battery;
-            return this;
-        }
-        public PhoneDetailBuilder camera(Camera camera) {
-            this.camera = camera;
-            return this;
-        }
-        public PhoneDetailBuilder connectivity(Connectivity connectivity) {
-            this.connectivity = connectivity;
-            return this;
-        }
-        public PhoneDetailBuilder description(String description) {
-            this.description = description;
-            return this;
-        }
-        public PhoneDetailBuilder display(Display display) {
-            this.display = display;
-            return this;
-        }
-        public PhoneDetailBuilder hardware(Hardware hardware) {
-            this.hardware = hardware;
-            return this;
-        }
-        public PhoneDetailBuilder id(String id) {
-            this.id = id;
-            return this;
-        }
         public PhoneDetailBuilder images(List<String> images) {
             this.images = images;
             return this;
         }
-        public PhoneDetailBuilder name(String name) {
-            this.name = name;
+        public PhoneDetailBuilder battery(String standbyTime,String talkTime, String type) {
+            this.battery = new Battery(standbyTime, talkTime, type);
             return this;
         }
-        public PhoneDetailBuilder sizeAndWeight(SizeAndWeight sizeAndWeight) {
-            this.sizeAndWeight = sizeAndWeight;
+        public PhoneDetailBuilder camera(List<String> features, String primary) {
+            this.camera = new Camera(features, primary);
             return this;
         }
-        public PhoneDetailBuilder storage(Storage storage) {
-            this.storage = storage;
+        public PhoneDetailBuilder connectivity(String bluetooth, String cell, Boolean gps, Boolean infrared, String wifi) {
+            this.connectivity = new Connectivity(bluetooth, cell, gps, infrared, wifi);
             return this;
         }
+        public PhoneDetailBuilder display(String screenResolution, String screenSize, Boolean touchScreen) {
+            this.display = new Display(screenResolution, screenSize, touchScreen);
+            return this;
+        }
+        public PhoneDetailBuilder hardware(Boolean accelerometer, String audioJack, String cpu, Boolean fmRadio, Boolean physicalKeyboard, String usb) {
+            this.hardware = new Hardware(accelerometer, audioJack, cpu, fmRadio, physicalKeyboard, usb);
+            return this;
+        }
+        public PhoneDetailBuilder sizeAndWeight(List<String> dimensions, String weight) {
+            this.sizeAndWeight = new SizeAndWeight(dimensions, weight);
+            return this;
+        }
+        public PhoneDetailBuilder storage(String flash, String ram) {
+            this.storage = new Storage(flash, ram);
+            return this;
+        }
+        //Return the finally constructed PhoneDetail object
         public PhoneDetail build() {
-            return new PhoneDetail(this);
+            PhoneDetail phoneDetail =  new PhoneDetail(this);
+            return phoneDetail;
         }
-
     }
 
-/*
-    public void setAdditionalFeatures(String additionalFeatures) {
-        this.additionalFeatures = additionalFeatures;
-    }
 
-    public void setAndroid(Android android) {
-        this.android = android;
-    }
 
-    public void setAvailability(List<String> availability) {
-        this.availability = availability;
-    }
-
-    public void setBattery(Battery battery) {
-        this.battery = battery;
-    }
-
-    public void setCamera(Camera camera) {
-        this.camera = camera;
-    }
-
-    public void setConnectivity(Connectivity connectivity) {
-        this.connectivity = connectivity;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setDisplay(Display display) {
-        this.display = display;
-    }
-
-    public void setHardware(Hardware hardware) {
-        this.hardware = hardware;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setImages(List<String> images) {
-        this.images = images;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSizeAndWeight(SizeAndWeight sizeAndWeight) {
-        this.sizeAndWeight = sizeAndWeight;
-    }
-
-    public void setStorage(Storage storage) {
-        this.storage = storage;
-    }
-
-    */
 }
