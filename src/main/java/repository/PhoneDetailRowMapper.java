@@ -1,6 +1,6 @@
 package repository;
 
-import model.PhoneDetail;
+import model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -40,35 +40,60 @@ public class PhoneDetailRowMapper implements RowMapper<PhoneDetail> {
                 "AND\n" +
                 "images_id= images.id", new Object[]{id}, new ImageRowMapper());
 
-        PhoneDetail phoneDetail = new PhoneDetail.PhoneDetailBuilder(rs.getString("additionalFeatures"))
+        return new PhoneDetail.PhoneDetailBuilder()
+                .additionalFeatures(rs.getString("additionalFeatures"))
                 .description(rs.getString("description"))
                 .name(rs.getString("name"))
-                .android(rs.getString("ui"),rs.getString("os_name"))
-                .battery(rs.getString("standbyTime"),rs.getString("talkTime"),rs.getString("type"))
-                .camera(features, rs.getString("primary_name"))
-                .connectivity(rs.getString("bluetooth_name"),
-                        rs.getString("cell"),
-                        rs.getBoolean("gps"),
-                        rs.getBoolean("infrared"),
-                        rs.getString("wifi_name")
+                .android(new Android.AndroidBuilder()
+                        .os(rs.getString("os_name"))
+                        .ui(rs.getString("ui")).build()
                         )
-                .display(rs.getString("screenResolution"),rs.getString("screenSize"),rs.getBoolean("touchScreen")
-                )
-                .hardware(rs.getBoolean("accelerometer"),
-                        rs.getString("audioJack_name"),
-                        rs.getString("cpu"),
-                        rs.getBoolean("fmRadio"),
-                        rs.getBoolean("physicalKeyboard"),
-                        rs.getString("usb_name")
+                .battery(new Battery.BatteryBuilder()
+                        .standbyTime(rs.getString("standbyTime"))
+                        .talkTime(rs.getString("talkTime"))
+                        .type(rs.getString("type"))
+                        .build()
                         )
-                .sizeAndWeight(dimensions, rs.getString("weight"))
-                .storage(rs.getString("flash"),rs.getString("ram"))
+                .camera(new Camera.CameraBuilder()
+                        .features(features)
+                        .primary(rs.getString("primary_name"))
+                        .build()
+                        )
+                .connectivity(new Connectivity.ConnectivityBuilder()
+                        .bluetooth(rs.getString("bluetooth_name"))
+                        .cell(rs.getString("cell"))
+                        .gps(rs.getBoolean("gps"))
+                        .infrared(rs.getBoolean("infrared"))
+                        .wifi(rs.getString("wifi_name"))
+                        .build()
+                        )
+                .display(new Display.DisplayBuilder()
+                        .screenResolution(rs.getString("screenResolution"))
+                        .screenSize(rs.getString("screenSize"))
+                        .touchScreen(rs.getBoolean("touchScreen"))
+                        .build())
+                .hardware(new Hardware.HardwareBuilder()
+                        .accelerometer(rs.getBoolean("accelerometer"))
+                        .audioJack(rs.getString("audioJack_name"))
+                        .cpu(rs.getString("cpu"))
+                        .fmRadio(rs.getBoolean("fmRadio"))
+                        .physicalKeyboard(rs.getBoolean("physicalKeyboard"))
+                        .usb(rs.getString("usb_name"))
+                        .build()
+                        )
+                .sizeAndWeight(new SizeAndWeight.SizeAndWeightBuilder()
+                        .dimensions(dimensions)
+                        .weight(rs.getString("weight"))
+                        .build()
+                        )
+                .storage(new Storage.StorageBuilder()
+                        .flash(rs.getString("flash"))
+                        .ram(rs.getString("ram"))
+                        .build()
+                        )
                 .availability(availability)
                 .images(images)
-
                 .build();
-        
-        return phoneDetail;
     }
 
     private static class ImageRowMapper implements RowMapper<String> {

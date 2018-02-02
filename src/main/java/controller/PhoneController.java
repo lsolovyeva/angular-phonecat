@@ -13,7 +13,6 @@ import java.util.Collection;
 public class PhoneController {
 
     @Autowired
-    //private PhoneRepository repo;
     PhoneService phoneService;
 
     @RequestMapping(value = "/phones/phones.json", method = RequestMethod.GET)

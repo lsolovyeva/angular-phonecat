@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 public class PhoneRepository {
-    /*
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
@@ -37,5 +37,5 @@ public class PhoneRepository {
                 "ON PhoneDetail.bluetooth_id=bluetooth.id LEFT JOIN wifi ON PhoneDetail.wifi_id=wifi.id LEFT JOIN audioJack ON PhoneDetail.audioJack_id=audioJack.id\n" +
                 "LEFT JOIN usb ON PhoneDetail.usb_id=usb.id WHERE PhoneDetail.id=?", new Object[]{id}, new PhoneDetailRowMapper(jdbcTemplate));
     }
-    */
+
 }
