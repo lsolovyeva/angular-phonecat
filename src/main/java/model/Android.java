@@ -23,7 +23,14 @@ public class Android {
         private String os;
         private String ui;
 
-        public AndroidBuilder() {}
+        //fabric static method:
+        public static AndroidBuilder newInstance() {
+            return new AndroidBuilder();
+        }
+
+        //public AndroidBuilder() {}
+        private AndroidBuilder() {}
+
         public AndroidBuilder os(String os) {
             this.os = os;
             return this;

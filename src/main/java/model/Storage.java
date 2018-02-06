@@ -24,7 +24,12 @@ public class Storage {
         private String flash;
         private String ram;
 
-        public StorageBuilder() {}
+        //fabric static method:
+        public static StorageBuilder newInstance() {
+            return new StorageBuilder();
+        }
+        private StorageBuilder() {}
+        //public StorageBuilder() {}
         public StorageBuilder flash(String flash) {
             this.flash = flash;
             return this;

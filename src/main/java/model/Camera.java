@@ -24,7 +24,13 @@ public class Camera {
         private List<String> features;
         private String primary;
 
-        public CameraBuilder() {}
+        //fabric static method:
+        public static CameraBuilder newInstance() {
+            return new CameraBuilder();
+        }
+        private CameraBuilder() {}
+
+        //public CameraBuilder() {}
         public CameraBuilder features(List<String> features) {
             this.features = features;
             return this;

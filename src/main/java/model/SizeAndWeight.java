@@ -27,7 +27,13 @@ public class SizeAndWeight {
         private List<String> dimensions;
         private String weight;
 
-        public SizeAndWeightBuilder() {}
+        //fabric static method:
+        public static SizeAndWeightBuilder newInstance() {
+            return new SizeAndWeightBuilder();
+        }
+        private SizeAndWeightBuilder() {}
+
+        //public SizeAndWeightBuilder() {}
 
         public SizeAndWeightBuilder dimensions(List<String> dimensions) {
             this.dimensions = dimensions;

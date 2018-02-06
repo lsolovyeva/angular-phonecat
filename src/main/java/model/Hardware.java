@@ -50,7 +50,13 @@ public class Hardware {
         private Boolean physicalKeyboard;
         private String usb;
 
-        public HardwareBuilder() {}
+        //fabric static method:
+        public static HardwareBuilder newInstance() {
+            return new HardwareBuilder();
+        }
+        private HardwareBuilder() {}
+
+        //public HardwareBuilder() {}
         public HardwareBuilder accelerometer(Boolean accelerometer) {
             this.accelerometer = accelerometer;
             return this;
