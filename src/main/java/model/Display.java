@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Display {
     private String screenResolution;
     private String screenSize;
@@ -23,6 +25,22 @@ public class Display {
 
     public Boolean isTouchScreen() {
         return touchScreen;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Display display = (Display) o;
+        return Objects.equals(screenResolution, display.screenResolution) &&
+                Objects.equals(screenSize, display.screenSize) &&
+                Objects.equals(touchScreen, display.touchScreen);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(screenResolution, screenSize, touchScreen);
     }
 
     public static class DisplayBuilder

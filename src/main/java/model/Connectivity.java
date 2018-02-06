@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Connectivity {
     private String bluetooth;
     private String cell;
@@ -32,6 +34,24 @@ public class Connectivity {
 
     public String getWifi() {
         return wifi;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Connectivity that = (Connectivity) o;
+        return Objects.equals(bluetooth, that.bluetooth) &&
+                Objects.equals(cell, that.cell) &&
+                Objects.equals(gps, that.gps) &&
+                Objects.equals(infrared, that.infrared) &&
+                Objects.equals(wifi, that.wifi);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(bluetooth, cell, gps, infrared, wifi);
     }
 
     public static class ConnectivityBuilder

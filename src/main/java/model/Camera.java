@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Camera {
     private List<String> features;
@@ -17,6 +18,21 @@ public class Camera {
 
     public String getPrimary() {
         return primary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Camera camera = (Camera) o;
+        return Objects.equals(features, camera.features) &&
+                Objects.equals(primary, camera.primary);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(features, primary);
     }
 
     public static class CameraBuilder

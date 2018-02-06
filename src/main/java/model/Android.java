@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Android {
     private String os;
     private String ui;
@@ -17,6 +19,20 @@ public class Android {
         return ui;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Android android = (Android) o;
+        return Objects.equals(os, android.os) &&
+                Objects.equals(ui, android.ui);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(os, ui);
+    }
 
     public static class AndroidBuilder
     {

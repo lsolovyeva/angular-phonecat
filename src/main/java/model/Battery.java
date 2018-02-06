@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Battery {
     private String standbyTime;
     private String talkTime;
@@ -20,6 +22,22 @@ public class Battery {
 
     public String getType() {
         return type;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Battery battery = (Battery) o;
+        return Objects.equals(standbyTime, battery.standbyTime) &&
+                Objects.equals(talkTime, battery.talkTime) &&
+                Objects.equals(type, battery.type);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(standbyTime, talkTime, type);
     }
 
     public static class BatteryBuilder

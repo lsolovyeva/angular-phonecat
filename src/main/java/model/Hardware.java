@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Hardware {
     private Boolean accelerometer;
     private String audioJack;
@@ -39,6 +41,25 @@ public class Hardware {
 
     public String getUsb() {
         return usb;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hardware hardware = (Hardware) o;
+        return Objects.equals(accelerometer, hardware.accelerometer) &&
+                Objects.equals(audioJack, hardware.audioJack) &&
+                Objects.equals(cpu, hardware.cpu) &&
+                Objects.equals(fmRadio, hardware.fmRadio) &&
+                Objects.equals(physicalKeyboard, hardware.physicalKeyboard) &&
+                Objects.equals(usb, hardware.usb);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(accelerometer, audioJack, cpu, fmRadio, physicalKeyboard, usb);
     }
 
     public static class HardwareBuilder

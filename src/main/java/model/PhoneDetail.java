@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class PhoneDetail {
     private String additionalFeatures;
@@ -106,6 +107,33 @@ public class PhoneDetail {
 
     public Storage getStorage() {
         return storage;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PhoneDetail that = (PhoneDetail) o;
+        return Objects.equals(additionalFeatures, that.additionalFeatures) &&
+                Objects.equals(android, that.android) &&
+                Objects.equals(availability, that.availability) &&
+                Objects.equals(battery, that.battery) &&
+                Objects.equals(camera, that.camera) &&
+                Objects.equals(connectivity, that.connectivity) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(display, that.display) &&
+                Objects.equals(hardware, that.hardware) &&
+                Objects.equals(id, that.id) &&
+                Objects.equals(images, that.images) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(sizeAndWeight, that.sizeAndWeight) &&
+                Objects.equals(storage, that.storage);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(additionalFeatures, android, availability, battery, camera, connectivity, description, display, hardware, id, images, name, sizeAndWeight, storage);
     }
 
     public static class PhoneDetailBuilder

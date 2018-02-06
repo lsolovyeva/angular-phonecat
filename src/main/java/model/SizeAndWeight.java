@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import java.util.Objects;
 
 public class SizeAndWeight {
     private List<String> dimensions;
@@ -22,6 +23,21 @@ public class SizeAndWeight {
         return weight;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SizeAndWeight that = (SizeAndWeight) o;
+        return Objects.equals(dimensions, that.dimensions) &&
+                Objects.equals(weight, that.weight);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(dimensions, weight);
+    }
+
     public static class SizeAndWeightBuilder
     {
         private List<String> dimensions;
@@ -32,7 +48,6 @@ public class SizeAndWeight {
             return new SizeAndWeightBuilder();
         }
         private SizeAndWeightBuilder() {}
-
         //public SizeAndWeightBuilder() {}
 
         public SizeAndWeightBuilder dimensions(List<String> dimensions) {

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Storage {
     private String flash;
     private String ram;
@@ -17,6 +19,21 @@ public class Storage {
 
     public String getRam() {
         return ram;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Storage storage = (Storage) o;
+        return Objects.equals(flash, storage.flash) &&
+                Objects.equals(ram, storage.ram);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(flash, ram);
     }
 
     public static class StorageBuilder

@@ -3,6 +3,8 @@ package model;
 import lombok.Builder;
 import lombok.Getter;
 
+import java.util.Objects;
+
 //@Builder
 //@Getter
 public class Phone {
@@ -91,5 +93,25 @@ public class Phone {
 
     public Integer getPhonedetail_id() {
         return phonedetail_id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Phone phone = (Phone) o;
+        return age == phone.age &&
+                Objects.equals(carrier, phone.carrier) &&
+                Objects.equals(id, phone.id) &&
+                Objects.equals(imageUrl, phone.imageUrl) &&
+                Objects.equals(name, phone.name) &&
+                Objects.equals(snippet, phone.snippet) &&
+                Objects.equals(phonedetail_id, phone.phonedetail_id);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(age, carrier, id, imageUrl, name, snippet, phonedetail_id);
     }
 }
