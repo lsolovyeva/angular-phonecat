@@ -19,7 +19,6 @@ public class PhoneDetail {
     private SizeAndWeight sizeAndWeight;
     private Storage storage;
 
-    //fabric static method:
     public static PhoneDetailBuilder builder() {
         return new PhoneDetailBuilder();
     }
@@ -155,7 +154,6 @@ public class PhoneDetail {
 
 
         private PhoneDetailBuilder() {}
-        //public PhoneDetailBuilder() {}
 
         public PhoneDetailBuilder additionalFeatures(String additionalFeatures) {
             this.additionalFeatures = additionalFeatures;
@@ -212,7 +210,6 @@ public class PhoneDetail {
             this.storage = storage;
             return this;
         }
-        //Return the finally constructed PhoneDetail object
         public PhoneDetail build() {
             return new PhoneDetail(this.additionalFeatures,
             this.android,

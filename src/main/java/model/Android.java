@@ -40,7 +40,7 @@ public class Android {
         private String ui;
 
         //fabric static method:
-        public static AndroidBuilder newInstance() {
+        public static AndroidBuilder builder() {
             return new AndroidBuilder();
         }
 

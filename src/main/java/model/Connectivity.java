@@ -62,13 +62,11 @@ public class Connectivity {
         private Boolean infrared;
         private String wifi;
 
-//fabric static method:
-        public static ConnectivityBuilder newInstance() {
+        public static ConnectivityBuilder builder() {
             return new ConnectivityBuilder();
         }
         private ConnectivityBuilder() {}
 
-        //public ConnectivityBuilder() {}
         public ConnectivityBuilder bluetooth(String bluetooth) {
             this.bluetooth = bluetooth;
             return this;

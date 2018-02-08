@@ -41,12 +41,10 @@ public class Storage {
         private String flash;
         private String ram;
 
-        //fabric static method:
-        public static StorageBuilder newInstance() {
+        public static StorageBuilder builder() {
             return new StorageBuilder();
         }
         private StorageBuilder() {}
-        //public StorageBuilder() {}
         public StorageBuilder flash(String flash) {
             this.flash = flash;
             return this;
@@ -55,7 +53,6 @@ public class Storage {
             this.ram = ram;
             return this;
         }
-
         public Storage build() {
             return new Storage(this.flash, this.ram);
         }

@@ -1,8 +1,5 @@
 package model;
 
-import lombok.Builder;
-import lombok.Getter;
-
 import java.util.Objects;
 
 //@Builder
@@ -17,15 +14,6 @@ public class Phone {
     private Integer phonedetail_id;
 
     public Phone() {
-    }
-
-    public Phone(int age, Integer id, String imageUrl, String name, String snippet) {
-
-        this.age = age;
-        this.id = id;
-        this.imageUrl = imageUrl;
-        this.name = name;
-        this.snippet = snippet;
     }
 
     public Phone(int age, String carrier, Integer id, String imageUrl, String name, String snippet) {

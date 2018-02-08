@@ -49,13 +49,11 @@ public class Display {
         private String screenSize;
         private Boolean touchScreen;
 
-        //fabric static method:
-        public static DisplayBuilder newInstance() {
+        public static DisplayBuilder builder() {
             return new DisplayBuilder();
         }
         private DisplayBuilder() {}
 
-        //public DisplayBuilder() {}
         public DisplayBuilder screenResolution(String screenResolution) {
             this.screenResolution = screenResolution;
             return this;

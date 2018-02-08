@@ -46,13 +46,11 @@ public class Battery {
         private String talkTime;
         private String type;
 
-        //fabric static method:
-        public static BatteryBuilder newInstance() {
+        public static BatteryBuilder builder() {
             return new BatteryBuilder();
         }
         private BatteryBuilder() {}
 
-        //public BatteryBuilder() {}
         public BatteryBuilder standbyTime(String standbyTime) {
             this.standbyTime = standbyTime;
             return this;
