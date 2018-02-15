@@ -15,4 +15,23 @@ config(['$locationProvider' ,'$routeProvider',
         }).
         otherwise('/phones');
     }
-]);
+])
+/*
+    .run(function loginning($routeProvider) {
+        console.log("app run");
+        $routeProvider.
+        when('/', {
+            templateUrl : 'home.html',
+            controller : 'home'
+        }).when('/login', {
+            templateUrl : 'login.html',
+            controller : 'navigation'
+        }).otherwise('/');
+    })
+    .controller('home', function($scope, $http) {
+        $http.get('/resource/').success(function(data) {
+            $scope.greeting = data;
+        })
+    })
+*/
+    ;

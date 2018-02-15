@@ -15,4 +15,10 @@ config(['$locationProvider' ,'$routeProvider',
         }).
         otherwise('/phones');
     }
-]);
+])
+    /*
+    .run(function() {
+        console.log("app run");
+    })
+    */
+    ;
