@@ -13,6 +13,9 @@ config(['$locationProvider' ,'$routeProvider',
         when('/phones/:phoneId', {
             template: '<phone-detail></phone-detail>'
         }).
+        when('/login', {
+            template: '<login></login>'
+        }).
         otherwise('/phones');
     }
 ]);
