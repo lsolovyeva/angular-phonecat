@@ -16,6 +16,9 @@ config(['$locationProvider' ,'$routeProvider',
         when('/login', {
             template: '<login></login>'
         }).
+        when('/logout', {
+            template: '<logout></logout>'
+        }).
         otherwise('/phones');
     }
 ]);

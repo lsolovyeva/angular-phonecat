@@ -9,7 +9,7 @@ component('phoneDetail', {
     controller: ['$routeParams', 'Phone',
         function PhoneDetailController($routeParams, Phone) {
             var self = this;
-            self.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
+            self.phone = Phone.query({phoneId: $routeParams.phoneId}, function(phone) {
                 self.setImage(phone.images[0]);
             });
 
