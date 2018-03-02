@@ -7,10 +7,27 @@ import org.springframework.web.bind.annotation.*;
 import repository.PhoneRepository;
 import service.PhoneService;
 
+import java.security.Principal;
 import java.util.Collection;
 
 @RestController
 public class PhoneController {
+
+    @RequestMapping("/user")
+    public Principal user(Principal user) {
+        return new Principal() {
+            @Override
+            public String getName() {
+                return "name123";
+            }
+
+        };
+    }
+
+    @RequestMapping(value = "/dologin", method = RequestMethod.POST)
+    public void getLogin() {
+
+    }
 
     @Autowired
     PhoneService phoneService;

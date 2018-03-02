@@ -5,7 +5,8 @@ module('login').
 component('login', {
     templateUrl: 'login/login.template.html',
     controller: [
-        function LoginController() {
+        function loginController() {
+        	
         }
     ]
 });
