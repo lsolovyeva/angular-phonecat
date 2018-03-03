@@ -9,25 +9,40 @@ import service.PhoneService;
 
 import java.security.Principal;
 import java.util.Collection;
+import org.springframework.http.HttpStatus;
+
+//@ResponseStatus(HttpStatus.FORBIDDEN)
+//class ForbiddenException extends RuntimeException {
+//}
 
 @RestController
 public class PhoneController {
+//    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger("application");
 
+/*
     @RequestMapping("/user")
     public Principal user(Principal user) {
-        return new Principal() {
-            @Override
-            public String getName() {
-                return "name123";
-            }
+        throw new ForbiddenException();
+        //return new Principal() {
+        //    @Override
+        //    public String getName() {
+        //        return "name123";
+        //    }
 
-        };
+        //};
     }
 
     @RequestMapping(value = "/dologin", method = RequestMethod.POST)
-    public void getLogin() {
-
+    public void doLogin(@RequestBody Credentials credentials) {
+        log.info("doLogin: credentials = '{}'", credentials);
+        throw new ForbiddenException();
     }
+*/
+    @RequestMapping("/user")
+    public Principal user(Principal user) {
+        return user;
+    }
+
 
     @Autowired
     PhoneService phoneService;

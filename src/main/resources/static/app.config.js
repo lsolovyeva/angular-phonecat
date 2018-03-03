@@ -1,8 +1,8 @@
 'use strict';
 
 angular.
-module('phonecatApp').
-config(['$locationProvider' ,'$routeProvider',
+module('phonecatApp')
+.config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
 
@@ -22,8 +22,21 @@ config(['$locationProvider' ,'$routeProvider',
         otherwise('/login');
     }
 ])
+.run( function($rootScope, $location) {
+    // register listener to watch route changes
+    $rootScope.$on( "$routeChangeStart", function(event, next, current) {
+        if ( $rootScope.authenticated === false ) {
+            // no logged user, we should be going to #login
+            if ( $location.$$path === "/login" ) {
+                // already going to #login, no redirect needed
+            } else {
+                // not going to #login, we should redirect now
+                $location.path( "/login" );
+            }
+        }         
+    });
+})
 .controller('navigation',
-        
 function($rootScope, $scope, $http, $location, $route) {
 
     $scope.tab = function(route) {
@@ -50,7 +63,7 @@ function($rootScope, $scope, $http, $location, $route) {
 
     $scope.credentials = {};
     $scope.login = function() {
-        $http.post('dologin', $.param($scope.credentials), {
+        $http.post('/login', $.param($scope.credentials), {
             headers : {
                 "content-type" : "application/x-www-form-urlencoded"
             }
