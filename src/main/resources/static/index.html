@@ -26,6 +26,8 @@
     <script src="phone-detail/phone-detail.component.js"></script>
     <script src="login/login.module.js"></script>
     <script src="login/login.component.js"></script>
+    <script src="add/add.module.js"></script>
+    <script src="add/add.component.js"></script>
 </head>
 <body>
 
@@ -35,6 +37,8 @@
         <li ng-show="!authenticated"><a href="#!/login">login</a></li>
 <!--class="active"-->
         <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
+        <li ng-show="authenticated"><a href="" ng-click="add()">AddPhone</a></li>
+
     </ul>
 </div>
 

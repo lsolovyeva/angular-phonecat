@@ -10,5 +10,6 @@ import java.util.List;
 public interface PhoneService {
     List<Phone> findAll();
     PhoneDetail findPhoneById(int id);
+    Collection<Phone> findAllWithAdd();
 }
 

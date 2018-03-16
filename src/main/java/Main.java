@@ -40,22 +40,6 @@ public class Main {
                 .and()
                     .logout()
                 .and()
-//                    .authorizeRequests()
-//                    .antMatchers("/")
-//                    .antMatchers("/index.html", "/home.html", "/login.html", "/"
-//
-//                            , "/bower_components/**",
-//                             "/core/**","/img/**",
-//                            "/app.animations.css",
-//                            "/app.animations.js",
-//                            "/app.config.js",
-//                            "/app.css",
-//                            "/app.module.js",
-//                            "/hello.js"
-//
-//                            )
-//                    .permitAll()
-//                .and()
                     .authorizeRequests()
                     .anyRequest().authenticated()
                 .and()

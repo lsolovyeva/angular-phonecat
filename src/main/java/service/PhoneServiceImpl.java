@@ -20,4 +20,7 @@ public class PhoneServiceImpl implements PhoneService {
         return phoneRepository.findAll();
     }
 
+    public List<Phone> findAllWithAdd() {
+        return phoneRepository.findAllWithAdd();
+    }
 }

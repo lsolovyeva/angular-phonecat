@@ -20,6 +20,10 @@ public class PhoneRepository {
         return jdbcTemplate.query("SELECT * FROM Phone", new PhoneRowMapper());
     }
 
+    public List<Phone> findAllWithAdd() {
+        return jdbcTemplate.query("INSERT * FROM Phone", new PhoneRowMapper());
+    }
+
     public PhoneDetail findPhoneById(int id) {
         return jdbcTemplate.queryForObject("SELECT PhoneDetail.additionalFeatures, os.name AS os_name,\n" +
                 "PhoneDetail.ui, PhoneDetail.standbyTime, PhoneDetail.talkTime, PhoneDetail.type,\n" +
