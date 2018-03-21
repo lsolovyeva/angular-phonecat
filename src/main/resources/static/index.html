@@ -37,10 +37,16 @@
         <li ng-show="!authenticated"><a href="#!/login">login</a></li>
 <!--class="active"-->
         <li ng-show="authenticated"><a href="" ng-click="logout()">logout</a></li>
-        <li ng-show="authenticated"><a href="" ng-click="add()">AddPhone</a></li>
 
+<!-- <li ng-controller="addition" ng-show="authenticated"><a href="/#!/add" ng-click="add()">AddPhone</a></li>-->
+        <li ng-controller="addition" ng-show="authenticated"><a href="/#!/add">AddPhone</a></li>
+       <!-- <button ng-click="add()">Add phone</button>-->
     </ul>
 </div>
+
+
+
+
 
 <div class="view-container">
     <div ng-view class="view-frame"></div>

@@ -12,6 +12,18 @@ public class PhoneController {
 
     @Autowired
     PhoneService phoneService;
+/*
+    @RequestMapping(value = "add/1", method = RequestMethod.POST)
+    public Integer addPhone(Integer myName1)
+    {
+
+        return myName1;
+    }
+*/
+@RequestMapping(value = "/add", method = {RequestMethod.POST, RequestMethod.GET})
+public void addAccount() {
+    System.out.println("Account on the top");
+}
 
     @RequestMapping(value = "/phones/phones.json", method = RequestMethod.GET)
     public Collection<Phone> getAllPhonesInfo() {

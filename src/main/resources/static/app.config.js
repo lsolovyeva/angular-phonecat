@@ -19,7 +19,7 @@ module('phonecatApp')
         }).
         when('/add', {
             templateUrl: 'add/add.template.html',
-            controller : 'navigation'
+            controller : 'addition'
         }).
         otherwise('/login');
     }

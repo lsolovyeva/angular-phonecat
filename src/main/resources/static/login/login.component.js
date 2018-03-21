@@ -88,10 +88,10 @@ component('login', {
                 });
             };
 
-
+/*
             $scope.add = function () {
 
                 $location.path("/add");
             };
-
+*/
         });
