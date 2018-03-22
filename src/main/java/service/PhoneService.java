@@ -1,5 +1,6 @@
 package service;
 
+import controller.PhoneController;
 import model.*;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,6 @@ import java.util.List;
 public interface PhoneService {
     List<Phone> findAll();
     PhoneDetail findPhoneById(int id);
-    Collection<Phone> findAllWithAdd();
+    int newPhoneWithAdd(String myName2, String myName5);
 }
 

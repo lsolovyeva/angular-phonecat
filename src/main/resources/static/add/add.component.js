@@ -43,14 +43,16 @@ component('add', {
             };
 
          */
+            $scope.myName2 = "My Carrier";
+            $scope.myName5 = "My Name";
+
 
             $scope.add = function () {
 
-                $scope.myName1 = 12;
-
-                                $http.post('http://localhost:8080/#!/add', $scope.myName1, {
+                //$scope.myName2 = "My Carrier";
+                                $http.post('/add', {'myName2': $scope.myName2, 'myName5': $scope.myName5}, {
                                     headers: {
-                                        "content-type": "application/x-www-form-urlenced"
+                                      //  "content-type": "application/x-www-form-urlencoded"
                                     }
                                 })
 

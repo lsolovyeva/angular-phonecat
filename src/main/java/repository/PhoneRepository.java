@@ -1,6 +1,6 @@
 package repository;
 
-import lombok.extern.slf4j.Slf4j;
+import controller.PhoneController;
 import model.Phone;
 import model.PhoneDetail;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,13 @@ public class PhoneRepository {
         return jdbcTemplate.query("SELECT * FROM Phone", new PhoneRowMapper());
     }
 
-    public List<Phone> findAllWithAdd() {
-        return jdbcTemplate.query("INSERT * FROM Phone", new PhoneRowMapper());
+    //INSERT INTO Phone (AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) VALUES (0, 'a', 144, 'b', 'n', 'aaa', 123);
+    //INSERT INTO Phone VALUES (age);
+    public int newPhoneWithAdd(String myName2, String myName5) {
+        String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?,?,?,?,?)";
+        Object[] params=new Object[]{0, myName2, 144, 'b', myName5, 'a', 123};
+        return jdbcTemplate.update(sql,params);
+        //return jdbcTemplate.update("INSERT INTO Phone (SNIPPET) VALUES ('dd');\n");
     }
 
     public PhoneDetail findPhoneById(int id) {

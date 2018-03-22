@@ -1,5 +1,6 @@
 package service;
 
+import controller.PhoneController;
 import model.Phone;
 import model.PhoneDetail;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class PhoneServiceImpl implements PhoneService {
         return phoneRepository.findAll();
     }
 
-    public List<Phone> findAllWithAdd() {
-        return phoneRepository.findAllWithAdd();
+    public int newPhoneWithAdd(String myName2, String myName5) {
+        return phoneRepository.newPhoneWithAdd(myName2, myName5);
     }
 }
