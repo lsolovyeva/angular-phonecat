@@ -3,6 +3,7 @@ package repository;
 import controller.PhoneController;
 import model.Phone;
 import model.PhoneDetail;
+import model.PhoneForAdd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -21,10 +22,31 @@ public class PhoneRepository {
     }
 
     //INSERT INTO Phone (AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) VALUES (0, 'a', 144, 'b', 'n', 'aaa', 123);
-    //INSERT INTO Phone VALUES (age);
-    public int newPhoneWithAdd(String myName2, String myName5) {
+
+    /*
+    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,
+    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,
+    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID,NAME,WEIGHT,FLASH,RAM)
+    values('Add features',0,'la','23h','24h','other',3,1,'non',true,false,2,'My Description','screen','s size',false,
+    false,1,'cpu',false,true,1,325,'name of mine','25kg','flashh','ramm');
+    */
+    public int newPhoneWithAdd(PhoneForAdd phoneForAdd) {
+        newPhoneWithAddDetail(phoneForAdd);
+
+
         String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?,?,?,?,?)";
-        Object[] params=new Object[]{0, myName2, 144, 'b', myName5, 'a', 123};
+        Object[] params=new Object[]{0, phoneForAdd.myName2, 144, 'b', phoneForAdd.myName5, "a snippet", 144};
+        return jdbcTemplate.update(sql,params);
+        //return jdbcTemplate.update("INSERT INTO Phone (SNIPPET) VALUES ('dd');\n");
+    }
+
+
+    public int newPhoneWithAddDetail(PhoneForAdd phoneForAdd) {
+        String sql = "    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,\n" +
+                "    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,\n" +
+                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID,NAME,WEIGHT,FLASH,RAM)\n" +
+                "    values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+        Object[] params=new Object[]{"Add features",0,"la","23h","24h","other",3,1,"non",true,false,2,phoneForAdd.myName14,"screen","s size",false, false,1,"cpu",false,true,1,144,"name of mine","25kg","flashh","ramm"};
         return jdbcTemplate.update(sql,params);
         //return jdbcTemplate.update("INSERT INTO Phone (SNIPPET) VALUES ('dd');\n");
     }
@@ -48,3 +70,17 @@ public class PhoneRepository {
     }
 
 }
+/*
+
+START TRANSACTION;
+
+    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,
+    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,
+    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID,NAME,WEIGHT,FLASH,RAM)
+    values('Add features',0,'la','23h','24h','other',3,1,'non',true,false,2,'My Description','screen','s size',false,
+    false,1,'cpu',false,true,1,325,'name of mine','25kg','flashh','ramm');
+
+    INSERT INTO Phone (AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) VALUES (0, 'a', 145, 'b', 'n', 'aaa', 325);
+
+COMMIT;
+ */

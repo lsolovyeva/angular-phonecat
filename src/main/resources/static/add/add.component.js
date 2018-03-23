@@ -45,14 +45,17 @@ component('add', {
          */
             $scope.myName2 = "My Carrier";
             $scope.myName5 = "My Name";
+            $scope.myName14 = "My Description";
 
 
             $scope.add = function () {
-
+                //PhoneForAdd.myName2 = $scope.myName2;
+                //PhoneForAdd.myName5 = $scope.myName5;
+var phoneForAdd = {myName2 : "My Carrier", myName5 : $scope.myName5, myName14 : $scope.myName14};
                 //$scope.myName2 = "My Carrier";
-                                $http.post('/add', {'myName2': $scope.myName2, 'myName5': $scope.myName5}, {
+                                $http.post('/add',phoneForAdd , {
                                     headers: {
-                                      //  "content-type": "application/x-www-form-urlencoded"
+                                       // "content-type": "application/x-www-form-urlencoded"
                                     }
                                 })
 

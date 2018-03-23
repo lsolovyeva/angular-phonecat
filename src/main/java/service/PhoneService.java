@@ -11,6 +11,6 @@ import java.util.List;
 public interface PhoneService {
     List<Phone> findAll();
     PhoneDetail findPhoneById(int id);
-    int newPhoneWithAdd(String myName2, String myName5);
+    int newPhoneWithAdd(PhoneForAdd phoneForAdd);
 }
 

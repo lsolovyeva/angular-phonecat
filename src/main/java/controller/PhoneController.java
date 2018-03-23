@@ -2,12 +2,11 @@ package controller;
 
 import model.PhoneDetail;
 import model.Phone;
+import model.PhoneForAdd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.PhoneService;
 import java.util.Collection;
-
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @RestController
 public class PhoneController {
@@ -43,20 +42,19 @@ public void addAccount() {
 
 
 
-
+/* no need to GET
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public int getAdd() {
         return phoneService.newPhoneWithAdd("JiJiJi",  "VoVoVo");
         //return new Phone(0, "JiJiJi", 144, "", "VoVoVo", "GoGoGo");
     }
-
+*/
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    //@ResponseBody
-    public int newPhone(@RequestParam("myName2")String myName2 ,@RequestParam("myName5")String myName5)
+    @ResponseBody
+    public int newPhone(@RequestBody PhoneForAdd phoneForAdd)
     {
         System.out.println("INTEGER Account on the top");
-        //return new Phone(0, myName2, 144, "", "VoVoVo", "GoGoGo");
-        return phoneService.newPhoneWithAdd(myName2, myName5);
+        return phoneService.newPhoneWithAdd(phoneForAdd);
 
     }
 

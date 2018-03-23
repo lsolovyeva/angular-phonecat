@@ -3,6 +3,7 @@ package service;
 import controller.PhoneController;
 import model.Phone;
 import model.PhoneDetail;
+import model.PhoneForAdd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.PhoneRepository;
@@ -21,7 +22,7 @@ public class PhoneServiceImpl implements PhoneService {
         return phoneRepository.findAll();
     }
 
-    public int newPhoneWithAdd(String myName2, String myName5) {
-        return phoneRepository.newPhoneWithAdd(myName2, myName5);
+    public int newPhoneWithAdd(PhoneForAdd phoneForAdd) {
+        return phoneRepository.newPhoneWithAdd(phoneForAdd);
     }
 }
