@@ -7,6 +7,8 @@ public class Battery {
     private String talkTime;
     private String type;
 
+    public Battery() {}
+
     public Battery(String standbyTime, String talkTime, String type) {
         this.standbyTime = standbyTime;
         this.talkTime = talkTime;

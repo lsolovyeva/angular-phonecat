@@ -13,18 +13,7 @@ public class PhoneController {
 
     @Autowired
     PhoneService phoneService;
-/*
-@RequestMapping(value = "/add", method = RequestMethod.POST)
-public void addAccount() {
-    System.out.println("Account on the top");
-}
 
-    @RequestMapping(value = "/add", method = POST)
-    @ResponseBody
-    public String postFoos() {
-        return "Post some Foos";
-    }
-*/
     @RequestMapping(value = "/phones/phones.json", method = RequestMethod.GET)
     public Collection<Phone> getAllPhonesInfo() {
         return phoneService.findAll();
@@ -39,26 +28,15 @@ public void addAccount() {
 
 
 
-
-
-
-/* no need to GET
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public int getAdd() {
-        return phoneService.newPhoneWithAdd("JiJiJi",  "VoVoVo");
-        //return new Phone(0, "JiJiJi", 144, "", "VoVoVo", "GoGoGo");
-    }
-*/
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
     public int newPhone(@RequestBody PhoneForAdd phoneForAdd)
     {
-        System.out.println("INTEGER Account on the top");
         return phoneService.newPhoneWithAdd(phoneForAdd);
 
     }
 
-/*
+/* Example:
     @GetMapping("/{id}")
     public ResponseEntity<?> getBazz(@PathVariable String id){
         return new ResponseEntity<>(new Bazz(id, "Bazz"+id), HttpStatus.OK);
@@ -68,6 +46,22 @@ public void addAccount() {
     public ResponseEntity<?> newBazz(@RequestParam("name") String name){
         return new ResponseEntity<>(new Bazz("5", name), HttpStatus.OK);
     }
+*/
 
-    */
+/*
+    @RequestMapping(value = "/add", method = POST)
+    @ResponseBody
+    public String postFoos() {
+            //System.out.println("INTEGER Account on the top");
+        return "Post some Foos";
+    }
+*/
+
+/* no need to GET
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
+    public int getAdd() {
+        return phoneService.newPhoneWithAdd("JiJiJi",  "VoVoVo");
+        //return new Phone(0, "JiJiJi", 144, "", "VoVoVo", "GoGoGo");
+    }
+*/
 }

@@ -13,8 +13,7 @@ public class Phone {
     private String snippet;
     private Integer phonedetail_id;
 
-    public Phone() {
-    }
+    public Phone() {}
 
     public Phone(int age, String carrier, Integer id, String imageUrl, String name, String snippet) {
         this.age = age;

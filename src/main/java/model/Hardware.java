@@ -10,6 +10,8 @@ public class Hardware {
     private Boolean physicalKeyboard;
     private String usb;
 
+    public Hardware() {}
+
     public Hardware(Boolean accelerometer, String audioJack, String cpu, Boolean fmRadio, Boolean physicalKeyboard, String usb) {
         this.accelerometer = accelerometer;
         this.audioJack = audioJack;

@@ -12,8 +12,7 @@ public class SizeAndWeight {
         this.weight = weight;
     }
 
-    public SizeAndWeight() {
-    }
+    public SizeAndWeight() {}
 
     public List<String> getDimensions() {
         return dimensions;

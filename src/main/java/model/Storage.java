@@ -11,8 +11,8 @@ public class Storage {
         this.ram = ram;
     }
 
-    public Storage() {
-    }
+    public Storage() {}
+
     public String getFlash() {
         return flash;
     }

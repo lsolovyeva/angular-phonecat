@@ -7,6 +7,8 @@ public class Camera {
     private List<String> features;
     private String primary;
 
+    public Camera() {}
+
     public Camera(List<String> features, String primary) {
         this.features = features;
         this.primary = primary;

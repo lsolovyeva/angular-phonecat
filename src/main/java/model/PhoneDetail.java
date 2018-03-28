@@ -19,6 +19,8 @@ public class PhoneDetail {
     private SizeAndWeight sizeAndWeight;
     private Storage storage;
 
+    public PhoneDetail() {}
+
     public static PhoneDetailBuilder builder() {
         return new PhoneDetailBuilder();
     }

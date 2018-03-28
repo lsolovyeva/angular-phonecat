@@ -7,14 +7,17 @@ public class Display {
     private String screenSize;
     private Boolean touchScreen;
 
+    public Display() {}
+
     public Display(String screenResolution, String screenSize, Boolean touchScreen) {
         this.screenResolution = screenResolution;
         this.screenSize = screenSize;
         this.touchScreen = touchScreen;
     }
+    /*
     public Display() {
     }
-
+*/
     public String getScreenResolution() {
         return screenResolution;
     }

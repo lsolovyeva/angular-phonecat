@@ -9,6 +9,8 @@ public class Connectivity {
     private Boolean infrared;
     private String wifi;
 
+    public Connectivity() {}
+
     public Connectivity(String bluetooth, String cell, Boolean gps, Boolean infrared, String wifi) {
         this.bluetooth = bluetooth;
         this.cell = cell;
