@@ -30,9 +30,9 @@ public class PhoneController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public int newPhone(@RequestBody PhoneForAdd phoneForAdd)
+    public void newPhone(@RequestBody PhoneForAdd phoneForAdd)
     {
-        return phoneService.newPhoneWithAdd(phoneForAdd);
+         phoneService.newPhoneWithAdd(phoneForAdd);
 
     }
 

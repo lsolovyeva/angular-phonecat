@@ -1,6 +1,5 @@
 package service;
 
-import controller.PhoneController;
 import model.Phone;
 import model.PhoneDetail;
 import model.PhoneForAdd;
@@ -22,7 +21,7 @@ public class PhoneServiceImpl implements PhoneService {
         return phoneRepository.findAll();
     }
 
-    public int newPhoneWithAdd(PhoneForAdd phoneForAdd) {
-        return phoneRepository.newPhoneWithAdd(phoneForAdd);
+    public void newPhoneWithAdd(PhoneForAdd phoneForAdd) {
+         phoneRepository.newPhoneWithAdd(phoneForAdd);
     }
 }

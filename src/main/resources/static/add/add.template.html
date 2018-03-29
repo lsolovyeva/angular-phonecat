@@ -154,13 +154,13 @@
     <p><i>screenResolution:</i></p>
     <p>
         <label>
-            <input name="myName15" ng-model="myName15" required>
+            <input name="myName15" ng-model="myName15" required ng-change="myFunc15()" ng-style="myDefaultColor15">
         </label>
     </p>
     <p><i>screenSize:</i></p>
     <p>
     <label>
-        <input name="my9Name15" ng-model="my9Name15" required>
+        <input name="my9Name15" ng-model="my9Name15" required ng-change="my9Func15()" ng-style="my9DefaultColor15">
     </label>
     </p>
     <p><i>touchScreen:</i></p>
@@ -180,13 +180,13 @@
     <p><i>audioJack:</i></p>
     <p>
         <label>
-            <input name="my11Name16" ng-model="my11Name16" required>
+            <input name="my11Name16" ng-model="my11Name16" required ng-change="my11Func16()" ng-style="my11DefaultColor16">
         </label>
     </p>
     <p><i>cpu:</i></p>
     <p>
         <label>
-            <input name="my12Name16" ng-model="my12Name16" required>
+            <input name="my12Name16" ng-model="my12Name16" required ng-change="my12Func16()" ng-style="my12DefaultColor16">
         </label>
     </p>
     <p><i>fmRadio:</i></p>
@@ -204,7 +204,7 @@
     <p><i>usb:</i></p>
     <p>
         <label>
-            <input name="my15Name16" ng-model="my15Name16" required>
+            <input name="my15Name16" ng-model="my15Name16" required ng-change="my15Func16()" ng-style="my15DefaultColor16">
         </label>
     </p>
 
@@ -216,7 +216,7 @@
 
     <p>images:
         <label>
-            <input name="myName18" ng-model="myName18" required>
+            <input name="myName18" ng-model="myName18" required type="file" accept="image/*">
         </label>
     </p>
 
@@ -230,13 +230,19 @@
     <p><i>dimensions:</i></p>
     <p>
         <label>
-            <input name="myName20" ng-model="myName20" required>
+            <input name="myName20" ng-model="myName20" required ng-change="myFunc20()" ng-style="myDefaultColor20">
+        </label>
+        <label>
+            <input name="my16Name20" ng-model="my16Name20" required ng-change="my16Func20()" ng-style="my16DefaultColor20">
+        </label>
+        <label>
+            <input name="my17Name20" ng-model="my17Name20" required ng-change="my17Func20()" ng-style="my17DefaultColor20">
         </label>
     </p>
     <p><i>weight:</i></p>
     <p>
         <label>
-            <input name="my16Name20" ng-model="my16Name20" required>
+            <input name="my18Name20" ng-model="my18Name20" required ng-change="my18Func20()" ng-style="my18DefaultColor20">
         </label>
     </p>
 
@@ -244,13 +250,13 @@
     <p><i>flash:</i></p>
     <p>
         <label>
-            <input name="myName21" ng-model="myName21" required>
+            <input name="myName21" ng-model="myName21" required ng-change="myFunc21()" ng-style="myDefaultColor21">
         </label>
     </p>
     <p><i>ram:</i></p>
     <p>
         <label>
-            <input name="my17Name21" ng-model="my17Name21" required>
+            <input name="my19Name21" ng-model="my19Name21" required ng-change="my19Func21()" ng-style="my19DefaultColor21">
         </label>
     </p>
 

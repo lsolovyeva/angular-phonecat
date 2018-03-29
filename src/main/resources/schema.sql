@@ -128,13 +128,13 @@ CREATE TABLE IF NOT EXISTS `phone_images` (
 
 );
 CREATE TABLE `dimensions` (
-    `id` int NOT NULL,
+    `id` int NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
     PRIMARY KEY (`id`)
 );
 CREATE TABLE IF NOT EXISTS `phone_dimensions` (
     `phonedetail_id` int NOT NULL,
-    `dimensions_id` int NOT NULL,
+    `dimensions_id` int NOT NULL AUTO_INCREMENT,
     FOREIGN KEY (`phonedetail_id`) REFERENCES PhoneDetail (`id`),
     FOREIGN KEY (`dimensions_id`) REFERENCES dimensions (`id`)
 );
