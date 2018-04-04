@@ -9,7 +9,7 @@ CREATE TABLE users
 
 
 CREATE TABLE IF NOT EXISTS `os` (
-  `id` int NOT NULL,
+  `id` int NOT NULL ,
   `name` varchar(200) NOT NULL,
    PRIMARY KEY (`id`)
 );

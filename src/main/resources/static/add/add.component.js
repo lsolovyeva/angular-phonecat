@@ -17,12 +17,16 @@ component('add', {
             $scope.myDefaultColor3 = {"color" : "grey"}; $scope.myDefaultColor4 = {"color" : "grey"};
             $scope.myDefaultColor5 = {"color" : "grey"}; $scope.myDefaultColor6 = {"color" : "grey"};
             $scope.myDefaultColor7 = {"color" : "grey"}; $scope.myDefaultColor8 = {"color" : "grey"};
-            $scope.myDefaultColor9 = {"color" : "grey"}; $scope.my1DefaultColor9 = {"color" : "grey"};
-            $scope.myDefaultColor10 = {"color" : "grey"}; $scope.myDefaultColor11 = {"color" : "grey"};
+            //$scope.myDefaultColor9 = {"color" : "grey"};
+            $scope.my1DefaultColor9 = {"color" : "grey"};
+            //$scope.myDefaultColor10 = {"color" : "grey"};
+            $scope.myDefaultColor11 = {"color" : "grey"};
             $scope.my2DefaultColor11 = {"color" : "grey"}; $scope.my3DefaultColor11 = {"color" : "grey"};
-            $scope.myDefaultColor12 = {"color" : "grey"};$scope.my4DefaultColor12 = {"color" : "grey"};
+            //$scope.myDefaultColor12 = {"color" : "grey"};
+            //$scope.my4DefaultColor12 = {"color" : "grey"};
             $scope.myDefaultColor13 = {"color" : "grey"};$scope.my5DefaultColor13 = {"color" : "grey"};
-            $scope.my8DefaultColor13 = {"color" : "grey"}; $scope.myDefaultColor14 = {"color" : "grey"};
+            //$scope.my8DefaultColor13 = {"color" : "grey"};
+            $scope.myDefaultColor14 = {"color" : "grey"};
             $scope.myDefaultColor15 = {"color" : "grey"}; $scope.my9DefaultColor15 = {"color" : "grey"};
             $scope.my11DefaultColor16 = {"color" : "grey"}; $scope.my12DefaultColor16 = {"color" : "grey"};
             $scope.my15DefaultColor16 = {"color" : "grey"};
@@ -42,17 +46,17 @@ component('add', {
             $scope.myFunc6 = function() {$scope.myDefaultColor6 = {"color" : "black"}};
             $scope.myFunc7 = function() {$scope.myDefaultColor7 = {"color" : "black"}};
             $scope.myFunc8 = function() {$scope.myDefaultColor8 = {"color" : "black"}};
-            $scope.myFunc9 = function() {$scope.myDefaultColor9 = {"color" : "black"}};
+            //$scope.myFunc9 = function() {$scope.myDefaultColor9 = {"color" : "black"}};
             $scope.my1Func9 = function() {$scope.my1DefaultColor9 = {"color" : "black"}};
-            $scope.myFunc10 = function() {$scope.myDefaultColor10 = {"color" : "black"}};
+            //$scope.myFunc10 = function() {$scope.myDefaultColor10 = {"color" : "black"}};
             $scope.myFunc11 = function() {$scope.myDefaultColor11 = {"color" : "black"}};
             $scope.my2Func11 = function() {$scope.my2DefaultColor11 = {"color" : "black"}};
             $scope.my3Func11 = function() {$scope.my3DefaultColor11 = {"color" : "black"}};
-            $scope.myFunc12 = function() {$scope.myDefaultColor12 = {"color" : "black"}};
-            $scope.my4Func12 = function() {$scope.my4DefaultColor12 = {"color" : "black"}};
+            //$scope.myFunc12 = function() {$scope.myDefaultColor12 = {"color" : "black"}};
+            //$scope.my4Func12 = function() {$scope.my4DefaultColor12 = {"color" : "black"}};
             $scope.myFunc13 = function() {$scope.myDefaultColor13 = {"color" : "black"}};
             $scope.my5Func13 = function() {$scope.my5DefaultColor13 = {"color" : "black"}};
-            $scope.my8Func13 = function() {$scope.my8DefaultColor13 = {"color" : "black"}};
+            //$scope.my8Func13 = function() {$scope.my8DefaultColor13 = {"color" : "black"}};
             $scope.myFunc14 = function() {$scope.myDefaultColor14 = {"color" : "black"}};
             $scope.myFunc15 = function() {$scope.myDefaultColor15 = {"color" : "black"}};
             $scope.my9Func15 = function() {$scope.my9DefaultColor15 = {"color" : "black"}};
@@ -76,27 +80,35 @@ component('add', {
             $scope.myName4 = "My ImageUrl";
             $scope.myName5 = "My Name";
             $scope.myName6 = "My Snippet";
-            $scope.myName7 = 0;//phonedetail_id
+            $scope.myName7 = 0; //phonedetail_id
 
             $scope.myName8 = "My AdditionalFeatures";
 
-            $scope.myName9 = "My os";
+            $scope.myName9 = 0; //os_id
+
             $scope.my1Name9 = "My ui";
 
-            $scope.myName10 = "My availability"; //??? List<String>
+            //$scope.myName10 = "My availability"; //??? List<String>
+            $scope.myName10 = '0000'; //availability_id
 
             $scope.myName11 = "My standbyTime";
             $scope.my2Name11 = "My talkTime";
             $scope.my3Name11 = "My type";
 
-            $scope.myName12 = "My features"; //??? List<String>
-            $scope.my4Name12 = "My primary";
+            //$scope.myName12 = "My features"; //List<String>
+            $scope.myName12 = 'Flash';
 
-            $scope.myName13 = "My bluetooth";
+        //$scope.my4Name12 = "My primary";
+            $scope.my4Name12 = 0; //primary_id
+
+            //$scope.myName13 = "My bluetooth";
+            $scope.myName13 = 0; //bluetooth_id
+
             $scope.my5Name13 = "My cell";
             $scope.my6Name13 = false; //gps
             $scope.my7Name13 = false; //infrared
-            $scope.my8Name13 = "My wifi";
+            //$scope.my8Name13 = "My wifi";
+            $scope.my8Name13 = 0; //wifi_id
 
             $scope.myName14 = "My Description";
 
@@ -106,11 +118,14 @@ component('add', {
 
 
             $scope.myName16 = false; //accelerometer
-            $scope.my11Name16 = "My audioJack";
+            //$scope.my11Name16 = "My audioJack";
+            $scope.my11Name16 = 0;
+
             $scope.my12Name16 = "My cpu";
             $scope.my13Name16 = false; //fmRadio
             $scope.my14Name16 = false; //physicalKeyboard
-            $scope.my15Name16 = "My usb";
+            //$scope.my15Name16 = "My usb";
+            $scope.my15Name16 = 0; //usb_id
 
             $scope.myName17 = "My id";
             $scope.myName18 = "My images"; //??? List<String>
@@ -128,6 +143,10 @@ component('add', {
 
             $scope.add = function () {
                // var phoneForAdd = {myName1 : $scope.myName1, myName2 : "My Carrier", myName5 : $scope.myName5, myName14 : $scope.myName14};
+                var favorite = [];
+                $.each($("input[name='myName10']:checked"), function(){
+                    favorite.push($(this).val());
+                });
                 var phoneForAdd = {
                                     phone : {
                                         age : $scope.myName1,
@@ -142,10 +161,13 @@ component('add', {
                                         additionalFeatures : $scope.myName8,
                                         android : {os : $scope.myName9, ui : $scope.my1Name9},
 
-                                        availability : [$scope.myName10],
+                                        availability : favorite,
+                                        //[$scope.myName10],
 
                                         battery : {standbyTime : $scope.myName11, talkTime : $scope.my2Name11, type : $scope.my3Name11},
-                                        camera : {features : [$scope.myName12], primary : $scope.my4Name12},
+                                        camera : {features :
+                                                $scope.myName12.split(','),
+                                            primary : $scope.my4Name12},
                                         connectivity : {bluetooth : $scope.myName13, cell : $scope.my5Name13, gps : $scope.my6Name13, infrared : $scope.my7Name13, wifi : $scope.my8Name13},
                                         description : $scope.myName14,
                                         display : {screenResolution : $scope.myName15, screenSize : $scope.my9Name15, touchScreen : $scope.my10Name15},

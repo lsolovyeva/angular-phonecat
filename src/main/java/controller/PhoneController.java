@@ -24,10 +24,6 @@ public class PhoneController {
         return phoneService.findPhoneById(id);
     }
 
-
-
-
-
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
     public void newPhone(@RequestBody PhoneForAdd phoneForAdd)

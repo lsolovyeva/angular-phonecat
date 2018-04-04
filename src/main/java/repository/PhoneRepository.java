@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -26,60 +28,133 @@ public class PhoneRepository {
 
         addPhone(phoneForAdd);
 
+        addPhoneAvailability(phoneForAdd);
+
+        addPhoneFeatures(phoneForAdd);
+
         addPhoneDimentions(phoneForAdd);
     }
 
     public int addPhone(PhoneForAdd phoneForAdd) {
+        //String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?, ?, ?, ?, ?)";
         String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?, ?, ?, ?, ?)";
+
+        //Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), 144, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), 144};
         Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), 144, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), 144};
+
         return jdbcTemplate.update(sql,params);
     }
 
     public int addDetail(PhoneForAdd phoneForAdd) {
         String sql = "    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,\n" +
                 "    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,\n" +
-                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID,NAME,WEIGHT,FLASH,RAM)\n" +
+                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID, NAME,WEIGHT,FLASH,RAM)\n" +
                 "    values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
-        Object[] params = new Object[]{"Add features",
-                0, //os_id
+        Object[] params = new Object[]{//"Add features",
+                phoneForAdd.phoneDetail.getAdditionalFeatures(),
+                //0, //os_id
+                phoneForAdd.phoneDetail.getAndroid().getOs(),
                 phoneForAdd.phoneDetail.getAndroid().getUi(),
                 phoneForAdd.phoneDetail.getBattery().getStandbyTime(),
                 phoneForAdd.phoneDetail.getBattery().getTalkTime(),
                 phoneForAdd.phoneDetail.getBattery().getType(),
-                3, //primary_id
-                1, //bluetooth_id
+                //3, //primary_id
+                phoneForAdd.phoneDetail.getCamera().getPrimary(),
+                //1, //bluetooth_id
+                phoneForAdd.phoneDetail.getConnectivity().getBluetooth(),
                 phoneForAdd.phoneDetail.getConnectivity().getCell(),
                 phoneForAdd.phoneDetail.getConnectivity().isGps(),
                 phoneForAdd.phoneDetail.getConnectivity().isInfrared(),
-                2, //wifi_id
+                //2, //wifi_id
+                phoneForAdd.phoneDetail.getConnectivity().getWifi(),
                 phoneForAdd.phoneDetail.getDescription(),
                 phoneForAdd.phoneDetail.getDisplay().getScreenResolution(),
                 phoneForAdd.phoneDetail.getDisplay().getScreenSize(),
                 phoneForAdd.phoneDetail.getDisplay().isTouchScreen(),
                 phoneForAdd.phoneDetail.getHardware().isAccelerometer(),
-                1, //audioJack_id
+                //1, //audioJack_id
+                phoneForAdd.phoneDetail.getHardware().getAudioJack(),
                 phoneForAdd.phoneDetail.getHardware().getCpu(),
                 phoneForAdd.phoneDetail.getHardware().isFmRadio(),
                 phoneForAdd.phoneDetail.getHardware().isPhysicalKeyboard(),
-                1, //usb_id
-                144, //id
+                //1, //usb_id
+                phoneForAdd.phoneDetail.getHardware().getUsb(),
+                 144,//id
                 phoneForAdd.phoneDetail.getName(),
                 phoneForAdd.phoneDetail.getSizeAndWeight().getWeight(),
                 phoneForAdd.phoneDetail.getStorage().getFlash(),
                 phoneForAdd.phoneDetail.getStorage().getRam() };
+
         return jdbcTemplate.update(sql,params);
     }
 
+
+    public int addPhoneAvailability(PhoneForAdd phoneForAdd) {
+        //addAvailability(phoneForAdd);
+        String sql = "INSERT INTO PHONE_AVAILABILITY (PHONEDETAIL_ID, AVAILABILITY_ID) VALUES (?, ?)";
+        ArrayList<Integer> tmp = new ArrayList<>();
+        Object[] params;
+
+        if (phoneForAdd.phoneDetail.getAvailability().size() > 0) {
+            tmp.add(144);
+            Integer bar = Integer.parseInt(phoneForAdd.phoneDetail.getAvailability().get(0));
+            tmp.add(bar);
+
+            for (int i = 1; i < phoneForAdd.phoneDetail.getAvailability().size(); i++) {
+                tmp.add(144);
+                Integer foo = Integer.parseInt(phoneForAdd.phoneDetail.getAvailability().get(i));
+                tmp.add(foo);
+                sql = sql.concat(" ,(?, ?)");
+            }
+            sql = sql.concat(";");
+            params = tmp.toArray();
+        }
+        else
+            params = new Object[] {144, 0000};
+        return jdbcTemplate.update(sql,params);
+    }
+/*
+    public int addAvailability(PhoneForAdd phoneForAdd) {
+
+        return jdbcTemplate.update(sql,params);
+    }
+*/
+    public int addPhoneFeatures(PhoneForAdd phoneForAdd) {
+        //String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID , DIMENSIONS_ID ) VALUES (?, ?), (?, ?), (?, ?);";
+        //addFeatures(phoneForAdd);
+
+        String sql = "";
+        Object[] params = new Object[] {};
+        if (phoneForAdd.phoneDetail.getCamera().getFeatures().size() == 2) {
+            params = new Object[]{144, 11011, 144, 22022};
+            sql = "INSERT INTO PHONE_FEATURES (PHONEDETAIL_ID, FEATURES_ID) VALUES (?, ?), (?, ?);";
+        }
+        else {
+            if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals("Flash"))
+                params = new Object[]{144,11011};
+            if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals("Video"))
+                params = new Object[]{144,22022};
+            if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals(""))
+                params = new Object[]{144,33033};
+            sql = "INSERT INTO PHONE_FEATURES (PHONEDETAIL_ID, FEATURES_ID) VALUES (?, ?);";
+        }
+        return jdbcTemplate.update(sql,params);
+    }
+/*
+    public int addFeatures(PhoneForAdd phoneForAdd) {
+        String sql = "INSERT INTO FEATURES(ID, NAME) VALUES (?, ?), (?, ?), (?, ?);";
+        Object[] params = new Object[]{11011, "Flash", 22022, "Video", 33033, ""};
+        return jdbcTemplate.update(sql,params);
+    }
+*/
     public int addPhoneDimentions(PhoneForAdd phoneForAdd) {
         //String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID , DIMENSIONS_ID ) VALUES (?, ?), (?, ?), (?, ?);";
-        String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID) VALUES (?), (?), (?);";
-
-        addDimentions(phoneForAdd);
-
         //Object[] params=new Object[]{144, 711, 144, 712, 144, 713};
-        Object[] params = new Object[]{144, 144, 144};
 
+        String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID) VALUES (?), (?), (?);";
+        addDimentions(phoneForAdd);
+        Object[] params = new Object[]{144, 144, 144};
         return jdbcTemplate.update(sql,params);
     }
 
@@ -92,7 +167,6 @@ public class PhoneRepository {
                 phoneForAdd.phoneDetail.getSizeAndWeight().getDimensions().get(1),
                 phoneForAdd.phoneDetail.getSizeAndWeight().getDimensions().get(2)
         };
-
         return jdbcTemplate.update(sql,params);
     }
 
@@ -126,3 +200,39 @@ public class PhoneRepository {
     INSERT INTO Phone (AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) VALUES (0, 'a', 145, 'b', 'n', 'aaa', 325);
 
  */
+
+
+        /*
+        String sql = "    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,\n" +
+                "    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,\n" +
+                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID,NAME,WEIGHT,FLASH,RAM)\n" +
+                "    values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+
+        Object[] params = new Object[]{"Add features",
+                0, //os_id
+                phoneForAdd.phoneDetail.getAndroid().getUi(),
+                phoneForAdd.phoneDetail.getBattery().getStandbyTime(),
+                phoneForAdd.phoneDetail.getBattery().getTalkTime(),
+                phoneForAdd.phoneDetail.getBattery().getType(),
+                3, //primary_id
+                1, //bluetooth_id
+                phoneForAdd.phoneDetail.getConnectivity().getCell(),
+                phoneForAdd.phoneDetail.getConnectivity().isGps(),
+                phoneForAdd.phoneDetail.getConnectivity().isInfrared(),
+                2, //wifi_id
+                phoneForAdd.phoneDetail.getDescription(),
+                phoneForAdd.phoneDetail.getDisplay().getScreenResolution(),
+                phoneForAdd.phoneDetail.getDisplay().getScreenSize(),
+                phoneForAdd.phoneDetail.getDisplay().isTouchScreen(),
+                phoneForAdd.phoneDetail.getHardware().isAccelerometer(),
+                1, //audioJack_id
+                phoneForAdd.phoneDetail.getHardware().getCpu(),
+                phoneForAdd.phoneDetail.getHardware().isFmRadio(),
+                phoneForAdd.phoneDetail.getHardware().isPhysicalKeyboard(),
+                1, //usb_id
+                144, //id
+                phoneForAdd.phoneDetail.getName(),
+                phoneForAdd.phoneDetail.getSizeAndWeight().getWeight(),
+                phoneForAdd.phoneDetail.getStorage().getFlash(),
+                phoneForAdd.phoneDetail.getStorage().getRam() };
+                */

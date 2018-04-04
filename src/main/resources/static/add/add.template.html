@@ -62,8 +62,14 @@
     <p><i>os:</i></p>
     <p>
         <label>
-            <input name="myName9" ng-model="myName9" required ng-change="myFunc9()" ng-style="myDefaultColor9">
+            <select name="myName9" ng-model="myName9">
+                <option value = '0' ng-selected="true" >Android 2.1</option>
+                <option value = '1'>Android 2.2</option>
+                <option value = '2'>Android 2.3</option>
+                <option value = '3'>Android 3.0</option>
+            </select>
         </label>
+
     </p>
     <p><i>ui:</i></p>
     <p>
@@ -73,9 +79,50 @@
     </p>
 
     <p>availability:
+        <!--<label><input name="myName10"  type="checkbox" value = '0000'> - </label> -->
+        <label><input name="myName10"  type="checkbox" value = '1111'> Verizon </label>
+        <label><input name="myName10"  type="checkbox" value = '2222'>AT&T </label>
+        <label><input name="myName10"  type="checkbox" value = '3333'>T-Mobile </label>
+        <label><input name="myName10"  type="checkbox" value = '4444'>Cellular South</label>
+        <label><input name="myName10"  type="checkbox" value = '5555'>KT </label>
+        <label><input name="myName10"  type="checkbox" value = '7777'>Sprint </label>
+        <label><input name="myName10"  type="checkbox" value = '8888'>US Cellular </label>
+        <label><input name="myName10"  type="checkbox" value = '9999'>Telus </label>
+        <label><input name="myName10"  type="checkbox" value = '1122'>M1 </label>
+        <label><input name="myName10"  type="checkbox" value = '1133'>O2 </label>
+        <label><input name="myName10"  type="checkbox" value = '1144'>Orange </label>
+        <label><input name="myName10"  type="checkbox" value = '1155'>Singtel </label>
+        <label><input name="myName10"  type="checkbox" value = '1166'>StarHub </label>
+        <label><input name="myName10"  type="checkbox" value = '1177'>T-Mobile </label>
+        <label><input name="myName10"  type="checkbox" value = '1188'>Vodafone </label>
+        <label><input name="myName10"  type="checkbox" value = '1199'>SFR  </label>
+
+        <!--
         <label>
-            <input name="myName10" ng-model="myName10" required ng-change="myFunc10()" ng-style="myDefaultColor10">
+            <select name="myName10" ng-model="myName10">
+                <option value = '0000' ng-selected="true"> -
+
+                <input name="employee" type="checkbox" value="Alex"/>
+
+                <option value = '1111' > Verizon </option>
+                <option value = '2222' > AT&T
+                <option value = '3333' > T-Mobile
+                <option value = '4444' > Cellular South
+                <option value = '5555' > KT
+                <option value = '7777' > Sprint
+                <option value = '8888' > US Cellular
+                <option value = '9999' > Telus
+                <option value = '1122' > M1
+                <option value = '1133' > O2
+                <option value = '1144' > Orange
+                <option value = '1155' > Singtel
+                <option value = '1166' > StarHub
+                <option value = '1177' > T-Mobile
+                <option value = '1188' > Vodafone
+                <option value = '1199' > SFR
+            </select>
         </label>
+        -->
     </p>
 
     <p><b>battery:</b></p>
@@ -102,13 +149,24 @@
     <p><i>features:</i></p>
     <p>
         <label>
-            <input name="myName12" ng-model="myName12" required ng-change="myFunc12()" ng-style="myDefaultColor12">
+            <select name="myName12" ng-model="myName12">
+                <option value = 'Flash' ng-selected="true"> Flash </option>
+                <option value = 'Video' >Video</option>
+                <option value = ''> - </option>
+                <option value = 'Flash, Video'> Flash, Video </option>
+            </select>
         </label>
     </p>
     <p><i>primary:</i></p>
     <p>
         <label>
-            <input name="my4Name12" ng-model="my4Name12" required ng-change="my4Func12()" ng-style="my4DefaultColor12">
+            <select name="my4Name12" ng-model="my4Name12">
+                <option value = '0'> - </option>
+                <option value = '1' ng-selected="true">3.0 megapixels</option>
+                <option value = '2'>3.2 megapixels</option>
+                <option value = '3'>5.0 megapixels</option>
+                <option value = '4'>8.0 megapixels</option>
+            </select>
         </label>
     </p>
 
@@ -116,7 +174,11 @@
     <p><i>bluetooth:</i></p>
     <p>
         <label>
-            <input name="myName13" ng-model="myName13" required ng-change="myFunc13()" ng-style="myDefaultColor13">
+            <select name="myName13" ng-model="myName13">
+                <option value = '0' ng-selected="true">Bluetooth 2.1</option>
+                <option value = '1' >Bluetooth 2.0</option>
+                <option value = '2'>Bluetooth 3.0</option>
+            </select>
         </label>
     </p>
     <p><i>cell:</i></p>
@@ -139,9 +201,13 @@
     </p>
     <p><i>wifi:</i></p>
     <p>
-    <label>
-        <input name="my8Name13" ng-model="my8Name13" required ng-change="my8Func13()" ng-style="my8DefaultColor13">
-    </label>
+        <label>
+            <select name="my8Name13" ng-model="my8Name13">
+                <option value = '0' ng-selected="true">802.11 b/g</option>
+                <option value = '1' >802.11 b/g/n</option>
+                <option value = '2'>802.11 a/b/g/n</option>
+            </select>
+        </label>
     </p>
 
     <p>description:
@@ -180,7 +246,10 @@
     <p><i>audioJack:</i></p>
     <p>
         <label>
-            <input name="my11Name16" ng-model="my11Name16" required ng-change="my11Func16()" ng-style="my11DefaultColor16">
+            <select name="my11Name16" ng-model="my11Name16">
+                <option value = '0' ng-selected="true"> - </option>
+                <option value = '1' >3.5mm</option>
+            </select>
         </label>
     </p>
     <p><i>cpu:</i></p>
@@ -204,8 +273,11 @@
     <p><i>usb:</i></p>
     <p>
         <label>
-            <input name="my15Name16" ng-model="my15Name16" required ng-change="my15Func16()" ng-style="my15DefaultColor16">
+            <select name="my11Name16" ng-model="my11Name16">
+                <option value = '0' ng-selected="true">USB 2.0</option>
+            </select>
         </label>
+
     </p>
 
     <p>id:
@@ -264,3 +336,21 @@
     <button ng-click="add()">Add phone</button>
 
 </div>
+
+<!--
+<style>
+.container { border:2px solid #ccc; width:300px; height: 100px; overflow-y: scroll; }
+</style>
+<div class="container">
+      <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+    <input type="checkbox"> This is checkbox <br>
+</div>
+-->
