@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,23 +23,23 @@ public class PhoneRepository {
 
     public void newPhoneWithAdd(PhoneForAdd phoneForAdd) {
 
-        addDetail(phoneForAdd);
+        int addedDetailID = addDetail(phoneForAdd);
 
-        addPhone(phoneForAdd);
+        addPhone(phoneForAdd, addedDetailID);
 
-        addPhoneAvailability(phoneForAdd);
+        addPhoneAvailability(phoneForAdd, addedDetailID);
 
-        addPhoneFeatures(phoneForAdd);
+        addPhoneFeatures(phoneForAdd, addedDetailID);
 
-        addPhoneDimentions(phoneForAdd);
+        addPhoneDimentions(phoneForAdd, addedDetailID);
     }
 
-    public int addPhone(PhoneForAdd phoneForAdd) {
+    public int addPhone(PhoneForAdd phoneForAdd, int addedDetailID) {
         //String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?, ?, ?, ?, ?)";
         String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?, ?, ?, ?, ?)";
 
         //Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), 144, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), 144};
-        Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), 144, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), 144};
+        Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), addedDetailID, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), addedDetailID};
 
         return jdbcTemplate.update(sql,params);
     }
@@ -48,8 +47,8 @@ public class PhoneRepository {
     public int addDetail(PhoneForAdd phoneForAdd) {
         String sql = "    INSERT INTO PHONEDETAIL (ADDITIONALFEATURES,OS_ID,UI,STANDBYTIME,TALKTIME,TYPE,PRIMARY_ID,BLUETOOTH_ID,CELL,GPS,\n" +
                 "    INFRARED,WIFI_ID,DESCRIPTION,SCREENRESOLUTION,SCREENSIZE,TOUCHSCREEN,ACCELEROMETER,\n" +
-                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID,ID, NAME,WEIGHT,FLASH,RAM)\n" +
-                "    values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+                "    AUDIOJACK_ID,CPU,FMRADIO,PHYSICALKEYBOARD,USB_ID, NAME,WEIGHT,FLASH,RAM)\n" +
+                "    values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
         Object[] params = new Object[]{//"Add features",
                 phoneForAdd.phoneDetail.getAdditionalFeatures(),
@@ -80,29 +79,31 @@ public class PhoneRepository {
                 phoneForAdd.phoneDetail.getHardware().isPhysicalKeyboard(),
                 //1, //usb_id
                 phoneForAdd.phoneDetail.getHardware().getUsb(),
-                 144,//id
+                //144,//id
                 phoneForAdd.phoneDetail.getName(),
                 phoneForAdd.phoneDetail.getSizeAndWeight().getWeight(),
                 phoneForAdd.phoneDetail.getStorage().getFlash(),
                 phoneForAdd.phoneDetail.getStorage().getRam() };
 
-        return jdbcTemplate.update(sql,params);
+        jdbcTemplate.update(sql,params); // new phone detail
+
+        return jdbcTemplate.queryForObject("SELECT id FROM PhoneDetail WHERE name=?", new Object[]{phoneForAdd.phoneDetail.getName()}, new IdRowMapper(jdbcTemplate));
     }
 
 
-    public int addPhoneAvailability(PhoneForAdd phoneForAdd) {
+    public int addPhoneAvailability(PhoneForAdd phoneForAdd, int addedDetailID) {
         //addAvailability(phoneForAdd);
         String sql = "INSERT INTO PHONE_AVAILABILITY (PHONEDETAIL_ID, AVAILABILITY_ID) VALUES (?, ?)";
         ArrayList<Integer> tmp = new ArrayList<>();
         Object[] params;
 
         if (phoneForAdd.phoneDetail.getAvailability().size() > 0) {
-            tmp.add(144);
+            tmp.add(addedDetailID);
             Integer bar = Integer.parseInt(phoneForAdd.phoneDetail.getAvailability().get(0));
             tmp.add(bar);
 
             for (int i = 1; i < phoneForAdd.phoneDetail.getAvailability().size(); i++) {
-                tmp.add(144);
+                tmp.add(addedDetailID);
                 Integer foo = Integer.parseInt(phoneForAdd.phoneDetail.getAvailability().get(i));
                 tmp.add(foo);
                 sql = sql.concat(" ,(?, ?)");
@@ -111,7 +112,7 @@ public class PhoneRepository {
             params = tmp.toArray();
         }
         else
-            params = new Object[] {144, 0000};
+            params = new Object[] {addedDetailID, 0000};
         return jdbcTemplate.update(sql,params);
     }
 /*
@@ -120,23 +121,23 @@ public class PhoneRepository {
         return jdbcTemplate.update(sql,params);
     }
 */
-    public int addPhoneFeatures(PhoneForAdd phoneForAdd) {
+    public int addPhoneFeatures(PhoneForAdd phoneForAdd, int addedDetailID) {
         //String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID , DIMENSIONS_ID ) VALUES (?, ?), (?, ?), (?, ?);";
         //addFeatures(phoneForAdd);
 
         String sql = "";
         Object[] params = new Object[] {};
         if (phoneForAdd.phoneDetail.getCamera().getFeatures().size() == 2) {
-            params = new Object[]{144, 11011, 144, 22022};
+            params = new Object[]{addedDetailID, 11011, addedDetailID, 22022};
             sql = "INSERT INTO PHONE_FEATURES (PHONEDETAIL_ID, FEATURES_ID) VALUES (?, ?), (?, ?);";
         }
         else {
             if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals("Flash"))
-                params = new Object[]{144,11011};
+                params = new Object[]{addedDetailID,11011};
             if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals("Video"))
-                params = new Object[]{144,22022};
+                params = new Object[]{addedDetailID,22022};
             if (phoneForAdd.phoneDetail.getCamera().getFeatures().get(0).equals(""))
-                params = new Object[]{144,33033};
+                params = new Object[]{addedDetailID,33033};
             sql = "INSERT INTO PHONE_FEATURES (PHONEDETAIL_ID, FEATURES_ID) VALUES (?, ?);";
         }
         return jdbcTemplate.update(sql,params);
@@ -148,13 +149,13 @@ public class PhoneRepository {
         return jdbcTemplate.update(sql,params);
     }
 */
-    public int addPhoneDimentions(PhoneForAdd phoneForAdd) {
+    public int addPhoneDimentions(PhoneForAdd phoneForAdd, int addedDetailID) {
         //String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID , DIMENSIONS_ID ) VALUES (?, ?), (?, ?), (?, ?);";
         //Object[] params=new Object[]{144, 711, 144, 712, 144, 713};
 
         String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID) VALUES (?), (?), (?);";
         addDimentions(phoneForAdd);
-        Object[] params = new Object[]{144, 144, 144};
+        Object[] params = new Object[]{addedDetailID, addedDetailID, addedDetailID};
         return jdbcTemplate.update(sql,params);
     }
 

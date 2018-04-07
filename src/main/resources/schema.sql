@@ -64,7 +64,7 @@ CREATE TABLE `PhoneDetail` (
     `fmRadio` BOOLEAN NOT NULL,
     `physicalKeyboard` BOOLEAN NOT NULL,
     `usb_id` int NOT NULL,
-    `id` int NOT NULL,
+    `id` int NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255) NOT NULL,
     `weight` VARCHAR(255) NOT NULL,
     `flash` VARCHAR(255) NOT NULL,
