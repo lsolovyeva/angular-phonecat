@@ -14,9 +14,10 @@ component('add', {
         function($scope, $location, $http) {
 
             $scope.myDefaultColor1 = {"color" : "grey"}; $scope.myDefaultColor2 = {"color" : "grey"};
-            $scope.myDefaultColor3 = {"color" : "grey"}; $scope.myDefaultColor4 = {"color" : "grey"};
+            //$scope.myDefaultColor3 = {"color" : "grey"}; $scope.myDefaultColor4 = {"color" : "grey"};
             $scope.myDefaultColor5 = {"color" : "grey"}; $scope.myDefaultColor6 = {"color" : "grey"};
-            $scope.myDefaultColor7 = {"color" : "grey"}; $scope.myDefaultColor8 = {"color" : "grey"};
+            //$scope.myDefaultColor7 = {"color" : "grey"};
+            $scope.myDefaultColor8 = {"color" : "grey"};
             //$scope.myDefaultColor9 = {"color" : "grey"};
             $scope.my1DefaultColor9 = {"color" : "grey"};
             //$scope.myDefaultColor10 = {"color" : "grey"};
@@ -36,15 +37,13 @@ component('add', {
             $scope.myDefaultColor21 = {"color" : "grey"}; $scope.my19DefaultColor21 = {"color" : "grey"};
 
 
-
-
             $scope.myFunc1 = function() {$scope.myDefaultColor1 = {"color" : "black"}};
             $scope.myFunc2 = function() {$scope.myDefaultColor2 = {"color" : "black"}};
-            $scope.myFunc3 = function() {$scope.myDefaultColor3 = {"color" : "black"}};
-            $scope.myFunc4 = function() {$scope.myDefaultColor4 = {"color" : "black"}};
+            //$scope.myFunc3 = function() {$scope.myDefaultColor3 = {"color" : "black"}};
+            //$scope.myFunc4 = function() {$scope.myDefaultColor4 = {"color" : "black"}};
             $scope.myFunc5 = function() {$scope.myDefaultColor5 = {"color" : "black"}};
             $scope.myFunc6 = function() {$scope.myDefaultColor6 = {"color" : "black"}};
-            $scope.myFunc7 = function() {$scope.myDefaultColor7 = {"color" : "black"}};
+            //$scope.myFunc7 = function() {$scope.myDefaultColor7 = {"color" : "black"}};
             $scope.myFunc8 = function() {$scope.myDefaultColor8 = {"color" : "black"}};
             //$scope.myFunc9 = function() {$scope.myDefaultColor9 = {"color" : "black"}};
             $scope.my1Func9 = function() {$scope.my1DefaultColor9 = {"color" : "black"}};
@@ -71,16 +70,26 @@ component('add', {
             $scope.myFunc21 = function() {$scope.myDefaultColor21 = {"color" : "black"}};
             $scope.my19Func21 = function() {$scope.my19DefaultColor21 = {"color" : "black"}};
 
+/*var a =  browser.driver.getCurrentUrl();
+console.log("Lalala");
+var request = require('request');
+var r = request.get('http://google.com?q=foo', function (err, res, body) {
+  console.log(r.uri.href);
+  console.log(res.request.uri.href);
 
+  // Mikael doesn't mention getting the uri using 'this' so maybe it's best to avoid it
+  // please add a comment if you know why this might be bad
+  console.log(this.uri.href);
+});*/
 
 
             $scope.myName1 = 0; //age
             $scope.myName2 = "My Carrier";
-            $scope.myName3 = 0; //Id
-            $scope.myName4 = "My ImageUrl";
+            //$scope.myName3 = 0; //Id
+            //$scope.myName4 = "My ImageUrl";
             $scope.myName5 = "My Name";
             $scope.myName6 = "My Snippet";
-            $scope.myName7 = 0; //phonedetail_id
+            //$scope.myName7 = 0; //phonedetail_id
 
             $scope.myName8 = "My AdditionalFeatures";
 
@@ -127,8 +136,20 @@ component('add', {
             //$scope.my15Name16 = "My usb";
             $scope.my15Name16 = 0; //usb_id
 
-            $scope.myName17 = "My id";
-            $scope.myName18 = "My images"; //??? List<String>
+            //$scope.myName17 = "My id";
+
+            //$scope.myName18 = "My images"; //??? List<String>
+            $scope.myName18 = [];
+            var rand1 = Math.floor(Math.random() * 1084);
+            var rand2 = Math.floor(Math.random() * 1084);
+            var rand3 = Math.floor(Math.random() * 1084);
+
+            var img1 = "https://picsum.photos/400?image=" + rand1;
+            var img2 = "https://picsum.photos/400?image=" + rand2;
+            var img3 = "https://picsum.photos/400?image=" + rand3;
+
+            $scope.myName18 = [img1, img2, img3];
+
             $scope.myName19 = "My name";
 
             $scope.myName20 = "My width"; //List<String> done
@@ -151,11 +172,11 @@ component('add', {
                                     phone : {
                                         age : $scope.myName1,
                                         carrier : $scope.myName2,
-                                        id : $scope.myName3,
-                                        imageUrl : $scope.myName4,
+                                        //id : $scope.myName3,
+                                        //imageUrl : $scope.myName4,
                                         name : $scope.myName5,
                                         snippet : $scope.myName6,
-                                        phonedetail_id : $scope.myName7
+                                        //phonedetail_id : $scope.myName7
                                     },
                                     phoneDetail : {
                                         additionalFeatures : $scope.myName8,
@@ -174,7 +195,7 @@ component('add', {
                                         hardware : {accelerometer : $scope.myName16, audioJack : $scope.my11Name16, cpu : $scope.my12Name16, fmRadio : $scope.my13Name16, physicalKeyboard : $scope.my14Name16, usb : $scope.my15Name16},
                                         id : $scope.myName17,
 
-                                        images : [$scope.myName18],
+                                        images : $scope.myName18,
 
                                         name : $scope.myName19,
                                         sizeAndWeight : {

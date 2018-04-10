@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `phone_features` (
 );
 
 CREATE TABLE `images` (
-    `id` int NOT NULL,
+    `id` int NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
     PRIMARY KEY (`id`)
 );

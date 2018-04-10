@@ -31,6 +31,9 @@ public class PhoneRepository {
 
         addPhoneFeatures(phoneForAdd, addedDetailID);
 
+        int addedImageID = addImages(phoneForAdd);
+        addPhoneImages(phoneForAdd, addedDetailID, addedImageID);
+
         addPhoneDimentions(phoneForAdd, addedDetailID);
     }
 
@@ -39,7 +42,7 @@ public class PhoneRepository {
         String sql = "INSERT INTO Phone(AGE, CARRIER, ID, IMAGEURL, NAME, SNIPPET, PHONEDETAIL_ID) values(?, ?, ?, ?, ?, ?, ?)";
 
         //Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), 144, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), 144};
-        Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), addedDetailID, 'b', phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), addedDetailID};
+        Object[] params = new Object[]{phoneForAdd.phone.getAge(), phoneForAdd.phone.getCarrier(), addedDetailID, phoneForAdd.phoneDetail.getImages().get(0), phoneForAdd.phone.getName(), phoneForAdd.phone.getSnippet(), addedDetailID};
 
         return jdbcTemplate.update(sql,params);
     }
@@ -149,6 +152,23 @@ public class PhoneRepository {
         return jdbcTemplate.update(sql,params);
     }
 */
+
+    public int addPhoneImages(PhoneForAdd phoneForAdd, int addedDetailID, int addedImageID) {
+        //addImages(phoneForAdd);
+
+        String sql = "INSERT INTO PHONE_IMAGES (PHONEDETAIL_ID, IMAGES_ID) VALUES (?, ?), (?, ?),(?, ?);";
+        Object[] params = new Object[] {addedDetailID, addedImageID, addedDetailID, addedImageID + 1, addedDetailID, addedImageID + 2};
+        return jdbcTemplate.update(sql,params);
+    }
+
+    public int addImages(PhoneForAdd phoneForAdd) {
+        String sql = "INSERT INTO IMAGES(NAME) VALUES (?),(?), (?);";
+        Object[] params = new Object[]{phoneForAdd.phoneDetail.getImages().get(0), phoneForAdd.phoneDetail.getImages().get(1),phoneForAdd.phoneDetail.getImages().get(2)};
+         jdbcTemplate.update(sql,params);
+        return jdbcTemplate.queryForObject("SELECT id FROM IMAGES WHERE name=?", new Object[]{phoneForAdd.phoneDetail.getImages().get(0)}, new IdRowMapper(jdbcTemplate));
+    }
+
+
     public int addPhoneDimentions(PhoneForAdd phoneForAdd, int addedDetailID) {
         //String sql = "INSERT INTO PHONE_DIMENSIONS (PHONEDETAIL_ID , DIMENSIONS_ID ) VALUES (?, ?), (?, ?), (?, ?);";
         //Object[] params=new Object[]{144, 711, 144, 712, 144, 713};
@@ -158,7 +178,6 @@ public class PhoneRepository {
         Object[] params = new Object[]{addedDetailID, addedDetailID, addedDetailID};
         return jdbcTemplate.update(sql,params);
     }
-
 
     public int addDimentions(PhoneForAdd phoneForAdd) {
         //String sql = "INSERT INTO DIMENSIONS(ID, NAME ) VALUES (?,?), (?,?), (?,?);";
