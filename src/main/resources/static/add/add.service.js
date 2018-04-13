@@ -1,9 +1,7 @@
 'use strict';
 
-angular.
-module('add').
-factory('Image', ['$resource',
-    function($resource) {
+angular.module('add').factory('Image', ['$resource',
+    function ($resource) {
         return $resource('https://picsum.photos/list', {}, {
             query: {
                 method: 'GET',

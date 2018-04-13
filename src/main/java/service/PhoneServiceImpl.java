@@ -15,13 +15,15 @@ public class PhoneServiceImpl implements PhoneService {
     @Autowired
     PhoneRepository phoneRepository;
 
-    public PhoneDetail findPhoneById(int id) {return phoneRepository.findPhoneById(id);}
+    public PhoneDetail findPhoneById(int id) {
+        return phoneRepository.findPhoneById(id);
+    }
 
     public List<Phone> findAll() {
         return phoneRepository.findAll();
     }
 
     public void newPhoneWithAdd(PhoneForAdd phoneForAdd) {
-         phoneRepository.newPhoneWithAdd(phoneForAdd);
+        phoneRepository.newPhoneWithAdd(phoneForAdd);
     }
 }

@@ -7,7 +7,8 @@ public class Battery {
     private String talkTime;
     private String type;
 
-    public Battery() {}
+    public Battery() {
+    }
 
     public Battery(String standbyTime, String talkTime, String type) {
         this.standbyTime = standbyTime;
@@ -18,6 +19,7 @@ public class Battery {
     public String getStandbyTime() {
         return standbyTime;
     }
+
     public String getTalkTime() {
         return talkTime;
     }
@@ -42,8 +44,7 @@ public class Battery {
         return Objects.hash(standbyTime, talkTime, type);
     }
 
-    public static class BatteryBuilder
-    {
+    public static class BatteryBuilder {
         private String standbyTime;
         private String talkTime;
         private String type;
@@ -51,16 +52,20 @@ public class Battery {
         public static BatteryBuilder builder() {
             return new BatteryBuilder();
         }
-        private BatteryBuilder() {}
+
+        private BatteryBuilder() {
+        }
 
         public BatteryBuilder standbyTime(String standbyTime) {
             this.standbyTime = standbyTime;
             return this;
         }
+
         public BatteryBuilder talkTime(String talkTime) {
             this.talkTime = talkTime;
             return this;
         }
+
         public BatteryBuilder type(String type) {
             this.type = type;
             return this;

@@ -7,17 +7,15 @@ public class Display {
     private String screenSize;
     private Boolean touchScreen;
 
-    public Display() {}
+    public Display() {
+    }
 
     public Display(String screenResolution, String screenSize, Boolean touchScreen) {
         this.screenResolution = screenResolution;
         this.screenSize = screenSize;
         this.touchScreen = touchScreen;
     }
-    /*
-    public Display() {
-    }
-*/
+
     public String getScreenResolution() {
         return screenResolution;
     }
@@ -46,8 +44,7 @@ public class Display {
         return Objects.hash(screenResolution, screenSize, touchScreen);
     }
 
-    public static class DisplayBuilder
-    {
+    public static class DisplayBuilder {
         private String screenResolution;
         private String screenSize;
         private Boolean touchScreen;
@@ -55,16 +52,20 @@ public class Display {
         public static DisplayBuilder builder() {
             return new DisplayBuilder();
         }
-        private DisplayBuilder() {}
+
+        private DisplayBuilder() {
+        }
 
         public DisplayBuilder screenResolution(String screenResolution) {
             this.screenResolution = screenResolution;
             return this;
         }
+
         public DisplayBuilder screenSize(String screenSize) {
             this.screenSize = screenSize;
             return this;
         }
+
         public DisplayBuilder touchScreen(Boolean touchScreen) {
             this.touchScreen = touchScreen;
             return this;

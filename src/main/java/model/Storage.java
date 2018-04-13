@@ -11,7 +11,8 @@ public class Storage {
         this.ram = ram;
     }
 
-    public Storage() {}
+    public Storage() {
+    }
 
     public String getFlash() {
         return flash;
@@ -36,23 +37,27 @@ public class Storage {
         return Objects.hash(flash, ram);
     }
 
-    public static class StorageBuilder
-    {
+    public static class StorageBuilder {
         private String flash;
         private String ram;
 
         public static StorageBuilder builder() {
             return new StorageBuilder();
         }
-        private StorageBuilder() {}
+
+        private StorageBuilder() {
+        }
+
         public StorageBuilder flash(String flash) {
             this.flash = flash;
             return this;
         }
+
         public StorageBuilder ram(String ram) {
             this.ram = ram;
             return this;
         }
+
         public Storage build() {
             return new Storage(this.flash, this.ram);
         }

@@ -1,31 +1,29 @@
 'use strict';
 
-angular.
-module('login').
-component('login', {
+angular.module('login').component('login', {
     templateUrl: 'login/login.template.html',
     controller: [
         function loginController() {
-        	
+
         }
     ]
 })
-    .run( function($rootScope, $location) {
+    .run(function ($rootScope, $location) {
         // register listener to watch route changes
-        $rootScope.$on( "$routeChangeStart", function(event, next, current) {
-            if ( $rootScope.authenticated === false ) {
+        $rootScope.$on("$routeChangeStart", function (event, next, current) {
+            if ($rootScope.authenticated === false) {
                 // no logged user, we should be going to #login
-                if ( $location.$$path === "/login" ) {
+                if ($location.$$path === "/login") {
                     // already going to #login, no redirect needed
                 } else {
                     // not going to #login, we should redirect now
-                    $location.path( "/login" );
+                    $location.path("/login");
                 }
             }
         });
     })
     .controller('navigation',
-        function($rootScope, $scope, $http, $location, $route) {
+        function ($rootScope, $scope, $http, $location, $route) {
 
             $scope.tab = function (route) {
                 return $route.current && route === $route.current.controller;
@@ -58,20 +56,20 @@ component('login', {
                 }).success(function (data) {
                     authenticate(function () {
                         if ($rootScope.authenticated) {
-                            console.log("Login succeeded")
+                            console.log("Login succeeded");
                             //$location.path("/");
                             $location.path("/phones");
                             $scope.error = false;
                             $rootScope.authenticated = true;
                         } else {
-                            console.log("Login failed with redirect")
+                            console.log("Login failed with redirect");
                             $location.path("/login");
                             $scope.error = true;
                             $rootScope.authenticated = false;
                         }
                     });
                 }).error(function (data) {
-                    console.log("Login failed")
+                    console.log("Login failed");
                     $location.path("/login");
                     $scope.error = true;
                     $rootScope.authenticated = false;
@@ -87,11 +85,4 @@ component('login', {
                     $rootScope.authenticated = false;
                 });
             };
-
-/*
-            $scope.add = function () {
-
-                $location.path("/add");
-            };
-*/
         });

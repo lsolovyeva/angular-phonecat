@@ -6,11 +6,11 @@ import model.PhoneForAdd;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import service.PhoneService;
+
 import java.util.Collection;
 
 @RestController
 public class PhoneController {
-
     @Autowired
     PhoneService phoneService;
 
@@ -26,38 +26,7 @@ public class PhoneController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     @ResponseBody
-    public void newPhone(@RequestBody PhoneForAdd phoneForAdd)
-    {
-         phoneService.newPhoneWithAdd(phoneForAdd);
-
+    public void newPhone(@RequestBody PhoneForAdd phoneForAdd) {
+        phoneService.newPhoneWithAdd(phoneForAdd);
     }
-
-/* Example:
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getBazz(@PathVariable String id){
-        return new ResponseEntity<>(new Bazz(id, "Bazz"+id), HttpStatus.OK);
-    }
-
-    @PostMapping
-    public ResponseEntity<?> newBazz(@RequestParam("name") String name){
-        return new ResponseEntity<>(new Bazz("5", name), HttpStatus.OK);
-    }
-*/
-
-/*
-    @RequestMapping(value = "/add", method = POST)
-    @ResponseBody
-    public String postFoos() {
-            //System.out.println("INTEGER Account on the top");
-        return "Post some Foos";
-    }
-*/
-
-/* no need to GET
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public int getAdd() {
-        return phoneService.newPhoneWithAdd("JiJiJi",  "VoVoVo");
-        //return new Phone(0, "JiJiJi", 144, "", "VoVoVo", "GoGoGo");
-    }
-*/
 }

@@ -19,7 +19,8 @@ public class PhoneDetail {
     private SizeAndWeight sizeAndWeight;
     private Storage storage;
 
-    public PhoneDetail() {}
+    public PhoneDetail() {
+    }
 
     public static PhoneDetailBuilder builder() {
         return new PhoneDetailBuilder();
@@ -38,8 +39,8 @@ public class PhoneDetail {
                        List<String> images,
                        String name,
                        SizeAndWeight sizeAndWeight,
-                       Storage storage
-    ) {this.additionalFeatures = additionalFeatures;
+                       Storage storage) {
+        this.additionalFeatures = additionalFeatures;
         this.android = android;
         this.availability = availability;
         this.battery = battery;
@@ -58,6 +59,7 @@ public class PhoneDetail {
     public String getAdditionalFeatures() {
         return additionalFeatures;
     }
+
     public Android getAndroid() {
         return android;
     }
@@ -137,8 +139,7 @@ public class PhoneDetail {
         return Objects.hash(additionalFeatures, android, availability, battery, camera, connectivity, description, display, hardware, id, images, name, sizeAndWeight, storage);
     }
 
-    public static class PhoneDetailBuilder
-    {
+    public static class PhoneDetailBuilder {
         private String additionalFeatures;
         private Android android;
         private List<String> availability;
@@ -154,8 +155,8 @@ public class PhoneDetail {
         private SizeAndWeight sizeAndWeight;
         private Storage storage;
 
-
-        private PhoneDetailBuilder() {}
+        private PhoneDetailBuilder() {
+        }
 
         public PhoneDetailBuilder additionalFeatures(String additionalFeatures) {
             this.additionalFeatures = additionalFeatures;
@@ -171,6 +172,7 @@ public class PhoneDetail {
             this.description = description;
             return this;
         }
+
         public PhoneDetailBuilder name(String name) {
             this.name = name;
             return this;
@@ -180,53 +182,62 @@ public class PhoneDetail {
             this.availability = availability;
             return this;
         }
+
         public PhoneDetailBuilder images(List<String> images) {
             this.images = images;
             return this;
         }
+
         public PhoneDetailBuilder battery(Battery battery) {
             this.battery = battery;
             return this;
         }
+
         public PhoneDetailBuilder camera(Camera camera) {
             this.camera = camera;
             return this;
         }
+
         public PhoneDetailBuilder connectivity(Connectivity connectivity) {
             this.connectivity = connectivity;
             return this;
         }
+
         public PhoneDetailBuilder display(Display display) {
             this.display = display;
             return this;
         }
+
         public PhoneDetailBuilder hardware(Hardware hardware) {
             this.hardware = hardware;
             return this;
         }
+
         public PhoneDetailBuilder sizeAndWeight(SizeAndWeight sizeAndWeight) {
             this.sizeAndWeight = sizeAndWeight;
             return this;
         }
+
         public PhoneDetailBuilder storage(Storage storage) {
             this.storage = storage;
             return this;
         }
+
         public PhoneDetail build() {
             return new PhoneDetail(this.additionalFeatures,
-            this.android,
-            this.availability,
-            this.battery,
-            this.camera,
-            this.connectivity,
-            this.description,
-            this.display,
-            this.hardware,
-            this.id,
-            this.images,
-            this.name,
-            this.sizeAndWeight,
-            this.storage);
+                    this.android,
+                    this.availability,
+                    this.battery,
+                    this.camera,
+                    this.connectivity,
+                    this.description,
+                    this.display,
+                    this.hardware,
+                    this.id,
+                    this.images,
+                    this.name,
+                    this.sizeAndWeight,
+                    this.storage);
         }
     }
 }

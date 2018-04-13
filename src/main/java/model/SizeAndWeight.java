@@ -12,7 +12,8 @@ public class SizeAndWeight {
         this.weight = weight;
     }
 
-    public SizeAndWeight() {}
+    public SizeAndWeight() {
+    }
 
     public List<String> getDimensions() {
         return dimensions;
@@ -37,20 +38,22 @@ public class SizeAndWeight {
         return Objects.hash(dimensions, weight);
     }
 
-    public static class SizeAndWeightBuilder
-    {
+    public static class SizeAndWeightBuilder {
         private List<String> dimensions;
         private String weight;
 
         public static SizeAndWeightBuilder builder() {
             return new SizeAndWeightBuilder();
         }
-        private SizeAndWeightBuilder() {}
+
+        private SizeAndWeightBuilder() {
+        }
 
         public SizeAndWeightBuilder dimensions(List<String> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
+
         public SizeAndWeightBuilder weight(String weight) {
             this.weight = weight;
             return this;

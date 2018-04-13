@@ -10,7 +10,8 @@ public class Hardware {
     private Boolean physicalKeyboard;
     private String usb;
 
-    public Hardware() {}
+    public Hardware() {
+    }
 
     public Hardware(Boolean accelerometer, String audioJack, String cpu, Boolean fmRadio, Boolean physicalKeyboard, String usb) {
         this.accelerometer = accelerometer;
@@ -64,8 +65,7 @@ public class Hardware {
         return Objects.hash(accelerometer, audioJack, cpu, fmRadio, physicalKeyboard, usb);
     }
 
-    public static class HardwareBuilder
-    {
+    public static class HardwareBuilder {
         private Boolean accelerometer;
         private String audioJack;
         private String cpu;
@@ -76,32 +76,40 @@ public class Hardware {
         public static HardwareBuilder builder() {
             return new HardwareBuilder();
         }
-        private HardwareBuilder() {}
+
+        private HardwareBuilder() {
+        }
 
         public HardwareBuilder accelerometer(Boolean accelerometer) {
             this.accelerometer = accelerometer;
             return this;
         }
+
         public HardwareBuilder audioJack(String audioJack) {
             this.audioJack = audioJack;
             return this;
         }
+
         public HardwareBuilder cpu(String cpu) {
             this.cpu = cpu;
             return this;
         }
+
         public HardwareBuilder fmRadio(Boolean fmRadio) {
             this.fmRadio = fmRadio;
             return this;
         }
+
         public HardwareBuilder physicalKeyboard(Boolean physicalKeyboard) {
             this.physicalKeyboard = physicalKeyboard;
             return this;
         }
+
         public HardwareBuilder usb(String usb) {
             this.usb = usb;
             return this;
         }
+
         public Hardware build() {
             return new Hardware(this.accelerometer, this.audioJack, this.cpu, this.fmRadio, this.physicalKeyboard, this.usb);
         }

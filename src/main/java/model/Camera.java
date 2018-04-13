@@ -7,7 +7,8 @@ public class Camera {
     private List<String> features;
     private String primary;
 
-    public Camera() {}
+    public Camera() {
+    }
 
     public Camera(List<String> features, String primary) {
         this.features = features;
@@ -37,20 +38,22 @@ public class Camera {
         return Objects.hash(features, primary);
     }
 
-    public static class CameraBuilder
-    {
+    public static class CameraBuilder {
         private List<String> features;
         private String primary;
 
         public static CameraBuilder builder() {
             return new CameraBuilder();
         }
-        private CameraBuilder() {}
+
+        private CameraBuilder() {
+        }
 
         public CameraBuilder features(List<String> features) {
             this.features = features;
             return this;
         }
+
         public CameraBuilder primary(String primary) {
             this.primary = primary;
             return this;

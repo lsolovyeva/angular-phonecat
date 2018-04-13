@@ -9,7 +9,8 @@ public class Connectivity {
     private Boolean infrared;
     private String wifi;
 
-    public Connectivity() {}
+    public Connectivity() {
+    }
 
     public Connectivity(String bluetooth, String cell, Boolean gps, Boolean infrared, String wifi) {
         this.bluetooth = bluetooth;
@@ -26,6 +27,7 @@ public class Connectivity {
     public String getCell() {
         return cell;
     }
+
     public Boolean isGps() {
         return gps;
     }
@@ -56,8 +58,7 @@ public class Connectivity {
         return Objects.hash(bluetooth, cell, gps, infrared, wifi);
     }
 
-    public static class ConnectivityBuilder
-    {
+    public static class ConnectivityBuilder {
         private String bluetooth;
         private String cell;
         private Boolean gps;
@@ -67,24 +68,30 @@ public class Connectivity {
         public static ConnectivityBuilder builder() {
             return new ConnectivityBuilder();
         }
-        private ConnectivityBuilder() {}
+
+        private ConnectivityBuilder() {
+        }
 
         public ConnectivityBuilder bluetooth(String bluetooth) {
             this.bluetooth = bluetooth;
             return this;
         }
+
         public ConnectivityBuilder cell(String cell) {
             this.cell = cell;
             return this;
         }
+
         public ConnectivityBuilder gps(Boolean gps) {
             this.gps = gps;
             return this;
         }
+
         public ConnectivityBuilder infrared(Boolean infrared) {
             this.infrared = infrared;
             return this;
         }
+
         public ConnectivityBuilder wifi(String wifi) {
             this.wifi = wifi;
             return this;
