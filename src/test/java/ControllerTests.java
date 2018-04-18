@@ -34,20 +34,20 @@ public class ControllerTests {
 
     @Test
     public void testExample3() {
-        List<String> _features = new ArrayList<>();
-        _features.add("");
+        List<String> features = new ArrayList<>();
+        features.add("");
 
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
+        List<String> availability = new ArrayList<>();
 
-        List<String> _images = new ArrayList<>();
-        _images.add("98");
-        _images.add("99");
-        _images.add("100");
+        List<String> images = new ArrayList<>();
+        images.add("98");
+        images.add("99");
+        images.add("100");
 
 
         Phone phone2 = new Phone();
@@ -74,7 +74,7 @@ public class ControllerTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -101,7 +101,7 @@ public class ControllerTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -110,8 +110,8 @@ public class ControllerTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();

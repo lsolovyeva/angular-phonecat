@@ -38,19 +38,19 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithFlashFeature() {
-        List<String> _features = new ArrayList<>();
-        _features.add("Flash");
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> features = new ArrayList<>();
+        features.add("Flash");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
-        _availability.add("0000");
-        List<String> _images = new ArrayList<>();
-        _images.add("80");
-        _images.add("81");
-        _images.add("82");
+        List<String> availability = new ArrayList<>();
+        availability.add("0000");
+        List<String> images = new ArrayList<>();
+        images.add("80");
+        images.add("81");
+        images.add("82");
 
 
         Phone phone2 = new Phone();
@@ -77,7 +77,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -104,7 +104,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -113,8 +113,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
@@ -127,19 +127,19 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithVideoFeature() {
-        List<String> _features = new ArrayList<>();
-        _features.add("Video");
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> features = new ArrayList<>();
+        features.add("Video");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
-        _availability.add("0000");
-        List<String> _images = new ArrayList<>();
-        _images.add("83");
-        _images.add("84");
-        _images.add("85");
+        List<String> availability = new ArrayList<>();
+        availability.add("0000");
+        List<String> images = new ArrayList<>();
+        images.add("83");
+        images.add("84");
+        images.add("85");
 
 
         Phone phone2 = new Phone();
@@ -166,7 +166,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -193,7 +193,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -202,8 +202,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
@@ -216,21 +216,21 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithFullFeatures() {
-        List<String> _features = new ArrayList<>();
-        _features.add("Flash");
-        _features.add("Video");
+        List<String> features = new ArrayList<>();
+        features.add("Flash");
+        features.add("Video");
 
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
-        _availability.add("0000");
-        List<String> _images = new ArrayList<>();
-        _images.add("86");
-        _images.add("87");
-        _images.add("88");
+        List<String> availability = new ArrayList<>();
+        availability.add("0000");
+        List<String> images = new ArrayList<>();
+        images.add("86");
+        images.add("87");
+        images.add("88");
 
 
         Phone phone2 = new Phone();
@@ -257,7 +257,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -284,7 +284,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -293,8 +293,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
@@ -307,20 +307,20 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithNoFeatures() {
-        List<String> _features = new ArrayList<>();
-        _features.add("");
+        List<String> features = new ArrayList<>();
+        features.add("");
 
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
-        _availability.add("0000");
-        List<String> _images = new ArrayList<>();
-        _images.add("89");
-        _images.add("90");
-        _images.add("91");
+        List<String> availability = new ArrayList<>();
+        availability.add("0000");
+        List<String> images = new ArrayList<>();
+        images.add("89");
+        images.add("90");
+        images.add("91");
 
 
         Phone phone2 = new Phone();
@@ -347,7 +347,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -374,7 +374,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -383,8 +383,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
@@ -397,22 +397,22 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithTwoAvailabilities() {
-        List<String> _features = new ArrayList<>();
-        _features.add("");
+        List<String> features = new ArrayList<>();
+        features.add("");
 
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
-        _availability.add("0000");
-        _availability.add("1111");
+        List<String> availability = new ArrayList<>();
+        availability.add("0000");
+        availability.add("1111");
 
-        List<String> _images = new ArrayList<>();
-        _images.add("92");
-        _images.add("93");
-        _images.add("94");
+        List<String> images = new ArrayList<>();
+        images.add("92");
+        images.add("93");
+        images.add("94");
 
 
         Phone phone2 = new Phone();
@@ -439,7 +439,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -466,7 +466,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -475,8 +475,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
@@ -489,20 +489,20 @@ public class PhoneTests {
 
     @Test
     public void addPhoneWithNoAvailabilities() {
-        List<String> _features = new ArrayList<>();
-        _features.add("");
+        List<String> features = new ArrayList<>();
+        features.add("");
 
-        List<String> _dimensions = new ArrayList<>();
-        _dimensions.add("bbb");
-        _dimensions.add("bbb1");
-        _dimensions.add("bbb2");
+        List<String> dimensions = new ArrayList<>();
+        dimensions.add("bbb");
+        dimensions.add("bbb1");
+        dimensions.add("bbb2");
 
-        List<String> _availability = new ArrayList<>();
+        List<String> availability = new ArrayList<>();
 
-        List<String> _images = new ArrayList<>();
-        _images.add("95");
-        _images.add("96");
-        _images.add("97");
+        List<String> images = new ArrayList<>();
+        images.add("95");
+        images.add("96");
+        images.add("97");
 
 
         Phone phone2 = new Phone();
@@ -529,7 +529,7 @@ public class PhoneTests {
                         .build()
                 )
                 .camera(Camera.CameraBuilder.builder()
-                        .features(_features)
+                        .features(features)
                         .primary("3")
                         .build()
                 )
@@ -556,7 +556,7 @@ public class PhoneTests {
                         .build()
                 )
                 .sizeAndWeight(SizeAndWeight.SizeAndWeightBuilder.builder()
-                        .dimensions(_dimensions)
+                        .dimensions(dimensions)
                         .weight("weight")
                         .build()
                 )
@@ -565,8 +565,8 @@ public class PhoneTests {
                         .ram("ram")
                         .build()
                 )
-                .availability(_availability)
-                .images(_images)
+                .availability(availability)
+                .images(images)
                 .build();
 
         PhoneForAdd phoneForAdd = new PhoneForAdd();
